@@ -1,0 +1,84 @@
+name: Weekly Market Radar Update
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # every Monday 06:00 UTC
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "keywords.yaml"
+      - "scripts/**"
+      - ".github/workflows/update.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # ── Free, no-auth data sources (always run) ──
+      - name: Fetch Google Trends + related queries
+        run: python scripts/fetch_trends.py
+        continue-on-error: true
+
+      - name: Fetch Wikipedia pageviews
+        run: python scripts/fetch_wikipedia.py
+        continue-on-error: true
+
+      - name: Fetch GDELT global news mentions
+        run: python scripts/fetch_gdelt.py
+        continue-on-error: true
+
+      - name: Fetch Hacker News chatter
+        run: python scripts/fetch_hackernews.py
+        continue-on-error: true
+
+      - name: Fetch Google autocomplete suggestions
+        run: python scripts/fetch_autocomplete.py
+        continue-on-error: true
+
+      # ── Reddit (optional, runs if creds set) ──
+      - name: Fetch Reddit (optional)
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+        run: python scripts/fetch_reddit.py
+        continue-on-error: true
+
+      # ── Aggregate + classify ──
+      - name: Analyze
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/analyze.py
+
+      - name: Build dashboard data
+        run: python scripts/build_dashboard_data.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "oruun-radar-bot"
+          git config user.email "actions@github.com"
+          git add docs/data.json data/*.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "chore(data): weekly refresh $(date -u +%F)"
+            git push
+          fi

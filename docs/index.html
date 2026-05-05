@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORUUN Market Radar</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">ORUUN</span>
+      <span class="brand-sub">MARKET RADAR</span>
+    </div>
+    <div class="meta">
+      <span id="generated-at">Loading…</span>
+      <span class="dot">·</span>
+      <span id="data-sources">—</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- KPI strip -->
+    <section class="kpis" id="kpis"></section>
+
+    <!-- Cross-source validation: the headline insight -->
+    <section class="card">
+      <div class="card-head">
+        <h2>📊 Cross-source validation · is the brand growth real?</h2>
+        <p class="subtitle">YoY change across <b>4 independent free sources</b>.
+          Authentic = 3+ sources strongly up. Mature = flat. Saturated = declining.</p>
+      </div>
+      <div class="legend">
+        <span class="badge authentic">🚀 Authentic</span>
+        <span class="badge rising">📈 Rising</span>
+        <span class="badge mixed">🔀 Mixed</span>
+        <span class="badge mature">📊 Mature</span>
+        <span class="badge saturated">🐢 Saturated</span>
+      </div>
+      <div class="x-source-table-wrap">
+        <table id="cross-table">
+          <thead>
+            <tr>
+              <th>Brand</th>
+              <th class="num">Google YoY</th>
+              <th class="num">Wikipedia YoY</th>
+              <th class="num">News YoY</th>
+              <th class="num">Hacker News YoY</th>
+              <th>Verdict</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Buyer journey: what stage are searchers at? -->
+    <section class="card">
+      <div class="card-head">
+        <h2>🛒 Buyer journey · what stage are searchers in?</h2>
+        <p class="subtitle">For each top keyword, related queries are auto-classified into 4 intent buckets.
+          High <b>Transactional</b> share = ready to buy.
+          High <b>Commercial</b> share = comparing.
+          High <b>Informational</b> share = early research.</p>
+      </div>
+      <div id="journey-grid" class="journey-grid"></div>
+    </section>
+
+    <!-- Trends explorer (existing) -->
+    <section class="card">
+      <div class="card-head">
+        <h2>🔍 Search heat &amp; week-over-week trend</h2>
+        <div class="filters">
+          <label>Category
+            <select id="cat-filter">
+              <option value="all">All</option>
+              <option value="product_category">Category (品类)</option>
+              <option value="competitor_keyword">Competitor product</option>
+              <option value="feature_material">Feature / Material</option>
+              <option value="use_case_persona">Use case / Persona</option>
+              <option value="brand">Brand</option>
+            </select>
+          </label>
+          <label>Sort by
+            <select id="sort-by">
+              <option value="opportunity_score">Opportunity score</option>
+              <option value="yoy_change_pct">YoY %</option>
+              <option value="wow_change_pct">WoW %</option>
+              <option value="volume_index">Search volume</option>
+            </select>
+          </label>
+          <label class="search">
+            <input id="search" type="search" placeholder="Filter keyword…" />
+          </label>
+        </div>
+      </div>
+
+      <div class="layout-2col">
+        <div>
+          <table id="kw-table">
+            <thead>
+              <tr>
+                <th>Keyword</th>
+                <th>Category</th>
+                <th class="num">Vol idx</th>
+                <th class="num">WoW %</th>
+                <th class="num">YoY %</th>
+                <th class="num">Opportunity</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div>
+          <div class="chart-title" id="chart-title">Click a keyword to inspect</div>
+          <canvas id="trend-chart" height="220"></canvas>
+          <div id="related-queries" class="related-queries"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blue-ocean opportunities (existing) -->
+    <section class="card">
+      <div class="card-head">
+        <h2>🌊 Blue-ocean opportunities</h2>
+        <p class="subtitle">High volume × growing fast × low competitor saturation.</p>
+      </div>
+      <div id="opp-grid" class="opp-grid"></div>
+    </section>
+
+    <!-- Live autocomplete intent map -->
+    <section class="card">
+      <div class="card-head">
+        <h2>💡 Live autocomplete · what are users typing right now?</h2>
+        <p class="subtitle">Real-time Google autocomplete suggestions, color-coded by buyer intent.</p>
+      </div>
+      <div id="autocomplete-grid" class="autocomplete-grid"></div>
+    </section>
+
+    <!-- Reddit-conditional sections -->
+    <section class="grid-2" id="reddit-only">
+      <div class="card">
+        <div class="card-head">
+          <h2>📢 Competitor share of voice (Reddit)</h2>
+          <p class="subtitle">Brand mentions across running subreddits.</p>
+        </div>
+        <canvas id="sov-chart" height="240"></canvas>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <h2>💬 Brand sentiment (Reddit)</h2>
+          <p class="subtitle">Avg sentiment of sentences mentioning each brand.</p>
+        </div>
+        <div id="sentiment-grid" class="sentiment-grid"></div>
+      </div>
+    </section>
+
+    <section class="card" id="pain-card">
+      <div class="card-head">
+        <h2>🩹 User pain points (Reddit)</h2>
+        <p class="subtitle">What runners actually complain about.</p>
+      </div>
+      <div id="pain-summary" class="pain-summary"></div>
+      <div id="pain-triggers" class="pain-triggers"></div>
+      <details class="pain-raw">
+        <summary>Raw quotes</summary>
+        <div id="pain-quotes"></div>
+      </details>
+    </section>
+
+    <footer>
+      <p>Built for ORUUN · Data refreshes every Monday via GitHub Actions ·
+        <a href="https://github.com/" id="repo-link" target="_blank" rel="noopener">view source</a>
+      </p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

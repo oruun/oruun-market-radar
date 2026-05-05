@@ -1,0 +1,142 @@
+# ORUUN Market Radar — Keyword Configuration
+# Edit this file to change what the dashboard tracks. No code changes needed.
+# After editing, commit & push; the next Actions run will pick it up.
+
+# Geographies to query Google Trends in. Use ISO codes or "" for worldwide.
+# pytrends will pull a separate series per geo and average them on the dashboard.
+geos:
+  - US
+  - GB
+  - DE
+  - FR
+  - ""   # worldwide
+
+# Time window for trend pulls. "today 12-m" = rolling last 12 months.
+# Other useful values: "today 5-y", "today 3-m", "now 7-d"
+timeframe: "today 12-m"
+
+# Geo used for the "related queries" pull (one geo only, since
+# pytrends related_queries() doesn't merge geos cleanly).
+related_queries_geo: "US"
+
+# Map brand → exact Wikipedia article title. Override here if the auto-search
+# resolver picks the wrong page (e.g. "On" → "On (album)" instead of "On Inc.").
+wikipedia_titles:
+  on: "On (running brand)"
+  hoka: "Hoka One One"
+  nike: "Nike, Inc."
+  asics: "Asics"
+  brooks: "Brooks Sports"
+  adidas: "Adidas"
+  saucony: "Saucony"
+  salomon: "Salomon Group"
+  "new balance": "New Balance"
+  lululemon: "Lululemon Athletica"
+  "arc'teryx": "Arc'teryx"
+  patagonia: "Patagonia, Inc."
+  tracksmith: "Tracksmith"
+  satisfy: "Satisfy Running"
+  # ORUUN, Bandit, District Vision likely don't have Wiki pages yet — that's fine,
+  # the resolver will return null and the dashboard will skip them.
+
+# Reddit subreddits to mine for share-of-voice and pain points.
+subreddits:
+  - running
+  - trailrunning
+  - RunningShoeGeeks
+  - Ultramarathon
+  - Marathon_Training
+  - xxfitness          # women's fitness perspective
+  - flexibility        # mobility/recovery angle
+  - hiking             # adjacency for trail / lifestyle wear
+  - onexone            # On running brand sub — useful competitor signal
+
+# Maximum Reddit posts pulled per subreddit per run (keeps Actions runs <5 min).
+reddit_post_limit: 75
+
+# How many comments per post to inspect for pain points.
+reddit_comment_limit: 25
+
+# Brand-aware competitor list. Used both as keyword tracking AND
+# for share-of-voice. ORUUN must be in this list — even if zero today,
+# the dashboard plots its rise over time.
+brands:
+  - oruun
+  - nike
+  - on            # On Running
+  - hoka
+  - salomon
+  - asics
+  - brooks
+  - new balance
+  - saucony
+  - adidas
+  - lululemon
+  - arc'teryx
+  - patagonia
+  - tracksmith
+  - bandit         # NYC indie running brand — adjacent positioning to ORUUN
+  - district vision
+  - satisfy
+
+# === KEYWORD TRACKING LISTS ===
+# Each item produces its own search-trend line.
+# Keep each list under ~20 items to respect Google Trends rate limits.
+
+categories:
+
+  product_category:           # 品类词
+    - lightweight running shoes
+    - trail running shoes
+    - minimalist running shoes
+    - speed training shoes
+    - long distance running shoes
+    - zero drop shoes
+    - barefoot running
+    - vertical running
+    - ultra running gear
+    - daily trainer
+
+  competitor_keyword:         # 竞品/品牌关键词 (specific products)
+    - nike pegasus
+    - nike vaporfly
+    - on cloudmonster
+    - on cloudsurfer
+    - hoka mach
+    - hoka clifton
+    - salomon speedcross
+    - asics novablast
+    - brooks ghost
+    - new balance rebel
+
+  feature_material:           # 功能/材质词
+    - merino wool running
+    - carbon plate shoes
+    - breathable running shorts
+    - quick dry shirt
+    - seamless running top
+    - recycled polyester activewear
+    - bamboo activewear
+    - anti chafe shorts
+    - thermal base layer
+    - ventilated running cap
+
+  use_case_persona:           # 场景/人群词
+    - city run outfit
+    - marathon training kit
+    - half marathon prep
+    - gym outfit men
+    - women's running shorts
+    - running commute
+    - early morning run gear
+    - hot weather running
+    - winter running clothes
+    - race day kit
+
+# === ADVANCED TUNING ===
+# Weights used by analyze.py to compute the opportunity score.
+# opportunity = (volume_index * growth_factor) / (saturation_factor + epsilon)
+opportunity_weights:
+  volume_floor: 5         # ignore terms below this avg index (too noisy)
+  growth_window_weeks: 4  # WoW vs 4-week-prior window
+  saturation_epsilon: 1   # avoid divide-by-zero
