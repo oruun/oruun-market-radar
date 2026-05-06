@@ -332,8 +332,13 @@ def main() -> None:
     cross_rows.sort(key=lambda r: (order.get(r["verdict"], 99), -r["trends_yoy_pct"]))
 
     # ------- Buyer journey aggregation -------
+    # Brand-category rows are intentionally excluded — buyer journey is about
+    # CONSUMER SEARCH INTENT for product/feature/use-case terms, not about
+    # brand-name searches. Brand health is shown separately in the
+    # Cross-source validation card.
+    journey_pool = [k for k in keyword_rows if k["category"] != "brand"]
     journey = []
-    for kw in keyword_rows[:20]:  # top 20 keywords by opportunity
+    for kw in journey_pool[:20]:  # top 20 non-brand keywords by opportunity
         breakdown = {b["intent"]: b["count"] for b in kw["intent_breakdown"]}
         total = sum(breakdown.values()) or 1
         journey.append({

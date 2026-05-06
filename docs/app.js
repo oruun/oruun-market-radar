@@ -99,7 +99,9 @@ function toggleRedditSections() {
 
 // ---------- KPI strip ----------
 function renderKPIs() {
-  const kws = state.data.keywords || [];
+  // Brand-category keywords are excluded from "consumer search" KPIs —
+  // brand health lives in the Cross-source validation card.
+  const kws = (state.data.keywords || []).filter((k) => k.category !== "brand");
   const climbing = kws.filter((k) => k.wow_change_pct > 5).length;
   const declining = kws.filter((k) => k.wow_change_pct < -5).length;
   const topOpp = kws.slice().sort((a, b) => b.opportunity_score - a.opportunity_score)[0];
@@ -107,9 +109,9 @@ function renderKPIs() {
   const authentic = cross.filter((c) => c.verdict === "Authentic" || c.verdict === "Rising").length;
 
   document.getElementById("kpis").innerHTML = [
-    kpi("Keywords tracked", kws.length, ""),
+    kpi("Search terms tracked", kws.length, "consumer queries (no brand names)"),
     kpi("Trending up (WoW > 5%)", climbing, declining ? `↓ ${declining} declining` : "", climbing > declining ? "up" : "down"),
-    kpi("Top opportunity", topOpp ? topOpp.term : "—", topOpp ? `score ${topOpp.opportunity_score}` : ""),
+    kpi("Top opportunity term", topOpp ? topOpp.term : "—", topOpp ? `score ${topOpp.opportunity_score}` : ""),
     kpi("Authentic + Rising brands", authentic, `of ${cross.length} tracked`, "up"),
   ].join("");
 }
@@ -170,9 +172,11 @@ function renderJourney() {
 }
 
 // ---------- Keyword table ----------
+// Brand-category rows are excluded from this section — brand-level analysis
+// lives in the Cross-source validation table at the top of the page.
 function renderTable() {
   const tbody = document.querySelector("#kw-table tbody");
-  let rows = (state.data.keywords || []).slice();
+  let rows = (state.data.keywords || []).filter((r) => r.category !== "brand");
   if (state.filter.category !== "all") {
     rows = rows.filter((r) => r.category === state.filter.category);
   }
@@ -257,8 +261,10 @@ function renderRelatedFor(row) {
 }
 
 // ---------- Opportunities ----------
+// Excludes brand-category rows so the blue-ocean grid focuses on
+// consumer search terms (categories / features / use cases / specific products).
 function renderOpportunities() {
-  let rows = (state.data.keywords || []).slice();
+  let rows = (state.data.keywords || []).filter((r) => r.category !== "brand");
   if (state.filter.category !== "all") {
     rows = rows.filter((r) => r.category === state.filter.category);
   }

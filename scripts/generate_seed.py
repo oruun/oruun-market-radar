@@ -144,7 +144,10 @@ cross_source = [{"brand":b,"trends_yoy_pct":t,"wiki_yoy_pct":w,"gdelt_yoy_pct":g
                 for b,t,w,g,h,v in cross]
 
 journey=[]
-for kw in [k for k in sorted(keywords, key=lambda r:(-r["opportunity_score"])) if k["related_top"] or k["related_rising"]][:12]:
+# Brand category excluded from buyer journey — that's a consumer-search-intent
+# concept, not a brand-awareness concept. Brand signals live in cross_source_validation.
+for kw in [k for k in sorted(keywords, key=lambda r:(-r["opportunity_score"]))
+           if (k["related_top"] or k["related_rising"]) and k["category"] != "brand"][:12]:
     counts={b["intent"]:b["count"] for b in kw["intent_breakdown"]}
     total=sum(counts.values()) or 1
     journey.append({
