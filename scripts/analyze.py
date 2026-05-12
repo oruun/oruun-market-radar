@@ -161,33 +161,42 @@ def gdelt_yoy(timeline: list[dict]) -> tuple[float, list[dict]]:
 # ----------------------------------------------------------------------
 # Cross-source classification
 # ----------------------------------------------------------------------
-def classify_brand_signal(trends_yoy: float, wiki_yoy_v: float, gdelt_yoy_v: float, hn_yoy: float) -> str:
+def classify_brand_signal(trends_yoy, wiki_yoy_v, gdelt_yoy_v, hn_yoy) -> str:
     """Maps the 4 YoY signals to a brand-status label.
-    Mirrors the user's reference table semantics."""
-    signals = {
+
+    CRITICAL: None means "no data from this source" — those signals are
+    excluded from classification. Treating missing-data as zero would make
+    quiet brands look falsely "Mature".
+    """
+    raw = {
         "trends": trends_yoy,
         "wiki": wiki_yoy_v,
         "gdelt": gdelt_yoy_v,
         "hn": hn_yoy,
     }
-    strong = sum(1 for v in signals.values() if v > 30)
-    moderate = sum(1 for v in signals.values() if 5 < v <= 30)
-    flat = sum(1 for v in signals.values() if -5 <= v <= 5)
-    declining = sum(1 for v in signals.values() if v < -5)
-    available = sum(1 for v in signals.values() if v != 0.0)
-
-    if strong >= 3:
-        return "Authentic"          # 多源大涨 → 真热度
-    if strong + moderate >= 3 and declining == 0:
-        return "Rising"             # 多源上升 → 上升期
-    if declining >= 2:
-        return "Saturated"          # 多源下行 → 饱和/触顶
-    if strong >= 1 and declining >= 1:
-        return "Mixed"              # 信号冲突 → 需深挖
-    if available == 0:
+    real = {k: v for k, v in raw.items() if v is not None}
+    if len(real) == 0:
         return "Unknown"
-    if flat >= 2:
-        return "Mature"             # 多源平稳 → 成熟期
+    if len(real) < 2:
+        # Single-signal evidence is never enough to call a verdict.
+        return "Insufficient data"
+
+    strong = sum(1 for v in real.values() if v > 30)
+    moderate = sum(1 for v in real.values() if 5 < v <= 30)
+    flat = sum(1 for v in real.values() if -5 <= v <= 5)
+    declining = sum(1 for v in real.values() if v < -5)
+
+    n = len(real)
+    if strong >= max(2, n - 1):                       # almost all sources strongly up
+        return "Authentic"
+    if (strong + moderate) >= max(2, n - 1) and declining == 0:
+        return "Rising"
+    if declining >= max(2, n - 1):
+        return "Saturated"
+    if strong >= 1 and declining >= 1:
+        return "Mixed"
+    if flat >= max(2, n - 1):
+        return "Mature"
     return "Mixed"
 
 
@@ -284,45 +293,60 @@ def main() -> None:
     keyword_rows.sort(key=lambda r: -r["opportunity_score"])
 
     # ------- Per-brand cross-source validation -------
-    # Build lookup tables
+    # CRITICAL: a brand is "present" in a source only if that source actually
+    # returned non-empty data for it. Missing data → None in the output, NOT 0.
     trends_by_brand: dict[str, float] = {}
     for s in trends["series"]:
         if s["category"] == "brand":
             avg = average_across_geos(s["geo_series"])
-            trends_by_brand[s["term"].lower()] = yoy_pct([float(v) for v in avg], 26) if avg else 0.0
+            if avg and len(avg) >= 52:
+                trends_by_brand[s["term"].lower()] = yoy_pct([float(v) for v in avg], 26)
 
     wiki_by_brand: dict[str, tuple[float, list[dict], str | None]] = {}
     for w in wiki.get("brands", []):
-        yoy_v, monthly = wiki_yoy(w.get("daily") or [])
-        wiki_by_brand[w["brand"].lower()] = (yoy_v, monthly, w.get("article"))
+        daily = w.get("daily") or []
+        if daily:
+            yoy_v, monthly = wiki_yoy(daily)
+            wiki_by_brand[w["brand"].lower()] = (yoy_v, monthly, w.get("article"))
 
     gdelt_by_term: dict[str, tuple[float, list[dict]]] = {}
     for r in gdelt.get("rows", []):
-        yoy_v, monthly = gdelt_yoy(r.get("timeline") or [])
-        gdelt_by_term[r["term"].lower()] = (yoy_v, monthly)
+        timeline = r.get("timeline") or []
+        if timeline:
+            yoy_v, monthly = gdelt_yoy(timeline)
+            gdelt_by_term[r["term"].lower()] = (yoy_v, monthly)
 
     hn_by_brand: dict[str, tuple[float, int, list]] = {}
     for r in hn.get("rows", []):
-        hn_by_brand[r["brand"].lower()] = (
-            float(r.get("yoy_pct", 0.0)),
-            int(r.get("recent_12m_count", 0)),
-            r.get("top_stories") or [],
-        )
+        # HN counts can be legitimately zero — we count the source as "present"
+        # only if at least one period had non-zero stories. Otherwise it's noise.
+        recent = int(r.get("recent_12m_count", 0))
+        prior = int(r.get("prior_12m_count", 0))
+        if recent + prior > 0:
+            hn_by_brand[r["brand"].lower()] = (
+                float(r.get("yoy_pct", 0.0)),
+                recent,
+                r.get("top_stories") or [],
+            )
 
     cross_rows = []
     for brand in brands:
-        t_yoy = trends_by_brand.get(brand, 0.0)
-        w_yoy, w_monthly, w_article = wiki_by_brand.get(brand, (0.0, [], None))
-        g_yoy, g_monthly = gdelt_by_term.get(brand, (0.0, []))
-        h_yoy, h_count, h_stories = hn_by_brand.get(brand, (0.0, 0, []))
+        t_yoy = trends_by_brand.get(brand)                # None if missing
+        wiki_entry = wiki_by_brand.get(brand)
+        gdelt_entry = gdelt_by_term.get(brand)
+        hn_entry = hn_by_brand.get(brand)
+
+        w_yoy, w_monthly, w_article = (wiki_entry if wiki_entry else (None, [], None))
+        g_yoy, g_monthly = (gdelt_entry if gdelt_entry else (None, []))
+        h_yoy, h_count, h_stories = (hn_entry if hn_entry else (None, 0, []))
 
         verdict = classify_brand_signal(t_yoy, w_yoy, g_yoy, h_yoy)
         cross_rows.append({
             "brand": brand,
-            "trends_yoy_pct": round(t_yoy, 1),
-            "wiki_yoy_pct": round(w_yoy, 1),
-            "gdelt_yoy_pct": round(g_yoy, 1),
-            "hn_yoy_pct": round(h_yoy, 1),
+            "trends_yoy_pct": round(t_yoy, 1) if t_yoy is not None else None,
+            "wiki_yoy_pct":   round(w_yoy, 1) if w_yoy is not None else None,
+            "gdelt_yoy_pct":  round(g_yoy, 1) if g_yoy is not None else None,
+            "hn_yoy_pct":     round(h_yoy, 1) if h_yoy is not None else None,
             "wiki_monthly": w_monthly,
             "gdelt_monthly": g_monthly,
             "hn_count_12m": h_count,
@@ -330,9 +354,13 @@ def main() -> None:
             "wiki_article": w_article,
             "verdict": verdict,
         })
-    # Order: Authentic / Rising first
-    order = {"Authentic": 0, "Rising": 1, "Mixed": 2, "Mature": 3, "Saturated": 4, "Unknown": 5}
-    cross_rows.sort(key=lambda r: (order.get(r["verdict"], 99), -r["trends_yoy_pct"]))
+    # Order: Authentic / Rising first; rows with missing trends sort to bottom of tie
+    order = {"Authentic": 0, "Rising": 1, "Mixed": 2, "Mature": 3,
+             "Saturated": 4, "Insufficient data": 5, "Unknown": 6}
+    def _tiebreak(r):
+        t = r.get("trends_yoy_pct")
+        return -t if t is not None else float("inf")
+    cross_rows.sort(key=lambda r: (order.get(r["verdict"], 99), _tiebreak(r)))
 
     # ------- Buyer journey aggregation -------
     # Brand-category rows are intentionally excluded — buyer journey is about
@@ -471,3 +499,39 @@ if __name__ == "__main__":
         import traceback
         traceback.print_exc()
         write_minimal_output(f"analyze crashed: {type(e).__name__}: {e}")
+ote {target}")
+    print(f"Active sources: {', '.join(out['data_sources_active'])}")
+
+
+def write_minimal_output(error_msg: str = "") -> None:
+    """Last-resort writer so build_dashboard_data.py always has a file to copy."""
+    out = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "data_sources_active": [],
+        "keywords": [],
+        "cross_source_validation": [],
+        "buyer_journey": [],
+        "autocomplete": [],
+        "intent_global": [],
+        "brand_share_of_voice": [],
+        "brand_sentiment": {},
+        "pain_points": [],
+        "pain_triggers": [],
+        "pain_summary": None,
+        "reddit_posts_analyzed": 0,
+        "timeframe": "today 12-m",
+        "error": error_msg or None,
+    }
+    target = DATA_DIR / "analyzed.json"
+    target.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Wrote minimal {target} (error: {error_msg})", flush=True)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        write_minimal_output(f"analyze crashed: {type(e).__name__}: {e}")
+f"analyze crashed: {type(e).__name__}: {e}")

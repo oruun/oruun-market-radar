@@ -424,3 +424,24 @@ footer {
   border-radius: 4px;
   background: transparent;
 }
+
+/* ---------- Empty state ---------- */
+.empty-state {
+  padding: 28px 24px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  background: var(--panel-2);
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+.empty-state b {
+  color: var(--text);
+  display: inline-block;
+  margin-bottom: 4px;
+}
+td.empty-state { display: table-cell; }     /* used inside <tr><td colspan=...> */
+
+/* Muted state for missing-data percentages in the cross-source table */
+.num.muted { color: var(--text-dim); opacity: 0.5; }

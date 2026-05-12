@@ -37,12 +37,17 @@ def load_config() -> dict:
 
 
 def all_keywords(cfg: dict) -> list[tuple[str, str]]:
+    """Returns [(keyword, category), ...] for CONSUMER-SEARCH terms only.
+
+    Brand-name search volume is intentionally NOT pulled from Google Trends —
+    brand health is measured via Wikipedia / GDELT / Hacker News instead, which
+    are far more reliable than pytrends on GitHub Actions IPs. Skipping brands
+    here cuts our Trends API load roughly in half.
+    """
     out: list[tuple[str, str]] = []
     for category, terms in cfg["categories"].items():
         for t in terms:
             out.append((t, category))
-    for brand in cfg.get("brands", []):
-        out.append((brand, "brand"))
     return out
 
 

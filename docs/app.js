@@ -10,12 +10,13 @@ const CATEGORY_LABEL = {
 };
 
 const VERDICT_META = {
-  Authentic: { emoji: "🚀", cls: "authentic" },
-  Rising:    { emoji: "📈", cls: "rising" },
-  Mixed:     { emoji: "🔀", cls: "mixed" },
-  Mature:    { emoji: "📊", cls: "mature" },
-  Saturated: { emoji: "🐢", cls: "saturated" },
-  Unknown:   { emoji: "❓", cls: "unknown" },
+  Authentic:            { emoji: "🚀", cls: "authentic" },
+  Rising:               { emoji: "📈", cls: "rising" },
+  Mixed:                { emoji: "🔀", cls: "mixed" },
+  Mature:               { emoji: "📊", cls: "mature" },
+  Saturated:            { emoji: "🐢", cls: "saturated" },
+  "Insufficient data":  { emoji: "⚪", cls: "unknown" },
+  Unknown:              { emoji: "❓", cls: "unknown" },
 };
 
 const INTENT_META = {
@@ -139,12 +140,26 @@ function renderCrossSource() {
     </tr>`;
   }).join("");
 }
-function pct(v) { return (v > 0 ? "+" : "") + (v ?? 0) + "%"; }
-function pctCls(v) { return v > 5 ? "delta-pos" : v < -5 ? "delta-neg" : ""; }
+function pct(v) {
+  if (v === null || v === undefined) return "—";   // missing data, not zero
+  return (v > 0 ? "+" : "") + v + "%";
+}
+function pctCls(v) {
+  if (v === null || v === undefined) return "muted";
+  return v > 5 ? "delta-pos" : v < -5 ? "delta-neg" : "";
+}
 
 // ---------- Buyer journey ----------
 function renderJourney() {
   const journey = state.data.buyer_journey || [];
+  if (journey.length === 0) {
+    document.getElementById("journey-grid").innerHTML = `<div class="empty-state">
+      <b>No journey data this run.</b><br>
+      Buyer journey is computed from Google Trends related queries.
+      Will populate once a Trends run completes successfully.
+    </div>`;
+    return;
+  }
   document.getElementById("journey-grid").innerHTML = journey.map((j) => {
     const stages = ["transactional", "commercial", "informational", "branded", "generic"];
     const total = stages.reduce((s, k) => s + (j.intent_pct[k] || 0), 0) || 1;
@@ -172,11 +187,23 @@ function renderJourney() {
 }
 
 // ---------- Keyword table ----------
-// Brand-category rows are excluded from this section — brand-level analysis
-// lives in the Cross-source validation table at the top of the page.
 function renderTable() {
   const tbody = document.querySelector("#kw-table tbody");
   let rows = (state.data.keywords || []).filter((r) => r.category !== "brand");
+
+  // Empty state — most commonly because Google Trends was rate-limited this run.
+  if (rows.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">
+      <b>No keyword data this run.</b><br>
+      Google Trends is the source for this section and is rate-limited from GitHub Actions.
+      <br>Other sources (Wikipedia / GDELT / Hacker News / Autocomplete) are unaffected — see panels above.
+    </td></tr>`;
+    document.getElementById("chart-title").textContent = "(no keyword data)";
+    if (state.trendChart) { state.trendChart.destroy(); state.trendChart = null; }
+    document.getElementById("related-queries").innerHTML = "";
+    return;
+  }
+
   if (state.filter.category !== "all") {
     rows = rows.filter((r) => r.category === state.filter.category);
   }
@@ -270,6 +297,13 @@ function renderOpportunities() {
   }
   rows.sort((a, b) => b.opportunity_score - a.opportunity_score);
   rows = rows.slice(0, 12);
+  if (rows.length === 0) {
+    document.getElementById("opp-grid").innerHTML = `<div class="empty-state">
+      <b>No opportunity data this run.</b><br>
+      Opportunity scoring requires Google Trends search-volume data.
+    </div>`;
+    return;
+  }
   document.getElementById("opp-grid").innerHTML = rows.map((r) => `
     <div class="opp-card">
       <div class="term">${escapeHtml(r.term)}</div>
