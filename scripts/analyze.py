@@ -439,5 +439,35 @@ def main() -> None:
     print(f"Active sources: {', '.join(out['data_sources_active'])}")
 
 
+def write_minimal_output(error_msg: str = "") -> None:
+    """Last-resort writer so build_dashboard_data.py always has a file to copy.
+    Called if main() crashes for any reason."""
+    out = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "data_sources_active": [],
+        "keywords": [],
+        "cross_source_validation": [],
+        "buyer_journey": [],
+        "autocomplete": [],
+        "intent_global": [],
+        "brand_share_of_voice": [],
+        "brand_sentiment": {},
+        "pain_points": [],
+        "pain_triggers": [],
+        "pain_summary": None,
+        "reddit_posts_analyzed": 0,
+        "timeframe": "today 12-m",
+        "error": error_msg or None,
+    }
+    target = DATA_DIR / "analyzed.json"
+    target.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Wrote minimal {target} (error: {error_msg})", flush=True)
+
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        write_minimal_output(f"analyze crashed: {type(e).__name__}: {e}")

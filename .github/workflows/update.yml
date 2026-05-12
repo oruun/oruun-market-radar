@@ -84,15 +84,18 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/analyze.py
+        continue-on-error: true   # main() wraps in try/except; tolerate any leak
 
       - name: Build dashboard data
+        if: always()              # run even if previous steps failed
         run: python scripts/build_dashboard_data.py
 
       - name: Commit refreshed data
+        if: always()              # commit whatever partial data we got
         run: |
           git config user.name "oruun-radar-bot"
           git config user.email "actions@github.com"
-          git add docs/data.json data/*.json
+          git add docs/data.json data/*.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No data changes."
           else

@@ -25,7 +25,7 @@ related_queries_geo: "US"
 # Map brand → exact Wikipedia article title. Override here if the auto-search
 # resolver picks the wrong page (e.g. "On" → "On (album)" instead of "On Inc.").
 wikipedia_titles:
-  on: "On (running brand)"
+  "on": "On (running brand)"   # quoted — yaml key 'on' is otherwise a boolean
   hoka: "Hoka One One"
   nike: "Nike, Inc."
   asics: "Asics"
@@ -63,10 +63,13 @@ reddit_comment_limit: 25
 # Brand-aware competitor list. Used both as keyword tracking AND
 # for share-of-voice. ORUUN must be in this list — even if zero today,
 # the dashboard plots its rise over time.
+#
+# IMPORTANT: any single-word brand that YAML might parse as a boolean
+# (on / off / yes / no / true / false) MUST be quoted.
 brands:
   - oruun
   - nike
-  - on            # On Running
+  - "on"          # On Running  (quoted — yaml would otherwise read as True)
   - hoka
   - salomon
   - asics
