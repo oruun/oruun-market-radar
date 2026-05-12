@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-12T06:23:48.978028+00:00",
+  "fetched_at": "2026-05-12T10:56:08.859627+00:00",
   "rows": [
     {
       "brand": "oruun",
@@ -78,9 +78,9 @@
     {
       "brand": "on",
       "query": "\"on\" running",
-      "recent_12m_count": 2982,
-      "prior_12m_count": 1212,
-      "yoy_pct": 146.0,
+      "recent_12m_count": 2981,
+      "prior_12m_count": 1214,
+      "yoy_pct": 145.6,
       "top_stories": [
         {
           "title": "Rust running on every GPU",
@@ -131,8 +131,8 @@
       "brand": "salomon",
       "query": "salomon",
       "recent_12m_count": 104,
-      "prior_12m_count": 88,
-      "yoy_pct": 18.2,
+      "prior_12m_count": 180,
+      "yoy_pct": -42.2,
       "top_stories": [
         {
           "title": "Bitcoin: The HEIST OF THE CENTURY \u2013 Is it a credible scenario?",
@@ -174,9 +174,9 @@
     {
       "brand": "asics",
       "query": "asics",
-      "recent_12m_count": 335,
+      "recent_12m_count": 141,
       "prior_12m_count": 353,
-      "yoy_pct": -5.1,
+      "yoy_pct": -60.1,
       "top_stories": [
         {
           "title": "Solving the compute crisis with physics-based ASICs",
@@ -218,9 +218,9 @@
     {
       "brand": "brooks",
       "query": "brooks",
-      "recent_12m_count": 1767,
-      "prior_12m_count": 1732,
-      "yoy_pct": 2.0,
+      "recent_12m_count": 1766,
+      "prior_12m_count": 1733,
+      "yoy_pct": 1.9,
       "top_stories": [
         {
           "title": "Disturbing Rumor \u2013 PBS NewsHour (Brooks / Capehart)",
@@ -306,17 +306,53 @@
     {
       "brand": "saucony",
       "query": "saucony",
-      "recent_12m_count": 0,
-      "prior_12m_count": 4,
-      "yoy_pct": -100.0,
-      "top_stories": []
+      "recent_12m_count": 16,
+      "prior_12m_count": 15,
+      "yoy_pct": 6.7,
+      "top_stories": [
+        {
+          "title": "Sauron, home security startup, plucks CEO out of Sonos",
+          "url": "https://techcrunch.com/2025/12/28/from-sonos-to-sauron-new-ceo-takes-on-high-end-home-security-startup-still-in-development/",
+          "points": 14,
+          "num_comments": 20,
+          "created_at": "2025-12-29T15:56:03Z"
+        },
+        {
+          "title": "New cars allegedly include \"eye of sauron\" to monitor drivers",
+          "url": "https://twitter.com/VladTheInflator/status/2036174124180185260",
+          "points": 7,
+          "num_comments": 0,
+          "created_at": "2026-03-24T18:23:24Z"
+        },
+        {
+          "title": "Show HN: Sauron MCP \u2013 one MCP to rule them all",
+          "url": "https://sauron-mcp.com/",
+          "points": 4,
+          "num_comments": 0,
+          "created_at": "2025-05-15T00:07:02Z"
+        },
+        {
+          "title": "The Eye of Sauron? R\u00e9servoir Manicouagan",
+          "url": "http://abioticdesignstudio.blogspot.com/2014/01/the-eye-of-sauron-reservoir-manicouagan.html",
+          "points": 3,
+          "num_comments": 0,
+          "created_at": "2026-03-26T19:01:24Z"
+        },
+        {
+          "title": "Show HN: Saucybargain \u2013 a community for bargains with zero affiliate marketing",
+          "url": "https://saucybargain.com",
+          "points": 2,
+          "num_comments": 0,
+          "created_at": "2026-04-18T06:19:51Z"
+        }
+      ]
     },
     {
       "brand": "adidas",
       "query": "adidas",
-      "recent_12m_count": 10,
+      "recent_12m_count": 8,
       "prior_12m_count": 6,
-      "yoy_pct": 66.7,
+      "yoy_pct": 33.3,
       "top_stories": [
         {
           "title": "Sawe becomes first athlete to run a sub-two-hour marathon in a competitive race",
@@ -402,17 +438,53 @@
     {
       "brand": "arc'teryx",
       "query": "arc'teryx",
-      "recent_12m_count": 0,
-      "prior_12m_count": 15,
-      "yoy_pct": -100.0,
-      "top_stories": []
+      "recent_12m_count": 15,
+      "prior_12m_count": 16,
+      "yoy_pct": -6.2,
+      "top_stories": [
+        {
+          "title": "Coronary artery calcium testing can reveal plaque in arteries, but is underused",
+          "url": "https://www.nytimes.com/2025/07/26/health/coronary-artery-calcium-heart.html",
+          "points": 214,
+          "num_comments": 194,
+          "created_at": "2025-07-26T21:45:07Z"
+        },
+        {
+          "title": "3D-printed carotid artery-on-chips for personalized thrombosis investigation",
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202508890",
+          "points": 27,
+          "num_comments": 2,
+          "created_at": "2025-12-03T21:40:55Z"
+        },
+        {
+          "title": "High-volume exercise tied to increased coronary artery calcification score",
+          "url": "https://medicalxpress.com/news/2025-05-high-volume-coronary-artery-calcification.html",
+          "points": 21,
+          "num_comments": 7,
+          "created_at": "2025-06-14T18:17:01Z"
+        },
+        {
+          "title": "Beaverton man breaks archery record with bare hands (and feet)",
+          "url": "https://www.opb.org/article/2025/09/20/beaverton-alan-case-breaks-archery-record/",
+          "points": 5,
+          "num_comments": 1,
+          "created_at": "2025-09-21T04:38:50Z"
+        },
+        {
+          "title": "An Artery of Empire: The Rise and Fall of China's Grand Canal",
+          "url": "https://worldhistory.substack.com/p/an-artery-of-empire",
+          "points": 5,
+          "num_comments": 0,
+          "created_at": "2026-01-18T15:36:08Z"
+        }
+      ]
     },
     {
       "brand": "patagonia",
       "query": "patagonia",
       "recent_12m_count": 13,
-      "prior_12m_count": 18,
-      "yoy_pct": -27.8,
+      "prior_12m_count": 16,
+      "yoy_pct": -18.8,
       "top_stories": [
         {
           "title": "Penguin 'Toxicologists' Find PFAS Chemicals in Remote Patagonia",
@@ -530,9 +602,9 @@
     {
       "brand": "satisfy",
       "query": "satisfy",
-      "recent_12m_count": 316,
-      "prior_12m_count": 232,
-      "yoy_pct": 36.2,
+      "recent_12m_count": 304,
+      "prior_12m_count": 223,
+      "yoy_pct": 36.3,
       "top_stories": [
         {
           "title": "SATisfying Solutions to Difficult Problems",
