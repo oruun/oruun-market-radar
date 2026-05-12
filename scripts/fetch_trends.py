@@ -26,8 +26,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-MAX_RETRIES = 4
-BASE_SLEEP = 8
+MAX_RETRIES = 2          # was 4 — reduced to fit GitHub Actions time budget
+BASE_SLEEP = 5           # was 8 — Trends recovers faster than this anyway
+POLITE_DELAY = 1.0       # was 1.5 — between successive term queries
 
 
 def load_config() -> dict:
@@ -91,33 +92,8 @@ def fetch_related(pytrends: TrendReq, term: str, geo: str, timeframe: str) -> di
     return {"top": [], "rising": []}
 
 
-def main() -> None:
-    cfg = load_config()
-    timeframe = cfg.get("timeframe", "today 12-m")
-    geos = cfg.get("geos", ["US"])
-    primary_geo = cfg.get("related_queries_geo", "US")  # related_queries pulled for one geo only
-
-    pytrends = TrendReq(hl="en-US", tz=0, retries=2, backoff_factor=0.5)
-    series_out = []
-
-    for term, category in all_keywords(cfg):
-        print(f"[trends] {category:<20s} {term}", flush=True)
-        geo_series: dict[str, list[dict]] = {}
-        for geo in geos:
-            label = geo if geo else "WORLD"
-            geo_series[label] = fetch_series(pytrends, term, geo, timeframe)
-            time.sleep(1.5)
-
-        related = fetch_related(pytrends, term, primary_geo, timeframe)
-        time.sleep(2)
-
-        series_out.append({
-            "term": term,
-            "category": category,
-            "geo_series": geo_series,
-            "related": related,  # {"top": [...], "rising": [...]}
-        })
-
+def write_output(series_out: list[dict], timeframe: str, primary_geo: str) -> None:
+    """Always-callable writer so partial progress is preserved on early exit."""
     out = {
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "timeframe": timeframe,
@@ -126,7 +102,44 @@ def main() -> None:
     }
     target = DATA_DIR / "trends_raw.json"
     target.write_text(json.dumps(out, indent=2), encoding="utf-8")
-    print(f"\nWrote {target}  ({len(series_out)} terms)")
+
+
+def main() -> None:
+    cfg = load_config()
+    timeframe = cfg.get("timeframe", "today 12-m")
+    geos = cfg.get("geos", ["US"])
+    primary_geo = cfg.get("related_queries_geo", "US")
+
+    pytrends = TrendReq(hl="en-US", tz=0, retries=1, backoff_factor=0.3)
+    series_out: list[dict] = []
+
+    # Write an empty file up front so analyze.py never fails on missing file
+    # if this script gets killed by a step-level timeout.
+    write_output(series_out, timeframe, primary_geo)
+
+    for i, (term, category) in enumerate(all_keywords(cfg)):
+        print(f"[trends {i+1}] {category:<20s} {term}", flush=True)
+        geo_series: dict[str, list[dict]] = {}
+        for geo in geos:
+            label = geo if geo else "WORLD"
+            geo_series[label] = fetch_series(pytrends, term, geo, timeframe)
+            time.sleep(POLITE_DELAY)
+
+        related = fetch_related(pytrends, term, primary_geo, timeframe)
+        time.sleep(POLITE_DELAY)
+
+        series_out.append({
+            "term": term,
+            "category": category,
+            "geo_series": geo_series,
+            "related": related,
+        })
+        # Flush partial progress every 5 terms so a timeout still leaves usable data
+        if (i + 1) % 5 == 0:
+            write_output(series_out, timeframe, primary_geo)
+
+    write_output(series_out, timeframe, primary_geo)
+    print(f"\nWrote data/trends_raw.json  ({len(series_out)} terms)")
 
 
 if __name__ == "__main__":

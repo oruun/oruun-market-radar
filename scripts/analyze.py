@@ -200,8 +200,11 @@ def main() -> None:
     brand_set = set(brands)
 
     trends = safe_load(DATA_DIR / "trends_raw.json")
-    if not trends:
-        raise SystemExit("missing data/trends_raw.json — run fetch_trends.py first")
+    if not trends or not trends.get("series"):
+        # Soft-fail: emit a minimal scaffold so the rest of the pipeline can run
+        # even if Trends was rate-limited or timed out in this job.
+        print("WARN: trends_raw.json missing or empty — continuing with other sources", flush=True)
+        trends = {"fetched_at": None, "timeframe": "today 12-m", "series": []}
     wiki = safe_load(DATA_DIR / "wikipedia_raw.json") or {"brands": []}
     gdelt = safe_load(DATA_DIR / "gdelt_raw.json") or {"rows": []}
     hn = safe_load(DATA_DIR / "hackernews_raw.json") or {"rows": []}

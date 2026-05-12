@@ -4,12 +4,15 @@
 
 # Geographies to query Google Trends in. Use ISO codes or "" for worldwide.
 # pytrends will pull a separate series per geo and average them on the dashboard.
+#
+# IMPORTANT: pytrends is rate-limited per source IP, and GitHub Actions runners
+# hit those limits hard. Keep this list SHORT (1-2 geos) to stay under the
+# 30-min job timeout. To track multiple markets, add them one at a time after
+# confirming the workflow finishes cleanly with one geo.
 geos:
   - US
-  - GB
-  - DE
-  - FR
-  - ""   # worldwide
+  # - GB        # uncomment one at a time once US works reliably
+  # - ""        # worldwide
 
 # Time window for trend pulls. "today 12-m" = rolling last 12 months.
 # Other useful values: "today 5-y", "today 3-m", "now 7-d"

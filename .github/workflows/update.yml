@@ -16,7 +16,7 @@ permissions:
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45   # bumped from 30 — Trends + Wikipedia + GDELT need headroom
 
     steps:
       - name: Checkout
@@ -33,37 +33,54 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # ── Free, no-auth data sources (always run) ──
+      # Google Trends is the most rate-limited source. Per-step timeout caps
+      # its damage so the remaining 4 sources + analyze + commit always run.
       - name: Fetch Google Trends + related queries
+        timeout-minutes: 18
         run: python scripts/fetch_trends.py
         continue-on-error: true
 
+      # Belt-and-suspenders: if Trends step was killed mid-write, seed an empty
+      # file so downstream analyze doesn't choke.
+      - name: Ensure trends file exists
+        if: always()
+        run: |
+          mkdir -p data
+          if [ ! -s data/trends_raw.json ]; then
+            echo '{"fetched_at": null, "timeframe": "today 12-m", "primary_geo": "US", "series": []}' > data/trends_raw.json
+            echo "Wrote empty trends_raw.json scaffold."
+          fi
+
       - name: Fetch Wikipedia pageviews
+        timeout-minutes: 6
         run: python scripts/fetch_wikipedia.py
         continue-on-error: true
 
       - name: Fetch GDELT global news mentions
+        timeout-minutes: 8
         run: python scripts/fetch_gdelt.py
         continue-on-error: true
 
       - name: Fetch Hacker News chatter
+        timeout-minutes: 4
         run: python scripts/fetch_hackernews.py
         continue-on-error: true
 
       - name: Fetch Google autocomplete suggestions
+        timeout-minutes: 4
         run: python scripts/fetch_autocomplete.py
         continue-on-error: true
 
-      # ── Reddit (optional, runs if creds set) ──
       - name: Fetch Reddit (optional)
+        timeout-minutes: 8
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
         run: python scripts/fetch_reddit.py
         continue-on-error: true
 
-      # ── Aggregate + classify ──
       - name: Analyze
+        timeout-minutes: 5
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/analyze.py
