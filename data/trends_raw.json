@@ -1,0 +1,392 @@
+{
+  "fetched_at": "2026-05-12T06:22:46.981151+00:00",
+  "timeframe": "today 12-m",
+  "primary_geo": "US",
+  "series": [
+    {
+      "term": "lightweight running shoes",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "trail running shoes",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "minimalist running shoes",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "speed training shoes",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "long distance running shoes",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "zero drop shoes",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "barefoot running",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "vertical running",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "ultra running gear",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "daily trainer",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "nike pegasus",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "nike vaporfly",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "on cloudmonster",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "on cloudsurfer",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "hoka mach",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "hoka clifton",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "salomon speedcross",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "asics novablast",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "brooks ghost",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "new balance rebel",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "merino wool running",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "carbon plate shoes",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "breathable running shorts",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "quick dry shirt",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "seamless running top",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "recycled polyester activewear",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "bamboo activewear",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "anti chafe shorts",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "thermal base layer",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "ventilated running cap",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "city run outfit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "marathon training kit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "half marathon prep",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "gym outfit men",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "women's running shorts",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    }
+  ]
+}

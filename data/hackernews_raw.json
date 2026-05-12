@@ -1,0 +1,575 @@
+{
+  "fetched_at": "2026-05-12T06:23:48.978028+00:00",
+  "rows": [
+    {
+      "brand": "oruun",
+      "query": "oruun",
+      "recent_12m_count": 16,
+      "prior_12m_count": 31,
+      "yoy_pct": -48.4,
+      "top_stories": [
+        {
+          "title": "Write less code, be more responsible",
+          "url": "https://blog.orhun.dev/code-responsibly/",
+          "points": 169,
+          "num_comments": 126,
+          "created_at": "2026-04-11T09:20:45Z"
+        },
+        {
+          "title": "Why stdout is faster than stderr? (2024)",
+          "url": "https://blog.orhun.dev/stdout-vs-stderr/",
+          "points": 7,
+          "num_comments": 0,
+          "created_at": "2026-04-03T17:00:59Z"
+        },
+        {
+          "title": "Building a guitar trainer with embedded Rust",
+          "url": "https://blog.orhun.dev/introducing-tuitar/",
+          "points": 5,
+          "num_comments": 0,
+          "created_at": "2026-03-28T09:17:31Z"
+        },
+        {
+          "title": "Building a guitar trainer with embedded Rust",
+          "url": "https://blog.orhun.dev/introducing-tuitar/",
+          "points": 4,
+          "num_comments": 0,
+          "created_at": "2026-03-29T15:58:34Z"
+        },
+        {
+          "title": "Ratatui.rs Running on Amazon Kindle",
+          "url": "https://bsky.app/profile/orhun.dev/post/3m3evyg2apc2w",
+          "points": 4,
+          "num_comments": 0,
+          "created_at": "2025-10-19T19:48:41Z"
+        }
+      ]
+    },
+    {
+      "brand": "nike",
+      "query": "\"nike\" running",
+      "recent_12m_count": 3,
+      "prior_12m_count": 3,
+      "yoy_pct": 0.0,
+      "top_stories": [
+        {
+          "title": "Welcome to the 'next big thing' for super shoes and marathon running",
+          "url": "https://www.nytimes.com/athletic/6562945/2025/10/31/marathon-running-super-sneaker-nike-puma/",
+          "points": 1,
+          "num_comments": 1,
+          "created_at": "2025-12-29T13:56:55Z"
+        },
+        {
+          "title": "Project Amplify: Powered footwear for running and walking",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-project-amplify-official-images",
+          "points": 125,
+          "num_comments": 121,
+          "created_at": "2025-10-25T20:35:48Z"
+        },
+        {
+          "title": "Nike Unveils Project Amplify, the First Powered-Footwear System",
+          "url": "https://about.nike.com/en-GB/newsroom/releases/nike-unveils-project-amplify-the-worlds-first-powered-footwear-system-for-running-and-walking",
+          "points": 3,
+          "num_comments": 1,
+          "created_at": "2025-10-25T04:37:56Z"
+        }
+      ]
+    },
+    {
+      "brand": "on",
+      "query": "\"on\" running",
+      "recent_12m_count": 2982,
+      "prior_12m_count": 1212,
+      "yoy_pct": 146.0,
+      "top_stories": [
+        {
+          "title": "Rust running on every GPU",
+          "url": "https://rust-gpu.github.io/blog/2025/07/25/rust-on-every-gpu/",
+          "points": 605,
+          "num_comments": 205,
+          "created_at": "2025-07-26T10:08:09Z"
+        },
+        {
+          "title": "Show HN: Witr \u2013 Explain why a process is running on your Linux system",
+          "url": "https://github.com/pranshuparmar/witr",
+          "points": 526,
+          "num_comments": 105,
+          "created_at": "2025-12-26T15:20:36Z"
+        },
+        {
+          "title": "This blog is running on a recycled Google Pixel 5 (2024)",
+          "url": "https://blog.ctms.me/posts/2024-08-29-running-this-blog-on-a-pixel-5/",
+          "points": 366,
+          "num_comments": 167,
+          "created_at": "2025-09-02T22:58:23Z"
+        },
+        {
+          "title": "zclaw: personal AI assistant in under 888 KB, running on an ESP32",
+          "url": "https://github.com/tnm/zclaw",
+          "points": 284,
+          "num_comments": 148,
+          "created_at": "2026-02-21T12:37:52Z"
+        },
+        {
+          "title": "Show HN: Sonar \u2013 A tiny CLI to see and kill whatever's running on localhost",
+          "url": "https://github.com/RasKrebs/sonar",
+          "points": 204,
+          "num_comments": 77,
+          "created_at": "2026-03-20T09:59:56Z"
+        }
+      ]
+    },
+    {
+      "brand": "hoka",
+      "query": "\"hoka\" running",
+      "recent_12m_count": 0,
+      "prior_12m_count": 0,
+      "yoy_pct": 0.0,
+      "top_stories": []
+    },
+    {
+      "brand": "salomon",
+      "query": "salomon",
+      "recent_12m_count": 104,
+      "prior_12m_count": 88,
+      "yoy_pct": 18.2,
+      "top_stories": [
+        {
+          "title": "Bitcoin: The HEIST OF THE CENTURY \u2013 Is it a credible scenario?",
+          "url": "https://news.ycombinator.com/item?id=44926596",
+          "points": 3,
+          "num_comments": 2,
+          "created_at": "2025-08-16T20:19:28Z"
+        },
+        {
+          "title": "Lab-grown salmon hits the menu",
+          "url": "https://www.smithsonianmag.com/smart-news/lab-grown-salmon-hits-the-menu-at-an-oregon-restaurant-as-the-fda-greenlights-the-cell-cultured-product-180986769/",
+          "points": 171,
+          "num_comments": 328,
+          "created_at": "2025-08-18T22:29:14Z"
+        },
+        {
+          "title": "Salmon exposed to cocaine and its main byproduct roam more widely",
+          "url": "https://www.science.org/content/article/cocaine-pollution-gives-salmon-wanderlust",
+          "points": 147,
+          "num_comments": 92,
+          "created_at": "2026-04-21T05:27:35Z"
+        },
+        {
+          "title": "As Alaska's salmon plummet, scientists home in on the killer",
+          "url": "https://www.science.org/content/article/alaska-s-salmon-plummet-scientists-home-killer",
+          "points": 77,
+          "num_comments": 107,
+          "created_at": "2025-08-19T15:25:42Z"
+        },
+        {
+          "title": "Salmon Recipe",
+          "url": "https://waveinscriber.com/posts/002-salmon-recipe/",
+          "points": 38,
+          "num_comments": 3,
+          "created_at": "2025-12-24T23:51:03Z"
+        }
+      ]
+    },
+    {
+      "brand": "asics",
+      "query": "asics",
+      "recent_12m_count": 335,
+      "prior_12m_count": 353,
+      "yoy_pct": -5.1,
+      "top_stories": [
+        {
+          "title": "Solving the compute crisis with physics-based ASICs",
+          "url": "https://arxiv.org/abs/2507.10463",
+          "points": 5,
+          "num_comments": 2,
+          "created_at": "2025-08-06T23:29:40Z"
+        },
+        {
+          "title": "Meta reveals four Broadcom-built ASICs for AI inference",
+          "url": "https://www.theregister.com/2026/03/12/meta_custom_chips/",
+          "points": 5,
+          "num_comments": 0,
+          "created_at": "2026-03-12T12:42:08Z"
+        },
+        {
+          "title": "Solving the compute crisis with physics-based ASICs",
+          "url": "https://arxiviq.substack.com/p/solving-the-compute-crisis-with-physics",
+          "points": 5,
+          "num_comments": 0,
+          "created_at": "2025-08-31T16:35:22Z"
+        },
+        {
+          "title": "ASICs' Kobe Headquarters and the Heart of Innovation",
+          "url": "https://sabukaru.online/articles/sound-mind-in-a-sound-body-inside-asics-kobe-headquarters-and-the-heart-of-innovation",
+          "points": 1,
+          "num_comments": 1,
+          "created_at": "2026-01-21T20:46:53Z"
+        },
+        {
+          "title": "Building Custom ASICs \u2013 Podcast",
+          "url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+          "points": 1,
+          "num_comments": 0,
+          "created_at": "2026-04-09T16:11:10Z"
+        }
+      ]
+    },
+    {
+      "brand": "brooks",
+      "query": "brooks",
+      "recent_12m_count": 1767,
+      "prior_12m_count": 1732,
+      "yoy_pct": 2.0,
+      "top_stories": [
+        {
+          "title": "Disturbing Rumor \u2013 PBS NewsHour (Brooks / Capehart)",
+          "url": "https://news.ycombinator.com/item?id=44280901",
+          "points": 9,
+          "num_comments": 4,
+          "created_at": "2025-06-15T06:30:50Z"
+        },
+        {
+          "title": "Mel Brooks: 'Hitler was bad to every Jew in the world, but he was good to me'",
+          "url": "https://www.telegraph.co.uk/films/2025/08/22/mel-brooks-interview-hitler/",
+          "points": 9,
+          "num_comments": 1,
+          "created_at": "2025-08-22T12:57:50Z"
+        },
+        {
+          "title": "Metcalfe's Law Against Brooks' Law",
+          "url": "https://lemire.me/blog/2025/06/15/metcalfes-law-against-brooks-law/",
+          "points": 6,
+          "num_comments": 0,
+          "created_at": "2025-06-15T14:52:34Z"
+        },
+        {
+          "title": "Ray Brooks, British actor and voice of Mr Benn, dies aged 86",
+          "url": "https://www.theguardian.com/tv-and-radio/2025/aug/11/ray-brooks-british-actor-and-voice-of-mr-benn-dies-aged-86",
+          "points": 3,
+          "num_comments": 1,
+          "created_at": "2025-08-11T01:05:32Z"
+        },
+        {
+          "title": "Combatting the person who trademarked the name of silent actress Louise Brooks",
+          "url": "https://louisebrookssociety.blogspot.com/2026/04/trademark-on-film-icon-louise-brooks.html",
+          "points": 3,
+          "num_comments": 0,
+          "created_at": "2026-04-24T01:32:46Z"
+        }
+      ]
+    },
+    {
+      "brand": "new balance",
+      "query": "new balance",
+      "recent_12m_count": 140,
+      "prior_12m_count": 96,
+      "yoy_pct": 45.8,
+      "top_stories": [
+        {
+          "title": "Boston's New Balance shoes now get 'made in Tamil Nadu' tag",
+          "url": "https://www.dtnext.in/news/business/bostons-new-balance-shoes-now-get-made-in-tamil-nadu-tag-844421",
+          "points": 4,
+          "num_comments": 0,
+          "created_at": "2025-08-28T08:07:30Z"
+        },
+        {
+          "title": "New Balance's Marketing Masterclass [video]",
+          "url": "https://www.youtube.com/watch?v=UcLZNDRCxiI",
+          "points": 2,
+          "num_comments": 0,
+          "created_at": "2025-09-26T21:20:20Z"
+        },
+        {
+          "title": "Case Study: Hydration Latency in Enterprise E-Commerce (Nike vs. New Balance)",
+          "url": "https://websiteaiscore.com/blog/nike-vs-new-balance-technical-audit",
+          "points": 1,
+          "num_comments": 1,
+          "created_at": "2026-01-17T11:35:06Z"
+        },
+        {
+          "title": "Unlocking the Four Burner Theory with AI: A New Balance",
+          "url": "https://itsmeduncan.com/2026/02/18/can-ai-solve-the-four-burner-problem/",
+          "points": 1,
+          "num_comments": 0,
+          "created_at": "2026-02-19T16:10:52Z"
+        },
+        {
+          "title": "Show HN: AgentOne \u2013 AI Dev Assistant for Enterprise Code Gen",
+          "url": "https://www.iterate.ai/agentone",
+          "points": 3,
+          "num_comments": 0,
+          "created_at": "2025-06-26T14:43:29Z"
+        }
+      ]
+    },
+    {
+      "brand": "saucony",
+      "query": "saucony",
+      "recent_12m_count": 0,
+      "prior_12m_count": 4,
+      "yoy_pct": -100.0,
+      "top_stories": []
+    },
+    {
+      "brand": "adidas",
+      "query": "adidas",
+      "recent_12m_count": 10,
+      "prior_12m_count": 6,
+      "yoy_pct": 66.7,
+      "top_stories": [
+        {
+          "title": "Sawe becomes first athlete to run a sub-two-hour marathon in a competitive race",
+          "url": "https://www.bbc.com/sport/athletics/articles/crm1m7e0zwzo",
+          "points": 519,
+          "num_comments": 345,
+          "created_at": "2026-04-26T20:56:30Z"
+        },
+        {
+          "title": "Two Athletes Break Sub-2-HR Marathon in Adizero Adios Pro Evo 3",
+          "url": "https://news.adidas.com/running/two-adidas-athletes-sabastian-sawe-and-yomif-kejelcha-break-the-sub-2-hour-marathon-barrier-in-the-r/s/d4be4eac-a3b8-47d5-835f-9cbd685638ca",
+          "points": 75,
+          "num_comments": 1,
+          "created_at": "2026-04-26T21:04:39Z"
+        },
+        {
+          "title": "Running Shoes Have Evolved \u2013 From Ancient Greece to Record-Breaking Marathons",
+          "url": "https://www.nytimes.com/2026/05/01/sports/running-shoe-history-adidas-sneakers-london-marathon.html",
+          "points": 2,
+          "num_comments": 0,
+          "created_at": "2026-05-03T01:59:34Z"
+        },
+        {
+          "title": "Show HN: Agentsmd \u2013 Local preferences and templates for AGENTS.md",
+          "url": "https://github.com/adiasg/agentsmd",
+          "points": 4,
+          "num_comments": 0,
+          "created_at": "2025-09-29T20:30:46Z"
+        },
+        {
+          "title": "Show HN: Custom guitar tab sheets with Cursor",
+          "url": "https://github.com/adiasg/guitar-tabs",
+          "points": 3,
+          "num_comments": 0,
+          "created_at": "2025-10-04T02:50:08Z"
+        }
+      ]
+    },
+    {
+      "brand": "lululemon",
+      "query": "lululemon",
+      "recent_12m_count": 7,
+      "prior_12m_count": 5,
+      "yoy_pct": 40.0,
+      "top_stories": [
+        {
+          "title": "Lululemon \u2013 you're wearing the leggings wrong",
+          "url": "https://financialpost.com/pmn/business-pmn/lululemon-now-asks-leggings-buyers-to-wear-skin-toned-underwear",
+          "points": 3,
+          "num_comments": 1,
+          "created_at": "2026-01-22T20:34:42Z"
+        },
+        {
+          "title": "Is that a Lululemon Scuba hoodie or Costco dupe? No one has to know",
+          "url": "https://www.washingtonpost.com/style/fashion/2025/01/25/costco-dupe-lululemon-scuba-hoodie-danskin/",
+          "points": 2,
+          "num_comments": 0,
+          "created_at": "2025-07-03T02:57:22Z"
+        },
+        {
+          "title": "Building a Smart Morning Routine Dashboard (From a Jailbroken Lululemon Mirror)",
+          "url": "https://www.youtube.com/watch?v=y8dx7ZimArc",
+          "points": 1,
+          "num_comments": 1,
+          "created_at": "2025-05-16T02:50:31Z"
+        },
+        {
+          "title": "RestockAlerts \u2013 Realtime Restock Tracker For Lululemon, Aritzia and More",
+          "url": "https://restockalerts.com/",
+          "points": 1,
+          "num_comments": 0,
+          "created_at": "2026-01-22T05:33:14Z"
+        },
+        {
+          "title": "The Great Agent Scramble at KubeCon '25: How AI Is Rewiring Enterprise Software",
+          "url": "https://www.mydecisive.ai/blog/great_agent_scramble",
+          "points": 2,
+          "num_comments": 1,
+          "created_at": "2025-11-27T18:15:20Z"
+        }
+      ]
+    },
+    {
+      "brand": "arc'teryx",
+      "query": "arc'teryx",
+      "recent_12m_count": 0,
+      "prior_12m_count": 15,
+      "yoy_pct": -100.0,
+      "top_stories": []
+    },
+    {
+      "brand": "patagonia",
+      "query": "patagonia",
+      "recent_12m_count": 13,
+      "prior_12m_count": 18,
+      "yoy_pct": -27.8,
+      "top_stories": [
+        {
+          "title": "Penguin 'Toxicologists' Find PFAS Chemicals in Remote Patagonia",
+          "url": "https://www.ucdavis.edu/health/news/penguin-toxicologists-find-pfas-chemicals-remote-patagonia",
+          "points": 167,
+          "num_comments": 82,
+          "created_at": "2026-04-10T06:15:46Z"
+        },
+        {
+          "title": "Patagonian Welsh",
+          "url": "https://en.wikipedia.org/wiki/Patagonian_Welsh",
+          "points": 109,
+          "num_comments": 67,
+          "created_at": "2025-09-25T04:30:13Z"
+        },
+        {
+          "title": "Ancient Patagonian hunter-gatherers took care of their injured and disabled",
+          "url": "https://phys.org/news/2025-10-ancient-patagonian-hunter-disabled.html",
+          "points": 86,
+          "num_comments": 90,
+          "created_at": "2025-10-07T12:34:47Z"
+        },
+        {
+          "title": "Fears 'stable' Patagonia glacier in irreversible decline",
+          "url": "https://www.theguardian.com/environment/2025/jul/11/glacier-patagonia-perito-moreno-decline",
+          "points": 6,
+          "num_comments": 0,
+          "created_at": "2025-07-13T22:05:00Z"
+        },
+        {
+          "title": "133,000 hectares of Chilean Patagonia preserved after local fundraising",
+          "url": "https://www.theguardian.com/world/2025/dec/19/i-cant-think-of-a-place-more-pristine-133000-hectares-of-chilean-patagonia-preserved-after-local-fundraising",
+          "points": 4,
+          "num_comments": 1,
+          "created_at": "2025-12-19T18:05:04Z"
+        }
+      ]
+    },
+    {
+      "brand": "tracksmith",
+      "query": "tracksmith",
+      "recent_12m_count": 1,
+      "prior_12m_count": 0,
+      "yoy_pct": 0.0,
+      "top_stories": [
+        {
+          "title": "Barry Diller's Tracksuit",
+          "url": "https://www.newinternet.tech/p/barry-dillers-tracksuit",
+          "points": 2,
+          "num_comments": 0,
+          "created_at": "2025-10-30T13:36:22Z"
+        }
+      ]
+    },
+    {
+      "brand": "bandit",
+      "query": "bandit",
+      "recent_12m_count": 51,
+      "prior_12m_count": 40,
+      "yoy_pct": 27.5,
+      "top_stories": [
+        {
+          "title": "Introduction to Multi-Armed Bandits (2019)",
+          "url": "https://arxiv.org/abs/1904.07272",
+          "points": 143,
+          "num_comments": 33,
+          "created_at": "2025-09-30T21:08:28Z"
+        },
+        {
+          "title": "Your inbox is a bandit problem",
+          "url": "https://parentheticallyspeaking.org/articles/bandit-inbox/",
+          "points": 104,
+          "num_comments": 83,
+          "created_at": "2025-12-22T04:04:04Z"
+        },
+        {
+          "title": "Bandit: A 32bit baremetal computer that runs Color Forth [video]",
+          "url": "https://www.youtube.com/watch?v=HK0uAKkt0AE",
+          "points": 95,
+          "num_comments": 11,
+          "created_at": "2026-03-12T14:10:56Z"
+        },
+        {
+          "title": "Ask HN: How did Windsurf investors make out like bandits when employees got $0?",
+          "url": "https://news.ycombinator.com/item?id=44891507",
+          "points": 5,
+          "num_comments": 1,
+          "created_at": "2025-08-13T17:46:33Z"
+        },
+        {
+          "title": "Bandit a 32bit baremetal computer that runs color forth [video]",
+          "url": "https://www.youtube.com/watch?v=HK0uAKkt0AE",
+          "points": 4,
+          "num_comments": 0,
+          "created_at": "2026-02-27T00:42:57Z"
+        }
+      ]
+    },
+    {
+      "brand": "district vision",
+      "query": "district vision",
+      "recent_12m_count": 1,
+      "prior_12m_count": 0,
+      "yoy_pct": 0.0,
+      "top_stories": [
+        {
+          "title": "Show HN: Agent-desktop \u2013 Native desktop automation CLI for AI agents",
+          "url": "https://github.com/lahfir/agent-desktop",
+          "points": 99,
+          "num_comments": 43,
+          "created_at": "2026-05-02T02:18:24Z"
+        }
+      ]
+    },
+    {
+      "brand": "satisfy",
+      "query": "satisfy",
+      "recent_12m_count": 316,
+      "prior_12m_count": 232,
+      "yoy_pct": 36.2,
+      "top_stories": [
+        {
+          "title": "SATisfying Solutions to Difficult Problems",
+          "url": "https://vaibhavsagar.com/blog/2025/10/22/satisfying-solutions/",
+          "points": 112,
+          "num_comments": 57,
+          "created_at": "2025-10-22T16:02:39Z"
+        },
+        {
+          "title": "It's not a hack to satisfy known requirements",
+          "url": "https://charemza.name/blog/posts/agile/over-engineering/not-a-hack-to-meet-requirements/",
+          "points": 52,
+          "num_comments": 58,
+          "created_at": "2025-10-04T13:20:15Z"
+        },
+        {
+          "title": "Scientific jargon can be 'satisfying' \u2013 but misleading",
+          "url": "https://www.nature.com/articles/d41586-025-02251-0",
+          "points": 7,
+          "num_comments": 0,
+          "created_at": "2025-07-21T14:20:31Z"
+        },
+        {
+          "title": "David Gelernter recommends 'small good looking blonde' to satisfy Epstein",
+          "url": "https://www.rawstory.com/epstein-2675100469/",
+          "points": 5,
+          "num_comments": 0,
+          "created_at": "2026-02-06T14:34:29Z"
+        },
+        {
+          "title": "Couples who meet offline tend to have more satisfying relationships",
+          "url": "https://www.psypost.org/couples-who-meet-offline-tend-to-have-more-satisfying-relationships/",
+          "points": 5,
+          "num_comments": 0,
+          "created_at": "2025-08-20T18:12:31Z"
+        }
+      ]
+    }
+  ]
+}
