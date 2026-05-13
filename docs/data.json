@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-13T00:49:16.251258+00:00",
-  "trends_fetched_at": "2026-05-13T00:46:33.376108+00:00",
+  "generated_at": "2026-05-13T01:26:54.997392+00:00",
+  "trends_fetched_at": "2026-05-13T01:24:02.852115+00:00",
   "wiki_fetched_at": "2026-05-12T10:48:45.885638+00:00",
   "gdelt_fetched_at": "2026-05-12T10:56:08.653652+00:00",
   "hn_fetched_at": "2026-05-12T10:56:08.859627+00:00",
-  "autocomplete_fetched_at": "2026-05-13T00:29:03.536390+00:00",
+  "autocomplete_fetched_at": "2026-05-13T01:06:42.284041+00:00",
   "reddit_fetched_at": "2026-05-12T10:56:47.452986+00:00",
   "reddit_posts_analyzed": 0,
   "timeframe": "today 12-m",
@@ -100,15 +100,11 @@
       "category": "product_category",
       "suggestions": [
         {
-          "text": "trail running shoes women",
-          "intent": "generic"
-        },
-        {
           "text": "trail running shoes men",
           "intent": "generic"
         },
         {
-          "text": "trail running shoes waterproof",
+          "text": "trail running shoes women",
           "intent": "generic"
         },
         {
@@ -116,58 +112,66 @@
           "intent": "commercial"
         },
         {
-          "text": "trail running shoes for hiking",
-          "intent": "generic"
-        },
-        {
-          "text": "trail running shoes reddit",
-          "intent": "generic"
-        },
-        {
-          "text": "trail running shoes vs running shoes",
-          "intent": "commercial"
-        },
-        {
-          "text": "trail running shoes men sale",
-          "intent": "transactional"
-        },
-        {
-          "text": "trail running shoes wide",
-          "intent": "generic"
-        },
-        {
-          "text": "trail running shoes with ankle support",
-          "intent": "generic"
-        },
-        {
           "text": "trail running shoes near me",
           "intent": "transactional"
         },
         {
-          "text": "trail running shoes 2026",
-          "intent": "generic"
-        },
-        {
-          "text": "trail running shoes for backpacking",
-          "intent": "generic"
+          "text": "trail running shoes sale",
+          "intent": "transactional"
         },
         {
           "text": "trail running shoes with wide toe box",
           "intent": "generic"
         },
         {
-          "text": "trail running shoes review",
+          "text": "trail running shoes waterproof",
+          "intent": "generic"
+        },
+        {
+          "text": "trail running shoes for hiking",
+          "intent": "generic"
+        },
+        {
+          "text": "trail running shoes nike",
+          "intent": "branded"
+        },
+        {
+          "text": "trail running shoes vs running shoes",
           "intent": "commercial"
+        },
+        {
+          "text": "trail running shoes reddit",
+          "intent": "generic"
+        },
+        {
+          "text": "trail running shoes for golf",
+          "intent": "generic"
+        },
+        {
+          "text": "trail running shoes hoka",
+          "intent": "branded"
+        },
+        {
+          "text": "trail running shoes new balance",
+          "intent": "branded"
+        },
+        {
+          "text": "trail running shoes with ankle support",
+          "intent": "generic"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 10
+          "count": 8
+        },
+        {
+          "intent": "branded",
+          "count": 3
         },
         {
           "intent": "commercial",
-          "count": 3
+          "count": 2
         },
         {
           "intent": "transactional",
@@ -416,11 +420,11 @@
       "category": "product_category",
       "suggestions": [
         {
-          "text": "zero drop shoes with wide toe box",
+          "text": "zero drop shoes womens",
           "intent": "generic"
         },
         {
-          "text": "zero drop shoes womens",
+          "text": "zero drop shoes with cushion",
           "intent": "generic"
         },
         {
@@ -432,7 +436,7 @@
           "intent": "generic"
         },
         {
-          "text": "zero drop shoes with cushioning",
+          "text": "zero drop shoes wide toe box",
           "intent": "generic"
         },
         {
@@ -442,10 +446,6 @@
         {
           "text": "zero drop shoes near me",
           "intent": "transactional"
-        },
-        {
-          "text": "zero drop shoes weightlifting",
-          "intent": "generic"
         },
         {
           "text": "zero drop shoes plantar fasciitis",
@@ -473,6 +473,10 @@
         },
         {
           "text": "zero drop shoes altra",
+          "intent": "generic"
+        },
+        {
+          "text": "zero drop shoes for high arches",
           "intent": "generic"
         }
       ],
@@ -856,15 +860,7 @@
           "intent": "branded"
         },
         {
-          "text": "nike pegasus women",
-          "intent": "branded"
-        },
-        {
           "text": "nike pegasus trail 5 gore-tex",
-          "intent": "branded"
-        },
-        {
-          "text": "nike pegasus trail 4",
           "intent": "branded"
         },
         {
@@ -872,19 +868,27 @@
           "intent": "branded"
         },
         {
+          "text": "nike pegasus women",
+          "intent": "branded"
+        },
+        {
+          "text": "nike pegasus premium men",
+          "intent": "branded"
+        },
+        {
           "text": "nike pegasus 41 women",
           "intent": "branded"
         },
         {
-          "text": "nike pegasus trail 4 gore-tex",
+          "text": "nike pegasus wave",
           "intent": "branded"
         },
         {
-          "text": "nike pegasus 41 review",
+          "text": "nike pegasus trail 4",
           "intent": "branded"
         },
         {
-          "text": "nike pegasus 41 mens",
+          "text": "nike pegasus running shoes",
           "intent": "branded"
         }
       ],
@@ -908,11 +912,11 @@
           "intent": "branded"
         },
         {
-          "text": "nike vaporfly 2",
+          "text": "nike vaporfly next",
           "intent": "branded"
         },
         {
-          "text": "nike vaporfly next",
+          "text": "nike vaporfly 2",
           "intent": "branded"
         },
         {
@@ -920,11 +924,15 @@
           "intent": "branded"
         },
         {
+          "text": "nike vaporfly 5",
+          "intent": "branded"
+        },
+        {
           "text": "nike vaporfly vs alphafly",
           "intent": "branded"
         },
         {
-          "text": "nike vaporfly 5",
+          "text": "nike vaporfly 4 near me",
           "intent": "branded"
         },
         {
@@ -932,15 +940,7 @@
           "intent": "branded"
         },
         {
-          "text": "nike vaporfly next percent 2",
-          "intent": "branded"
-        },
-        {
           "text": "nike vaporfly 1",
-          "intent": "branded"
-        },
-        {
-          "text": "nike vaporfly 4 reddit",
           "intent": "branded"
         },
         {
@@ -957,6 +957,10 @@
         },
         {
           "text": "nike vaporfly running shoes",
+          "intent": "branded"
+        },
+        {
+          "text": "nike vaporfly 4 men",
           "intent": "branded"
         }
       ],
@@ -980,6 +984,10 @@
           "intent": "branded"
         },
         {
+          "text": "on cloudmonster women",
+          "intent": "branded"
+        },
+        {
           "text": "on cloudmonster 3 hyper",
           "intent": "branded"
         },
@@ -992,7 +1000,7 @@
           "intent": "branded"
         },
         {
-          "text": "on cloudmonster women",
+          "text": "on cloudmonster black",
           "intent": "branded"
         },
         {
@@ -1000,27 +1008,7 @@
           "intent": "branded"
         },
         {
-          "text": "on cloudmonster 1",
-          "intent": "branded"
-        },
-        {
-          "text": "on cloudmonster hyper paf",
-          "intent": "branded"
-        },
-        {
-          "text": "on cloudmonster sale",
-          "intent": "branded"
-        },
-        {
-          "text": "on cloudmonster black",
-          "intent": "branded"
-        },
-        {
           "text": "on cloudmonster men",
-          "intent": "branded"
-        },
-        {
-          "text": "on cloudmonster 3 hyper review",
           "intent": "branded"
         },
         {
@@ -1028,7 +1016,23 @@
           "intent": "branded"
         },
         {
-          "text": "on cloudmonster hyper 2",
+          "text": "on cloudmonster review",
+          "intent": "branded"
+        },
+        {
+          "text": "on cloudmonster 1",
+          "intent": "branded"
+        },
+        {
+          "text": "on cloudmonster shoes",
+          "intent": "branded"
+        },
+        {
+          "text": "on cloudmonster 2 review",
+          "intent": "branded"
+        },
+        {
+          "text": "on cloudmonster 1 vs 2",
           "intent": "branded"
         }
       ],
@@ -1044,19 +1048,15 @@
       "category": "competitor_keyword",
       "suggestions": [
         {
-          "text": "on cloudsurfer 2",
-          "intent": "branded"
-        },
-        {
           "text": "on cloudsurfer max",
           "intent": "branded"
         },
         {
-          "text": "on cloudsurfer next",
+          "text": "on cloudsurfer 2",
           "intent": "branded"
         },
         {
-          "text": "on cloudsurfer trail 2",
+          "text": "on cloudsurfer next",
           "intent": "branded"
         },
         {
@@ -1072,6 +1072,10 @@
           "intent": "branded"
         },
         {
+          "text": "on cloudsurfer trail 2",
+          "intent": "branded"
+        },
+        {
           "text": "on cloudsurfer women",
           "intent": "branded"
         },
@@ -1081,10 +1085,6 @@
         },
         {
           "text": "on cloudsurfer 2 review",
-          "intent": "branded"
-        },
-        {
-          "text": "on cloudsurfer vs cloudmonster",
           "intent": "branded"
         },
         {
@@ -1101,6 +1101,10 @@
         },
         {
           "text": "on cloudsurfer men",
+          "intent": "branded"
+        },
+        {
+          "text": "on cloudsurfer next review",
           "intent": "branded"
         }
       ],
@@ -1124,7 +1128,7 @@
           "intent": "branded"
         },
         {
-          "text": "hoka mach 6 women",
+          "text": "hoka mach x",
           "intent": "branded"
         },
         {
@@ -1132,7 +1136,11 @@
           "intent": "branded"
         },
         {
-          "text": "hoka mach x2",
+          "text": "hoka mach x 2",
+          "intent": "branded"
+        },
+        {
+          "text": "hoka mach 6 women's",
           "intent": "branded"
         },
         {
@@ -1140,15 +1148,7 @@
           "intent": "branded"
         },
         {
-          "text": "hoka mach x",
-          "intent": "branded"
-        },
-        {
           "text": "hoka mach 7 review",
-          "intent": "branded"
-        },
-        {
-          "text": "hoka mach 6 men",
           "intent": "branded"
         },
         {
@@ -1156,7 +1156,19 @@
           "intent": "branded"
         },
         {
+          "text": "hoka mach 6 mens",
+          "intent": "branded"
+        },
+        {
+          "text": "hoka mach 7 mens",
+          "intent": "branded"
+        },
+        {
           "text": "hoka mach 3",
+          "intent": "branded"
+        },
+        {
+          "text": "hoka mach 6 vs mach 7",
           "intent": "branded"
         },
         {
@@ -1164,15 +1176,7 @@
           "intent": "branded"
         },
         {
-          "text": "hoka mach 7 women",
-          "intent": "branded"
-        },
-        {
-          "text": "hoka mach remastered",
-          "intent": "branded"
-        },
-        {
-          "text": "hoka mach 6 wide",
+          "text": "hoka mach 6 sale",
           "intent": "branded"
         }
       ],
@@ -1212,7 +1216,7 @@
           "intent": "branded"
         },
         {
-          "text": "hoka clifton 9 gtx",
+          "text": "hoka clifton 8",
           "intent": "branded"
         },
         {
@@ -1220,15 +1224,7 @@
           "intent": "branded"
         },
         {
-          "text": "hoka clifton 8",
-          "intent": "branded"
-        },
-        {
-          "text": "hoka clifton 10 vs bondi 9",
-          "intent": "branded"
-        },
-        {
-          "text": "hoka clifton 11",
+          "text": "hoka clifton 9 gtx",
           "intent": "branded"
         },
         {
@@ -1240,11 +1236,19 @@
           "intent": "branded"
         },
         {
-          "text": "hoka clifton 10 kids",
+          "text": "hoka clifton 9 vs 10",
           "intent": "branded"
         },
         {
-          "text": "hoka clifton l",
+          "text": "hoka clifton 10 vs bondi 9",
+          "intent": "branded"
+        },
+        {
+          "text": "hoka clifton 11",
+          "intent": "branded"
+        },
+        {
+          "text": "hoka clifton 10 sale",
           "intent": "branded"
         }
       ],
@@ -1276,11 +1280,11 @@
           "intent": "branded"
         },
         {
-          "text": "salomon speedcross 6 women",
+          "text": "salomon speedcross 4",
           "intent": "branded"
         },
         {
-          "text": "salomon speedcross women",
+          "text": "salomon speedcross 6 women",
           "intent": "branded"
         },
         {
@@ -1288,27 +1292,11 @@
           "intent": "branded"
         },
         {
+          "text": "salomon speedcross women",
+          "intent": "branded"
+        },
+        {
           "text": "salomon speedcross 6 wide",
-          "intent": "branded"
-        },
-        {
-          "text": "salomon speedcross 6 waterproof",
-          "intent": "branded"
-        },
-        {
-          "text": "salomon speedcross 4",
-          "intent": "branded"
-        },
-        {
-          "text": "salomon speedcross pink",
-          "intent": "branded"
-        },
-        {
-          "text": "salomon speedcross 3 satin",
-          "intent": "branded"
-        },
-        {
-          "text": "salomon speedcross 6 costco",
           "intent": "branded"
         },
         {
@@ -1317,6 +1305,22 @@
         },
         {
           "text": "salomon speedcross 6 gore-tex",
+          "intent": "branded"
+        },
+        {
+          "text": "salomon speedcross 6 forces",
+          "intent": "branded"
+        },
+        {
+          "text": "salomon speedcross 5 gtx",
+          "intent": "branded"
+        },
+        {
+          "text": "salomon speedcross peak",
+          "intent": "branded"
+        },
+        {
+          "text": "salomon speedcross 3 gtx",
           "intent": "branded"
         }
       ],
@@ -1348,10 +1352,6 @@
           "intent": "branded"
         },
         {
-          "text": "asics novablast 3",
-          "intent": "branded"
-        },
-        {
           "text": "asics novablast 5 review",
           "intent": "branded"
         },
@@ -1360,11 +1360,7 @@
           "intent": "branded"
         },
         {
-          "text": "asics novablast 5 tokyo",
-          "intent": "branded"
-        },
-        {
-          "text": "asics novablast 5 wide",
+          "text": "asics novablast 3",
           "intent": "branded"
         },
         {
@@ -1372,11 +1368,7 @@
           "intent": "branded"
         },
         {
-          "text": "asics novablast 5 vs superblast 2",
-          "intent": "branded"
-        },
-        {
-          "text": "asics novablast 5 reddit",
+          "text": "asics novablast women",
           "intent": "branded"
         },
         {
@@ -1384,11 +1376,23 @@
           "intent": "branded"
         },
         {
-          "text": "asics novablast wide",
+          "text": "asics novablast 4 womens",
           "intent": "branded"
         },
         {
-          "text": "asics novablast women",
+          "text": "asics novablast 4 sale",
+          "intent": "branded"
+        },
+        {
+          "text": "asics novablast 5 sale",
+          "intent": "branded"
+        },
+        {
+          "text": "asics novablast 2",
+          "intent": "branded"
+        },
+        {
+          "text": "asics novablast 5 near me",
           "intent": "branded"
         }
       ],
@@ -1432,6 +1436,10 @@
           "intent": "branded"
         },
         {
+          "text": "brooks ghost women",
+          "intent": "branded"
+        },
+        {
           "text": "brooks ghost trail",
           "intent": "branded"
         },
@@ -1440,19 +1448,15 @@
           "intent": "branded"
         },
         {
-          "text": "brooks ghost women",
-          "intent": "branded"
-        },
-        {
           "text": "brooks ghost 16 women",
           "intent": "branded"
         },
         {
-          "text": "brooks ghost 18 review",
+          "text": "brooks ghost shoes",
           "intent": "branded"
         },
         {
-          "text": "brooks ghost shoes",
+          "text": "brooks ghost 18 review",
           "intent": "branded"
         },
         {
@@ -1492,10 +1496,6 @@
           "intent": "branded"
         },
         {
-          "text": "new balance rebel v5 mens",
-          "intent": "branded"
-        },
-        {
           "text": "new balance rebel fuel cell",
           "intent": "branded"
         },
@@ -1504,19 +1504,11 @@
           "intent": "branded"
         },
         {
-          "text": "new balance rebel trail",
-          "intent": "branded"
-        },
-        {
           "text": "new balance rebel 5",
           "intent": "branded"
         },
         {
           "text": "new balance rebel v5 women",
-          "intent": "branded"
-        },
-        {
-          "text": "new balance rebel v5 reddit",
           "intent": "branded"
         },
         {
@@ -1532,14 +1524,30 @@
           "intent": "branded"
         },
         {
-          "text": "new balance rebel v5 amazon",
+          "text": "new balance rebel trail",
+          "intent": "branded"
+        },
+        {
+          "text": "new balance rebel v5 men",
+          "intent": "branded"
+        },
+        {
+          "text": "new balance rebel v2",
+          "intent": "branded"
+        },
+        {
+          "text": "new balance rebel v5 release date",
+          "intent": "branded"
+        },
+        {
+          "text": "new balance rebel v4 womens",
           "intent": "branded"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 15
+          "count": 16
         }
       ]
     },
@@ -1548,15 +1556,15 @@
       "category": "feature_material",
       "suggestions": [
         {
+          "text": "merino wool running socks",
+          "intent": "generic"
+        },
+        {
           "text": "merino wool running shirt",
           "intent": "generic"
         },
         {
           "text": "merino wool running shorts",
-          "intent": "generic"
-        },
-        {
-          "text": "merino wool running socks",
           "intent": "generic"
         },
         {
@@ -1628,10 +1636,6 @@
           "intent": "generic"
         },
         {
-          "text": "carbon plate shoes banned",
-          "intent": "generic"
-        },
-        {
           "text": "carbon plate shoes near me",
           "intent": "transactional"
         },
@@ -1681,6 +1685,10 @@
         },
         {
           "text": "carbon plate shoes for training",
+          "intent": "generic"
+        },
+        {
+          "text": "carbon plate shoes for 5k",
           "intent": "generic"
         }
       ],
@@ -2576,15 +2584,15 @@
       "category": "use_case_persona",
       "suggestions": [
         {
-          "text": "women's running shorts with phone pocket",
-          "intent": "generic"
-        },
-        {
           "text": "women's running shorts with liner",
           "intent": "generic"
         },
         {
           "text": "women's running shorts with pockets",
+          "intent": "generic"
+        },
+        {
+          "text": "women's running shorts with phone pocket",
           "intent": "generic"
         },
         {
