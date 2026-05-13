@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-05-13T08:14:28.852900+00:00",
+  "fetched_at": "2026-05-13T23:31:56.729357+00:00",
   "timeframe": "today 12-m",
   "primary_geo": "US",
   "series": [
     {
-      "term": "lightweight running shoes",
+      "term": "running shirt",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -15,7 +15,7 @@
       }
     },
     {
-      "term": "trail running shoes",
+      "term": "running t shirt",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -26,7 +26,7 @@
       }
     },
     {
-      "term": "minimalist running shoes",
+      "term": "running tee",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -37,7 +37,7 @@
       }
     },
     {
-      "term": "speed training shoes",
+      "term": "long sleeve running shirt",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -48,7 +48,7 @@
       }
     },
     {
-      "term": "long distance running shoes",
+      "term": "running tank top",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -59,7 +59,7 @@
       }
     },
     {
-      "term": "zero drop shoes",
+      "term": "running singlet",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -70,7 +70,7 @@
       }
     },
     {
-      "term": "barefoot running",
+      "term": "running shorts",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -81,7 +81,7 @@
       }
     },
     {
-      "term": "vertical running",
+      "term": "5 inch running shorts",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -92,7 +92,7 @@
       }
     },
     {
-      "term": "ultra running gear",
+      "term": "split running shorts",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -103,7 +103,7 @@
       }
     },
     {
-      "term": "daily trainer",
+      "term": "compression running shorts",
       "category": "product_category",
       "geo_series": {
         "US": []
@@ -114,7 +114,84 @@
       }
     },
     {
-      "term": "nike pegasus",
+      "term": "2 in 1 running shorts",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "running socks",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "no show running socks",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "merino running socks",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "running cap",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "running hat",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "trucker hat running",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "tracksmith van cortlandt singlet",
       "category": "competitor_keyword",
       "geo_series": {
         "US": []
@@ -125,7 +202,7 @@
       }
     },
     {
-      "term": "nike vaporfly",
+      "term": "tracksmith twilight tank",
       "category": "competitor_keyword",
       "geo_series": {
         "US": []
@@ -136,7 +213,7 @@
       }
     },
     {
-      "term": "on cloudmonster",
+      "term": "satisfy short distance shorts",
       "category": "competitor_keyword",
       "geo_series": {
         "US": []
@@ -147,7 +224,7 @@
       }
     },
     {
-      "term": "on cloudsurfer",
+      "term": "satisfy running tee",
       "category": "competitor_keyword",
       "geo_series": {
         "US": []
@@ -158,7 +235,7 @@
       }
     },
     {
-      "term": "hoka mach",
+      "term": "bandit running shirt",
       "category": "competitor_keyword",
       "geo_series": {
         "US": []
@@ -169,7 +246,7 @@
       }
     },
     {
-      "term": "hoka clifton",
+      "term": "nike dri fit running shirt",
       "category": "competitor_keyword",
       "geo_series": {
         "US": []
@@ -180,7 +257,7 @@
       }
     },
     {
-      "term": "salomon speedcross",
+      "term": "nike challenger shorts",
       "category": "competitor_keyword",
       "geo_series": {
         "US": []
@@ -191,85 +268,8 @@
       }
     },
     {
-      "term": "asics novablast",
+      "term": "lululemon fast and free shorts",
       "category": "competitor_keyword",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "brooks ghost",
-      "category": "competitor_keyword",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "new balance rebel",
-      "category": "competitor_keyword",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "merino wool running",
-      "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "carbon plate shoes",
-      "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "breathable running shorts",
-      "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "quick dry shirt",
-      "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "seamless running top",
-      "category": "feature_material",
       "geo_series": {
         "US": []
       },
