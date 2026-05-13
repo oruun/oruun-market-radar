@@ -1,75 +1,43 @@
-# ORUUN Market Radar — Keyword Configuration
+# ORUUN Market Radar - Keyword Configuration
 # Edit this file to change what the dashboard tracks. No code changes needed.
 # After editing, commit & push; the next Actions run will pick it up.
-
-# Geographies to query Google Trends in. Use ISO codes or "" for worldwide.
-# pytrends will pull a separate series per geo and average them on the dashboard.
 #
-# IMPORTANT: pytrends is rate-limited per source IP, and GitHub Actions runners
-# hit those limits hard. Keep this list SHORT (1-2 geos) to stay under the
-# 30-min job timeout. To track multiple markets, add them one at a time after
-# confirming the workflow finishes cleanly with one geo.
+# FOCUS: running APPAREL (tees, tanks, shorts, socks, caps).
+# Shoes are intentionally excluded - that category is dominated by Hoka/On/Nike
+# and not where ORUUN competes.
+
+# Geographies to query Google Trends in. ISO codes or "" for worldwide.
+# Keep this list SHORT (1-2 geos) to stay under the 30-min job timeout.
 geos:
   - US
-  # - GB        # uncomment one at a time once US works reliably
-  # - ""        # worldwide
+  # - GB
 
-# Time window for trend pulls. "today 12-m" = rolling last 12 months.
-# Other useful values: "today 5-y", "today 3-m", "now 7-d"
+# Time window for trend pulls.
 timeframe: "today 12-m"
 
-# Geo used for the "related queries" pull (one geo only, since
-# pytrends related_queries() doesn't merge geos cleanly).
+# Geo used for the "related queries" pull
 related_queries_geo: "US"
 
-# Map brand → exact Wikipedia article title. Override here if the auto-search
-# resolver picks the wrong page (e.g. "On" → "On (album)" instead of "On Inc.").
+# Wikipedia title overrides (still used if brand cross-source ever re-enabled).
 wikipedia_titles:
-  "on": "On (running brand)"   # quoted — yaml key 'on' is otherwise a boolean
+  "on": "On (running brand)"
   hoka: "Hoka One One"
-  nike: "Nike, Inc."
-  asics: "Asics"
-  brooks: "Brooks Sports"
-  adidas: "Adidas"
-  saucony: "Saucony"
-  salomon: "Salomon Group"
-  "new balance": "New Balance"
-  lululemon: "Lululemon Athletica"
-  "arc'teryx": "Arc'teryx"
-  patagonia: "Patagonia, Inc."
-  tracksmith: "Tracksmith"
-  satisfy: "Satisfy Running"
-  # ORUUN, Bandit, District Vision likely don't have Wiki pages yet — that's fine,
-  # the resolver will return null and the dashboard will skip them.
 
-# Reddit subreddits to mine for share-of-voice and pain points.
+reddit_post_limit: 75
+reddit_comment_limit: 25
 subreddits:
   - running
   - trailrunning
-  - RunningShoeGeeks
-  - Ultramarathon
   - Marathon_Training
-  - xxfitness          # women's fitness perspective
-  - flexibility        # mobility/recovery angle
-  - hiking             # adjacency for trail / lifestyle wear
-  - onexone            # On running brand sub — useful competitor signal
+  - xxfitness
 
-# Maximum Reddit posts pulled per subreddit per run (keeps Actions runs <5 min).
-reddit_post_limit: 75
-
-# How many comments per post to inspect for pain points.
-reddit_comment_limit: 25
-
-# Brand-aware competitor list. Used both as keyword tracking AND
-# for share-of-voice. ORUUN must be in this list — even if zero today,
-# the dashboard plots its rise over time.
-#
-# IMPORTANT: any single-word brand that YAML might parse as a boolean
-# (on / off / yes / no / true / false) MUST be quoted.
+# === BRAND LIST ===
+# Used by the buyer-intent classifier (to flag "branded" queries like
+# "satisfy running shirt"). NOT used for individual brand tracking anymore.
 brands:
   - oruun
   - nike
-  - "on"          # On Running  (quoted — yaml would otherwise read as True)
+  - "on"
   - hoka
   - salomon
   - asics
@@ -78,71 +46,101 @@ brands:
   - saucony
   - adidas
   - lululemon
-  - arc'teryx
-  - patagonia
   - tracksmith
-  - bandit         # NYC indie running brand — adjacent positioning to ORUUN
+  - bandit
   - district vision
   - satisfy
+  - janji
+  - ciele
+  - path projects
+  - soar
+  - patagonia
+  - smartwool
+  - darn tough        # premium running sock brand
+  - feetures          # running sock brand
+  - balega            # running sock brand
+  - stance            # running sock brand
+  - injinji           # toe sock brand
+  - goodr             # running sunglasses + caps
 
 # === KEYWORD TRACKING LISTS ===
-# Each item produces its own search-trend line.
-# Keep each list under ~20 items to respect Google Trends rate limits.
+# Focus categories: tees / tanks / shorts / socks / caps.
 
 categories:
 
-  product_category:           # 品类词
-    - lightweight running shoes
-    - trail running shoes
-    - minimalist running shoes
-    - speed training shoes
-    - long distance running shoes
-    - zero drop shoes
-    - barefoot running
-    - vertical running
-    - ultra running gear
-    - daily trainer
+  product_category:           # 品类词 - the core apparel types
+    - running shirt
+    - running t shirt
+    - running tee
+    - long sleeve running shirt
+    - running tank top
+    - running singlet
+    - running shorts
+    - 5 inch running shorts
+    - split running shorts
+    - compression running shorts
+    - 2 in 1 running shorts
+    - running socks
+    - no show running socks
+    - merino running socks
+    - running cap
+    - running hat
+    - trucker hat running
 
-  competitor_keyword:         # 竞品/品牌关键词 (specific products)
-    - nike pegasus
-    - nike vaporfly
-    - on cloudmonster
-    - on cloudsurfer
-    - hoka mach
-    - hoka clifton
-    - salomon speedcross
-    - asics novablast
-    - brooks ghost
-    - new balance rebel
+  competitor_keyword:         # 具体竞品商品 (apparel only - no shoes)
+    - tracksmith van cortlandt singlet
+    - tracksmith twilight tank
+    - satisfy short distance shorts
+    - satisfy running tee
+    - bandit running shirt
+    - nike dri fit running shirt
+    - nike challenger shorts
+    - lululemon fast and free shorts
+    - patagonia airshed pullover
+    - on running tee
+    - janji aft tights
+    - ciele alpcap
+    - goodr running cap
+    - darn tough running socks
+    - balega running socks
+    - feetures elite socks
 
-  feature_material:           # 功能/材质词
-    - merino wool running
-    - carbon plate shoes
-    - breathable running shorts
-    - quick dry shirt
+  feature_material:           # 功能/材质 - what runners search for in apparel
+    - merino wool running shirt
     - seamless running top
-    - recycled polyester activewear
-    - bamboo activewear
-    - anti chafe shorts
-    - thermal base layer
-    - ventilated running cap
+    - anti chafe running shorts
+    - moisture wicking shirt
+    - breathable running shorts
+    - quick dry running tee
+    - lightweight running singlet
+    - recycled polyester running
+    - bamboo running shirt
+    - mesh running shorts
+    - compression running socks
+    - toe running socks
+    - sun protection running shirt
+    - cooling running shirt
+    - sweat wicking cap
 
-  use_case_persona:           # 场景/人群词
+  use_case_persona:           # 场景/人群 - when/who wears this
     - city run outfit
-    - marathon training kit
-    - half marathon prep
-    - gym outfit men
-    - women's running shorts
-    - running commute
-    - early morning run gear
-    - hot weather running
-    - winter running clothes
+    - marathon kit
+    - hot weather running gear
+    - cold weather running gear
+    - summer running outfit
+    - winter running outfit
+    - rainy day running gear
+    - women running tank top
+    - men running shorts
+    - track workout outfit
+    - half marathon kit
+    - ultra running kit
+    - trail running shorts
+    - treadmill running outfit
     - race day kit
 
-# === ADVANCED TUNING ===
-# Weights used by analyze.py to compute the opportunity score.
-# opportunity = (volume_index * growth_factor) / (saturation_factor + epsilon)
+# === TUNING ===
 opportunity_weights:
-  volume_floor: 5         # ignore terms below this avg index (too noisy)
-  growth_window_weeks: 4  # WoW vs 4-week-prior window
-  saturation_epsilon: 1   # avoid divide-by-zero
+  volume_floor: 5
+  growth_window_weeks: 4
+  saturation_epsilon: 1

@@ -184,15 +184,12 @@ function pctCls(v) {
 // ---------- Buyer journey ----------
 function renderJourney() {
   const journey = state.data.buyer_journey || [];
+  const section = document.getElementById("journey-section");
   if (journey.length === 0) {
-    document.getElementById("journey-grid").innerHTML = `<div class="empty-state">
-      <b>No journey data this run.</b><br>
-      Buyer journey uses Google Trends related queries.
-      Will populate once a Trends run completes successfully (Trends is sometimes
-      rate-limited from GitHub Actions).
-    </div>`;
+    if (section) section.style.display = "none";
     return;
   }
+  if (section) section.style.display = "";
   document.getElementById("journey-grid").innerHTML = journey.map((j) => {
     const stages = ["transactional", "commercial", "informational", "branded", "generic"];
     const total = stages.reduce((s, k) => s + (j.intent_pct[k] || 0), 0) || 1;
@@ -223,18 +220,14 @@ function renderJourney() {
 function renderTable() {
   const tbody = document.querySelector("#kw-table tbody");
   let rows = (state.data.keywords || []).filter((r) => r.category !== "brand");
+  const section = document.getElementById("search-heat-section");
 
   if (rows.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">
-      <b>No keyword data this run.</b><br>
-      Google Trends is the source for this section and is rate-limited from GitHub Actions.
-      <br>Live autocomplete suggestions above are unaffected.
-    </td></tr>`;
-    document.getElementById("chart-title").textContent = "(no keyword data)";
+    if (section) section.style.display = "none";
     if (state.trendChart) { state.trendChart.destroy(); state.trendChart = null; }
-    document.getElementById("related-queries").innerHTML = "";
     return;
   }
+  if (section) section.style.display = "";
 
   if (state.filter.category !== "all") {
     rows = rows.filter((r) => r.category === state.filter.category);
@@ -327,13 +320,12 @@ function renderOpportunities() {
   }
   rows.sort((a, b) => b.opportunity_score - a.opportunity_score);
   rows = rows.slice(0, 12);
+  const oppSection = document.getElementById("opportunities-section");
   if (rows.length === 0) {
-    document.getElementById("opp-grid").innerHTML = `<div class="empty-state">
-      <b>No opportunity data this run.</b><br>
-      Opportunity scoring uses Google Trends search-volume data.
-    </div>`;
+    if (oppSection) oppSection.style.display = "none";
     return;
   }
+  if (oppSection) oppSection.style.display = "";
   document.getElementById("opp-grid").innerHTML = rows.map((r) => `
     <div class="opp-card">
       <div class="term">${escapeHtml(r.term)}</div>
