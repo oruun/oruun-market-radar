@@ -11,7 +11,7 @@
   <header class="topbar">
     <div class="brand">
       <span class="brand-mark">ORUUN</span>
-      <span class="brand-sub">MARKET RADAR</span>
+      <span class="brand-sub">SEARCH RADAR</span>
     </div>
     <div class="meta">
       <span id="generated-at">Loading…</span>
@@ -24,38 +24,23 @@
     <!-- KPI strip -->
     <section class="kpis" id="kpis"></section>
 
-    <!-- Cross-source validation: the headline insight -->
+    <!-- Live autocomplete — the centerpiece. Updates every run, no rate limits. -->
     <section class="card">
       <div class="card-head">
-        <h2>📊 Cross-source validation · is the brand growth real?</h2>
-        <p class="subtitle">YoY change across <b>4 independent free sources</b>.
-          Authentic = 3+ sources strongly up. Mature = flat. Saturated = declining.</p>
+        <h2>💡 Live autocomplete · what are runners typing right now?</h2>
+        <p class="subtitle">Real-time Google autocomplete suggestions, color-coded by buyer intent.
+          <span class="legend-inline">
+            <span style="color:#d6ff5c">● Transactional</span>
+            <span style="color:#6affb1">● Commercial</span>
+            <span style="color:#5cb8ff">● Informational</span>
+            <span style="color:#c19bff">● Branded</span>
+          </span>
+        </p>
       </div>
-      <div class="legend">
-        <span class="badge authentic">🚀 Authentic</span>
-        <span class="badge rising">📈 Rising</span>
-        <span class="badge mixed">🔀 Mixed</span>
-        <span class="badge mature">📊 Mature</span>
-        <span class="badge saturated">🐢 Saturated</span>
-      </div>
-      <div class="x-source-table-wrap">
-        <table id="cross-table">
-          <thead>
-            <tr>
-              <th>Brand</th>
-              <th class="num">Google YoY</th>
-              <th class="num">Wikipedia YoY</th>
-              <th class="num">News YoY</th>
-              <th class="num">Hacker News YoY</th>
-              <th>Verdict</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+      <div id="autocomplete-grid" class="autocomplete-grid"></div>
     </section>
 
-    <!-- Buyer journey: what stage are searchers at? -->
+    <!-- Buyer journey -->
     <section class="card">
       <div class="card-head">
         <h2>🛒 Buyer journey · what stage are searchers in?</h2>
@@ -67,7 +52,7 @@
       <div id="journey-grid" class="journey-grid"></div>
     </section>
 
-    <!-- Trends explorer (existing) -->
+    <!-- Search heat + trend explorer -->
     <section class="card">
       <div class="card-head">
         <h2>🔍 Search heat &amp; week-over-week trend</h2>
@@ -119,7 +104,7 @@
       </div>
     </section>
 
-    <!-- Blue-ocean opportunities (existing) -->
+    <!-- Blue ocean -->
     <section class="card">
       <div class="card-head">
         <h2>🌊 Blue-ocean opportunities</h2>
@@ -128,48 +113,8 @@
       <div id="opp-grid" class="opp-grid"></div>
     </section>
 
-    <!-- Live autocomplete intent map -->
-    <section class="card">
-      <div class="card-head">
-        <h2>💡 Live autocomplete · what are users typing right now?</h2>
-        <p class="subtitle">Real-time Google autocomplete suggestions, color-coded by buyer intent.</p>
-      </div>
-      <div id="autocomplete-grid" class="autocomplete-grid"></div>
-    </section>
-
-    <!-- Reddit-conditional sections -->
-    <section class="grid-2" id="reddit-only">
-      <div class="card">
-        <div class="card-head">
-          <h2>📢 Competitor share of voice (Reddit)</h2>
-          <p class="subtitle">Brand mentions across running subreddits.</p>
-        </div>
-        <canvas id="sov-chart" height="240"></canvas>
-      </div>
-      <div class="card">
-        <div class="card-head">
-          <h2>💬 Brand sentiment (Reddit)</h2>
-          <p class="subtitle">Avg sentiment of sentences mentioning each brand.</p>
-        </div>
-        <div id="sentiment-grid" class="sentiment-grid"></div>
-      </div>
-    </section>
-
-    <section class="card" id="pain-card">
-      <div class="card-head">
-        <h2>🩹 User pain points (Reddit)</h2>
-        <p class="subtitle">What runners actually complain about.</p>
-      </div>
-      <div id="pain-summary" class="pain-summary"></div>
-      <div id="pain-triggers" class="pain-triggers"></div>
-      <details class="pain-raw">
-        <summary>Raw quotes</summary>
-        <div id="pain-quotes"></div>
-      </details>
-    </section>
-
     <footer>
-      <p>Built for ORUUN · Data refreshes every Monday via GitHub Actions ·
+      <p>Built for ORUUN · Tracks consumer search terms only · Data refreshes weekly via GitHub Actions ·
         <a href="https://github.com/" id="repo-link" target="_blank" rel="noopener">view source</a>
       </p>
     </footer>

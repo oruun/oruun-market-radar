@@ -54,10 +54,12 @@ def fetch_suggestions(term: str, hl: str = "en", gl: str = "us") -> list[str]:
 
 def main() -> None:
     cfg = load_config()
-    # Track autocomplete for product_category, feature_material, use_case_persona
-    # (skip brand & competitor — those autocompletes are mostly product names).
+    # Track autocomplete for ALL four consumer-search categories.
+    # competitor_keyword now included — those autocompletes reveal what people
+    # search NEXT to specific competitor products (e.g. "hoka mach review" /
+    # "hoka mach alternative") which is invaluable purchase-intent signal.
     seeds: list[tuple[str, str]] = []
-    for cat in ("product_category", "feature_material", "use_case_persona"):
+    for cat in ("product_category", "competitor_keyword", "feature_material", "use_case_persona"):
         for term in cfg.get("categories", {}).get(cat, []):
             seeds.append((term, cat))
 

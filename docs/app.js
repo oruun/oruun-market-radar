@@ -1,22 +1,11 @@
-// ORUUN Market Radar — dashboard logic v0.2
-// Reads ./data.json, refreshed weekly by GitHub Actions.
+// ORUUN Market Radar — dashboard logic v0.3
+// Focus: CONSUMER SEARCH TERMS only. Brand tracking removed by design.
 
 const CATEGORY_LABEL = {
-  product_category: "Category",
+  product_category:   "Category",
   competitor_keyword: "Competitor product",
-  feature_material: "Feature/Material",
-  use_case_persona: "Use case/Persona",
-  brand: "Brand",
-};
-
-const VERDICT_META = {
-  Authentic:            { emoji: "🚀", cls: "authentic" },
-  Rising:               { emoji: "📈", cls: "rising" },
-  Mixed:                { emoji: "🔀", cls: "mixed" },
-  Mature:               { emoji: "📊", cls: "mature" },
-  Saturated:            { emoji: "🐢", cls: "saturated" },
-  "Insufficient data":  { emoji: "⚪", cls: "unknown" },
-  Unknown:              { emoji: "❓", cls: "unknown" },
+  feature_material:   "Feature/Material",
+  use_case_persona:   "Use case/Persona",
 };
 
 const INTENT_META = {
@@ -32,7 +21,6 @@ const state = {
   filter: { category: "all", sortBy: "opportunity_score", search: "" },
   selectedTerm: null,
   trendChart: null,
-  sovChart: null,
 };
 
 async function load() {
@@ -79,41 +67,36 @@ function render() {
   document.getElementById("generated-at").textContent =
     "Updated " + niceDate(state.data.generated_at);
   document.getElementById("data-sources").textContent =
-    (state.data.data_sources_active || []).join(" + ");
+    (state.data.data_sources_active || []).join(" + ") || "no data";
   renderKPIs();
-  renderCrossSource();
+  renderAutocomplete();      // Front and center — the most reliable section
   renderJourney();
   renderTable();
   renderOpportunities();
-  renderAutocomplete();
-  renderShareOfVoice();
-  renderSentiment();
-  renderPainPoints();
-  toggleRedditSections();
-}
-
-function toggleRedditSections() {
-  const hasReddit = (state.data.reddit_posts_analyzed || 0) > 0;
-  document.getElementById("reddit-only").style.display = hasReddit ? "" : "none";
-  document.getElementById("pain-card").style.display = hasReddit ? "" : "none";
 }
 
 // ---------- KPI strip ----------
 function renderKPIs() {
-  // Brand-category keywords are excluded from "consumer search" KPIs —
-  // brand health lives in the Cross-source validation card.
   const kws = (state.data.keywords || []).filter((k) => k.category !== "brand");
   const climbing = kws.filter((k) => k.wow_change_pct > 5).length;
   const declining = kws.filter((k) => k.wow_change_pct < -5).length;
   const topOpp = kws.slice().sort((a, b) => b.opportunity_score - a.opportunity_score)[0];
-  const cross = state.data.cross_source_validation || [];
-  const authentic = cross.filter((c) => c.verdict === "Authentic" || c.verdict === "Rising").length;
+
+  // Aggregate autocomplete suggestions
+  const acRows = state.data.autocomplete || [];
+  const totalSuggs = acRows.reduce((n, r) => n + (r.suggestions || []).length, 0);
+  const txnCount = acRows.reduce((n, r) =>
+    n + (r.suggestions || []).filter((s) => s.intent === "transactional").length, 0);
 
   document.getElementById("kpis").innerHTML = [
-    kpi("Search terms tracked", kws.length, "consumer queries (no brand names)"),
-    kpi("Trending up (WoW > 5%)", climbing, declining ? `↓ ${declining} declining` : "", climbing > declining ? "up" : "down"),
-    kpi("Top opportunity term", topOpp ? topOpp.term : "—", topOpp ? `score ${topOpp.opportunity_score}` : ""),
-    kpi("Authentic + Rising brands", authentic, `of ${cross.length} tracked`, "up"),
+    kpi("Search terms tracked", kws.length, "consumer queries"),
+    kpi("Trending up (WoW > 5%)", climbing,
+        declining ? `↓ ${declining} declining` : "",
+        climbing > declining ? "up" : "down"),
+    kpi("Top opportunity term", topOpp ? topOpp.term : "—",
+        topOpp ? `score ${topOpp.opportunity_score}` : ""),
+    kpi("Live autocomplete suggestions", totalSuggs,
+        `${txnCount} buy-intent`, "up"),
   ].join("");
 }
 function kpi(label, value, delta = "", deltaClass = "") {
@@ -124,24 +107,8 @@ function kpi(label, value, delta = "", deltaClass = "") {
   </div>`;
 }
 
-// ---------- Cross-source validation ----------
-function renderCrossSource() {
-  const tbody = document.querySelector("#cross-table tbody");
-  const rows = state.data.cross_source_validation || [];
-  tbody.innerHTML = rows.map((r) => {
-    const v = VERDICT_META[r.verdict] || VERDICT_META.Unknown;
-    return `<tr>
-      <td><b>${escapeHtml(r.brand)}</b></td>
-      <td class="num ${pctCls(r.trends_yoy_pct)}">${pct(r.trends_yoy_pct)}</td>
-      <td class="num ${pctCls(r.wiki_yoy_pct)}">${pct(r.wiki_yoy_pct)}</td>
-      <td class="num ${pctCls(r.gdelt_yoy_pct)}">${pct(r.gdelt_yoy_pct)}</td>
-      <td class="num ${pctCls(r.hn_yoy_pct)}">${pct(r.hn_yoy_pct)}</td>
-      <td><span class="badge ${v.cls}">${v.emoji} ${r.verdict}</span></td>
-    </tr>`;
-  }).join("");
-}
 function pct(v) {
-  if (v === null || v === undefined) return "—";   // missing data, not zero
+  if (v === null || v === undefined) return "—";
   return (v > 0 ? "+" : "") + v + "%";
 }
 function pctCls(v) {
@@ -155,8 +122,9 @@ function renderJourney() {
   if (journey.length === 0) {
     document.getElementById("journey-grid").innerHTML = `<div class="empty-state">
       <b>No journey data this run.</b><br>
-      Buyer journey is computed from Google Trends related queries.
-      Will populate once a Trends run completes successfully.
+      Buyer journey uses Google Trends related queries.
+      Will populate once a Trends run completes successfully (Trends is sometimes
+      rate-limited from GitHub Actions).
     </div>`;
     return;
   }
@@ -191,12 +159,11 @@ function renderTable() {
   const tbody = document.querySelector("#kw-table tbody");
   let rows = (state.data.keywords || []).filter((r) => r.category !== "brand");
 
-  // Empty state — most commonly because Google Trends was rate-limited this run.
   if (rows.length === 0) {
     tbody.innerHTML = `<tr><td colspan="6" class="empty-state">
       <b>No keyword data this run.</b><br>
       Google Trends is the source for this section and is rate-limited from GitHub Actions.
-      <br>Other sources (Wikipedia / GDELT / Hacker News / Autocomplete) are unaffected — see panels above.
+      <br>Live autocomplete suggestions above are unaffected.
     </td></tr>`;
     document.getElementById("chart-title").textContent = "(no keyword data)";
     if (state.trendChart) { state.trendChart.destroy(); state.trendChart = null; }
@@ -288,8 +255,6 @@ function renderRelatedFor(row) {
 }
 
 // ---------- Opportunities ----------
-// Excludes brand-category rows so the blue-ocean grid focuses on
-// consumer search terms (categories / features / use cases / specific products).
 function renderOpportunities() {
   let rows = (state.data.keywords || []).filter((r) => r.category !== "brand");
   if (state.filter.category !== "all") {
@@ -300,7 +265,7 @@ function renderOpportunities() {
   if (rows.length === 0) {
     document.getElementById("opp-grid").innerHTML = `<div class="empty-state">
       <b>No opportunity data this run.</b><br>
-      Opportunity scoring requires Google Trends search-volume data.
+      Opportunity scoring uses Google Trends search-volume data.
     </div>`;
     return;
   }
@@ -317,94 +282,33 @@ function renderOpportunities() {
   `).join("");
 }
 
-// ---------- Autocomplete intent map ----------
+// ---------- Autocomplete (the centerpiece) ----------
 function renderAutocomplete() {
   const rows = state.data.autocomplete || [];
+  if (rows.length === 0) {
+    document.getElementById("autocomplete-grid").innerHTML = `<div class="empty-state">
+      <b>No autocomplete data this run.</b><br>
+      Will populate on the next scheduled run.
+    </div>`;
+    return;
+  }
   document.getElementById("autocomplete-grid").innerHTML = rows.map((r) => {
     const suggs = (r.suggestions || []).map((s) => {
       const meta = INTENT_META[s.intent] || INTENT_META.generic;
       return `<span class="ac-tag" style="border-color:${meta.color}; color:${meta.color}" title="${meta.label}">${escapeHtml(s.text)}</span>`;
     }).join("");
+    const breakdown = (r.intent_breakdown || []).map((b) =>
+      `<span class="ac-stat" style="color:${(INTENT_META[b.intent] || INTENT_META.generic).color}">${(INTENT_META[b.intent] || INTENT_META.generic).short} ${b.count}</span>`
+    ).join("");
     return `<div class="ac-card">
       <div class="ac-head">
         <div class="term">${escapeHtml(r.term)}</div>
         <div class="cat-pill">${CATEGORY_LABEL[r.category] || r.category}</div>
       </div>
+      <div class="ac-breakdown">${breakdown}</div>
       <div class="ac-tags">${suggs || "<i>(no suggestions)</i>"}</div>
     </div>`;
   }).join("");
-}
-
-// ---------- Reddit sections ----------
-function renderShareOfVoice() {
-  const rows = (state.data.brand_share_of_voice || []).filter((r) => r.mentions > 0).slice(0, 12);
-  if (!rows.length) return;
-  const ctx = document.getElementById("sov-chart").getContext("2d");
-  if (state.sovChart) state.sovChart.destroy();
-  state.sovChart = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: rows.map((r) => r.brand),
-      datasets: [{
-        label: "Mentions",
-        data: rows.map((r) => r.mentions),
-        backgroundColor: rows.map((r) => r.brand === "oruun" ? "#d6ff5c" : "#3a4250"),
-      }],
-    },
-    options: {
-      responsive: true, indexAxis: "y",
-      plugins: {
-        legend: { display: false },
-        tooltip: { callbacks: { label: (c) => `${c.parsed.x} mentions  ·  ${rows[c.dataIndex].share_pct}%` } },
-      },
-      scales: {
-        x: { ticks: { color: "#8b93a3" }, grid: { color: "#1f242c" } },
-        y: { ticks: { color: "#e6e8ec" }, grid: { display: false } },
-      },
-    },
-  });
-}
-
-function renderSentiment() {
-  const sent = state.data.brand_sentiment || {};
-  const items = Object.entries(sent)
-    .map(([brand, s]) => ({ brand, ...s }))
-    .filter((s) => s.n >= 3)
-    .sort((a, b) => b.n - a.n).slice(0, 16);
-  if (!items.length) return;
-  document.getElementById("sentiment-grid").innerHTML = items.map((s) => {
-    const pctV = Math.max(-100, Math.min(100, s.avg * 100));
-    const w = Math.abs(pctV);
-    const left = pctV >= 0 ? "50%" : `calc(50% - ${w}%)`;
-    const cls = pctV >= 0 ? "" : "bad";
-    return `<div class="sent-card">
-      <div class="brand">${escapeHtml(s.brand)}</div>
-      <div class="meter ${cls}"><span style="left:${left}; width:${w}%"></span></div>
-      <div class="nums"><span>${s.n} sent.</span><span>${s.positive_pct}% pos · ${s.negative_pct}% neg</span></div>
-    </div>`;
-  }).join("");
-}
-
-function renderPainPoints() {
-  if (!state.data.pain_points || !state.data.pain_points.length) return;
-  const summary = state.data.pain_summary;
-  const grid = document.getElementById("pain-summary");
-  if (summary && summary.themes && summary.themes.length) {
-    grid.innerHTML = summary.themes.map((t) => `
-      <div class="pain-card">
-        <h4>${escapeHtml(t.headline || "")}</h4>
-        <p>${escapeHtml(t.description || "")}</p>
-        <div class="idea"><b>Product idea →</b> ${escapeHtml(t.product_idea || "")}</div>
-      </div>`).join("");
-  } else {
-    grid.innerHTML = `<div class="pain-card"><h4>AI summary unavailable</h4>
-      <p>Set ANTHROPIC_API_KEY secret to enable theme clustering. Raw triggers below still work.</p></div>`;
-  }
-  document.getElementById("pain-triggers").innerHTML = (state.data.pain_triggers || [])
-    .map((t) => `<span class="trigger-pill">${escapeHtml(t.trigger)} <b>${t.count}</b></span>`).join("");
-  document.getElementById("pain-quotes").innerHTML = (state.data.pain_points || []).slice(0, 30).map((q) =>
-    `<blockquote>${escapeHtml(q.text)}<cite>${escapeHtml(q.subreddit || "")} · <a href="${escapeAttr(q.url || "#")}" target="_blank" rel="noopener">view</a></cite></blockquote>`
-  ).join("");
 }
 
 // ---------- helpers ----------

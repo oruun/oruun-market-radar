@@ -443,5 +443,16 @@ footer {
 }
 td.empty-state { display: table-cell; }     /* used inside <tr><td colspan=...> */
 
-/* Muted state for missing-data percentages in the cross-source table */
+/* Muted state for missing-data percentages */
 .num.muted { color: var(--text-dim); opacity: 0.5; }
+
+/* Inline legend for autocomplete intent colors */
+.legend-inline { margin-left: 8px; }
+.legend-inline span { margin-left: 12px; font-size: 11px; }
+
+/* Per-card intent breakdown inside autocomplete cards */
+.ac-breakdown {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 6px; font-size: 10px; letter-spacing: 0.08em;
+}
+.ac-stat { font-weight: 600; }
