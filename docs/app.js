@@ -69,10 +69,75 @@ function render() {
   document.getElementById("data-sources").textContent =
     (state.data.data_sources_active || []).join(" + ") || "no data";
   renderKPIs();
-  renderAutocomplete();      // Front and center — the most reliable section
+  renderBuyingIntent();
+  renderBrandSov();
+  renderLongTail();
+  renderAutocomplete();
   renderJourney();
   renderTable();
   renderOpportunities();
+}
+
+// ---------- Highest buying intent (transactional + commercial) ----------
+function renderBuyingIntent() {
+  const items = state.data.top_buying_intent || [];
+  if (items.length === 0) {
+    document.getElementById("buying-intent-grid").innerHTML = `<div class="empty-state">
+      No buying-intent queries yet. Will populate after the next autocomplete run.
+    </div>`;
+    return;
+  }
+  document.getElementById("buying-intent-grid").innerHTML = items.map((s) => {
+    const meta = INTENT_META[s.intent] || INTENT_META.generic;
+    return `<div class="bi-card" style="border-left-color:${meta.color}">
+      <div class="bi-text">${escapeHtml(s.text)}</div>
+      <div class="bi-meta">
+        <span style="color:${meta.color}">${meta.short}</span>
+        <span class="bi-seed">${escapeHtml(s.seed)}</span>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+// ---------- Brand share-of-voice in autocomplete ----------
+function renderBrandSov() {
+  const rows = (state.data.brand_sov_autocomplete || []).filter((r) => r.mentions > 0).slice(0, 12);
+  if (rows.length === 0) {
+    document.getElementById("brand-sov-bars").innerHTML = `<div class="empty-state">
+      No brand mentions detected in autocomplete this run.
+    </div>`;
+    return;
+  }
+  const max = Math.max(...rows.map((r) => r.mentions));
+  document.getElementById("brand-sov-bars").innerHTML = rows.map((r) => {
+    const isOruun = r.brand === "oruun";
+    const w = max ? Math.round(100 * r.mentions / max) : 0;
+    return `<div class="sov-row">
+      <div class="sov-brand">${escapeHtml(r.brand)}</div>
+      <div class="sov-track"><span class="sov-fill ${isOruun ? "self" : ""}" style="width:${w}%"></span></div>
+      <div class="sov-num">${r.mentions} <span class="sov-pct">(${r.share_pct}%)</span></div>
+    </div>`;
+  }).join("");
+}
+
+// ---------- Long-tail niche discoveries ----------
+function renderLongTail() {
+  const items = state.data.long_tail || [];
+  if (items.length === 0) {
+    document.getElementById("long-tail-list").innerHTML = `<div class="empty-state">
+      No long-tail queries yet (need 5+ word non-branded autocomplete suggestions).
+    </div>`;
+    return;
+  }
+  document.getElementById("long-tail-list").innerHTML = items.map((s) => `
+    <div class="lt-item">
+      <div class="lt-text">${escapeHtml(s.text)}</div>
+      <div class="lt-meta">
+        <span class="cat-pill">${CATEGORY_LABEL[s.category] || s.category}</span>
+        <span class="lt-seed">from "${escapeHtml(s.seed)}"</span>
+      </div>
+    </div>
+  `).join("");
 }
 
 // ---------- KPI strip ----------

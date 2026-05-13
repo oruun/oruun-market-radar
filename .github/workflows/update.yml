@@ -35,8 +35,9 @@ jobs:
 
       # Google Autocomplete — most reliable signal. Run FIRST so even if
       # Trends times out, we still have the centerpiece data.
+      # 11 variations × ~25 seeds × ~0.5s = ~140s of polite delay alone.
       - name: Fetch Google autocomplete suggestions
-        timeout-minutes: 5
+        timeout-minutes: 10
         run: python scripts/fetch_autocomplete.py
         continue-on-error: true
 

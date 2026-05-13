@@ -456,3 +456,63 @@ td.empty-state { display: table-cell; }     /* used inside <tr><td colspan=...> 
   margin-bottom: 6px; font-size: 10px; letter-spacing: 0.08em;
 }
 .ac-stat { font-weight: 600; }
+
+/* -------- Highest buying intent grid -------- */
+.bi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+.bi-card {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.bi-text { font-size: 14px; font-weight: 500; }
+.bi-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 6px; font-size: 11px; color: var(--text-dim);
+}
+.bi-seed { letter-spacing: 0.06em; }
+
+/* -------- Brand SoV bars -------- */
+.sov-bars { display: flex; flex-direction: column; gap: 6px; }
+.sov-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 120px;
+  gap: 12px;
+  align-items: center;
+  font-size: 13px;
+}
+.sov-brand { font-weight: 500; }
+.sov-track {
+  height: 10px; background: var(--panel-2); border-radius: 5px; overflow: hidden;
+}
+.sov-fill {
+  display: block; height: 100%; background: #3a4250;
+  transition: width 0.3s;
+}
+.sov-fill.self { background: var(--accent); }
+.sov-num { font-variant-numeric: tabular-nums; text-align: right; color: var(--text-dim); font-size: 12px; }
+.sov-pct { opacity: 0.6; margin-left: 4px; }
+
+/* -------- Long-tail list -------- */
+.long-tail {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 8px;
+}
+.lt-item {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.lt-text { font-size: 14px; }
+.lt-meta {
+  display: flex; gap: 10px; align-items: center;
+  margin-top: 4px; font-size: 11px; color: var(--text-dim);
+}
+.lt-seed { font-style: italic; }

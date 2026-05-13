@@ -322,21 +322,80 @@ def main() -> None:
 
     # ------- Autocomplete (long-tail intent) -------
     autocomplete_rows = []
+    all_suggestions: list[dict] = []          # flat list across all seeds, used for aggregations
     for r in auto.get("rows", []):
         suggs = r.get("suggestions") or []
-        # Classify each suggestion
+        sources = {s["text"]: s.get("from", "raw") for s in (r.get("suggestion_sources") or [])}
         intents: Counter = Counter()
         annotated = []
         for s in suggs:
             label = classify_query(s, brand_set)
             intents[label] += 1
-            annotated.append({"text": s, "intent": label})
+            entry = {"text": s, "intent": label, "from": sources.get(s, "raw")}
+            annotated.append(entry)
+            all_suggestions.append({**entry, "seed": r["term"], "category": r["category"]})
         autocomplete_rows.append({
             "term": r["term"],
             "category": r["category"],
             "suggestions": annotated,
             "intent_breakdown": [{"intent": k, "count": v} for k, v in intents.most_common()],
         })
+
+    # ----- Aggregation A: top buying-intent terms across ALL seeds -----
+    # Transactional + Commercial only — sorted by uniqueness (longer/more specific first)
+    buying_intent = [s for s in all_suggestions if s["intent"] in ("transactional", "commercial")]
+    seen_text: set[str] = set()
+    buying_intent_unique = []
+    for s in buying_intent:
+        key = s["text"].lower()
+        if key in seen_text:
+            continue
+        seen_text.add(key)
+        buying_intent_unique.append(s)
+    buying_intent_unique.sort(key=lambda s: (-len(s["text"]),))  # longer = more specific niche
+    top_buying_intent = buying_intent_unique[:30]
+
+    # ----- Aggregation B: brand share-of-voice IN AUTOCOMPLETE -----
+    # Replaces the brand-cross-source signal we lost when removing Wikipedia/GDELT/HN.
+    brand_mentions_ac: Counter = Counter()
+    for s in all_suggestions:
+        text = s["text"].lower()
+        for b in brand_set:
+            if not b:
+                continue
+            if re.search(r"\b" + re.escape(b) + r"\b", text):
+                brand_mentions_ac[b] += 1
+    total_brand_mentions = sum(brand_mentions_ac.values()) or 1
+    brand_sov_autocomplete = sorted(
+        [
+            {
+                "brand": b,
+                "mentions": c,
+                "share_pct": round(100.0 * c / total_brand_mentions, 2),
+            }
+            for b, c in brand_mentions_ac.items() if c > 0
+        ],
+        key=lambda r: -r["mentions"],
+    )
+
+    # ----- Aggregation C: long-tail niche discoveries -----
+    # Suggestions that are 5+ words, unique, NOT branded — these are the
+    # niche/specific queries with low competition.
+    long_tail = []
+    seen_tail: set[str] = set()
+    for s in all_suggestions:
+        if s["intent"] == "branded":
+            continue
+        words = s["text"].split()
+        if len(words) < 5:
+            continue
+        key = s["text"].lower()
+        if key in seen_tail:
+            continue
+        seen_tail.add(key)
+        long_tail.append(s)
+    long_tail.sort(key=lambda s: (-len(s["text"].split()),))
+    long_tail = long_tail[:25]
 
     # ------- Pain points (Reddit, optional) -------
     pain_points = []
@@ -390,6 +449,9 @@ def main() -> None:
         "cross_source_validation": cross_rows,
         "buyer_journey": journey,
         "autocomplete": autocomplete_rows,
+        "top_buying_intent": top_buying_intent,
+        "brand_sov_autocomplete": brand_sov_autocomplete,
+        "long_tail": long_tail,
         "intent_global": [{"intent": k, "count": v} for k, v in intent_global.most_common()],
         "brand_share_of_voice": sov,
         "brand_sentiment": sentiment,
