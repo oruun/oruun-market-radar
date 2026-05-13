@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-12T10:56:47.011232+00:00",
+  "fetched_at": "2026-05-13T00:29:03.536390+00:00",
   "rows": [
     {
       "term": "lightweight running shoes",
@@ -26,21 +26,21 @@
       "term": "trail running shoes",
       "category": "product_category",
       "suggestions": [
-        "trail running shoes men",
         "trail running shoes women",
-        "trail running shoes vs hiking shoes",
-        "trail running shoes near me",
-        "trail running shoes sale",
-        "trail running shoes with wide toe box",
+        "trail running shoes men",
         "trail running shoes waterproof",
+        "trail running shoes vs hiking shoes",
         "trail running shoes for hiking",
-        "trail running shoes nike",
-        "trail running shoes vs running shoes",
         "trail running shoes reddit",
-        "trail running shoes for golf",
-        "trail running shoes hoka",
-        "trail running shoes new balance",
-        "trail running shoes with ankle support"
+        "trail running shoes vs running shoes",
+        "trail running shoes men sale",
+        "trail running shoes wide",
+        "trail running shoes with ankle support",
+        "trail running shoes near me",
+        "trail running shoes 2026",
+        "trail running shoes for backpacking",
+        "trail running shoes with wide toe box",
+        "trail running shoes review"
       ]
     },
     {
@@ -110,21 +110,21 @@
       "term": "zero drop shoes",
       "category": "product_category",
       "suggestions": [
+        "zero drop shoes with wide toe box",
         "zero drop shoes womens",
-        "zero drop shoes with cushion",
         "zero drop shoes meaning",
         "zero drop shoes men",
-        "zero drop shoes wide toe box",
+        "zero drop shoes with cushioning",
         "zero drop shoes for walking",
         "zero drop shoes near me",
+        "zero drop shoes weightlifting",
         "zero drop shoes plantar fasciitis",
         "zero drop shoes with arch support",
         "zero drop shoes running",
         "zero drop shoes benefits",
         "zero drop shoes reddit",
         "zero drop shoes for flat feet",
-        "zero drop shoes altra",
-        "zero drop shoes for high arches"
+        "zero drop shoes altra"
       ]
     },
     {
@@ -217,12 +217,222 @@
       ]
     },
     {
+      "term": "nike pegasus",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "nike pegasus 41",
+        "nike pegasus premium",
+        "nike pegasus trail",
+        "nike pegasus 42",
+        "nike pegasus trail 5",
+        "nike pegasus plus",
+        "nike pegasus 40",
+        "nike pegasus women",
+        "nike pegasus trail 5 gore-tex",
+        "nike pegasus trail 4",
+        "nike pegasus 39",
+        "nike pegasus 41 women",
+        "nike pegasus trail 4 gore-tex",
+        "nike pegasus 41 review",
+        "nike pegasus 41 mens"
+      ]
+    },
+    {
+      "term": "nike vaporfly",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "nike vaporfly 4",
+        "nike vaporfly 3",
+        "nike vaporfly 2",
+        "nike vaporfly next",
+        "nike vaporfly 4 review",
+        "nike vaporfly vs alphafly",
+        "nike vaporfly 5",
+        "nike vaporfly next 4",
+        "nike vaporfly next percent 2",
+        "nike vaporfly 1",
+        "nike vaporfly 4 reddit",
+        "nike vaporfly women",
+        "nike vaporfly next 2",
+        "nike vaporfly 4 women",
+        "nike vaporfly running shoes"
+      ]
+    },
+    {
+      "term": "on cloudmonster",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "on cloudmonster 3",
+        "on cloudmonster 2",
+        "on cloudmonster 3 hyper",
+        "on cloudmonster void",
+        "on cloudmonster hyper",
+        "on cloudmonster women",
+        "on cloudmonster 3 review",
+        "on cloudmonster 1",
+        "on cloudmonster hyper paf",
+        "on cloudmonster sale",
+        "on cloudmonster black",
+        "on cloudmonster men",
+        "on cloudmonster 3 hyper review",
+        "on cloudmonster 2 women",
+        "on cloudmonster hyper 2"
+      ]
+    },
+    {
+      "term": "on cloudsurfer",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "on cloudsurfer 2",
+        "on cloudsurfer max",
+        "on cloudsurfer next",
+        "on cloudsurfer trail 2",
+        "on cloudsurfer trail",
+        "on cloudsurfer max women",
+        "on cloudsurfer 2 women",
+        "on cloudsurfer women",
+        "on cloudsurfer max review",
+        "on cloudsurfer 2 review",
+        "on cloudsurfer vs cloudmonster",
+        "on cloudsurfer next women",
+        "on cloudsurfer max men",
+        "on cloudsurfer 2 men",
+        "on cloudsurfer men"
+      ]
+    },
+    {
+      "term": "hoka mach",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "hoka mach 6",
+        "hoka mach 7",
+        "hoka mach 6 women",
+        "hoka mach 5",
+        "hoka mach x2",
+        "hoka mach 6 review",
+        "hoka mach x",
+        "hoka mach 7 review",
+        "hoka mach 6 men",
+        "hoka mach x3",
+        "hoka mach 3",
+        "hoka mach 7 release date",
+        "hoka mach 7 women",
+        "hoka mach remastered",
+        "hoka mach 6 wide"
+      ]
+    },
+    {
+      "term": "hoka clifton",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "hoka clifton 10",
+        "hoka clifton 9",
+        "hoka clifton 10 womens",
+        "hoka clifton 9 womens",
+        "hoka clifton 10 mens",
+        "hoka clifton womens",
+        "hoka clifton 9 gtx",
+        "hoka clifton vs bondi",
+        "hoka clifton 8",
+        "hoka clifton 10 vs bondi 9",
+        "hoka clifton 11",
+        "hoka clifton 10 review",
+        "hoka clifton 9 mens",
+        "hoka clifton 10 kids",
+        "hoka clifton l"
+      ]
+    },
+    {
+      "term": "salomon speedcross",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "salomon speedcross 6",
+        "salomon speedcross 3",
+        "salomon speedcross 6 gtx",
+        "salomon speedcross 5",
+        "salomon speedcross 6 women",
+        "salomon speedcross women",
+        "salomon speedcross 6 review",
+        "salomon speedcross 6 wide",
+        "salomon speedcross 6 waterproof",
+        "salomon speedcross 4",
+        "salomon speedcross pink",
+        "salomon speedcross 3 satin",
+        "salomon speedcross 6 costco",
+        "salomon speedcross gtx",
+        "salomon speedcross 6 gore-tex"
+      ]
+    },
+    {
+      "term": "asics novablast",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "asics novablast 5",
+        "asics novablast 6",
+        "asics novablast 4",
+        "asics novablast 5 women",
+        "asics novablast 3",
+        "asics novablast 5 review",
+        "asics novablast vs superblast",
+        "asics novablast 5 tokyo",
+        "asics novablast 5 wide",
+        "asics novablast 5 men",
+        "asics novablast 5 vs superblast 2",
+        "asics novablast 5 reddit",
+        "asics novablast 6 release date",
+        "asics novablast wide",
+        "asics novablast women"
+      ]
+    },
+    {
+      "term": "brooks ghost",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "brooks ghost max",
+        "brooks ghost 17",
+        "brooks ghost max 3",
+        "brooks ghost 18",
+        "brooks ghost 16",
+        "brooks ghost max 2",
+        "brooks ghost 15",
+        "brooks ghost trail",
+        "brooks ghost 17 women's",
+        "brooks ghost women",
+        "brooks ghost 16 women",
+        "brooks ghost 18 review",
+        "brooks ghost shoes",
+        "brooks ghost 17 review",
+        "brooks ghost vs glycerin"
+      ]
+    },
+    {
+      "term": "new balance rebel",
+      "category": "competitor_keyword",
+      "suggestions": [
+        "new balance rebel v5",
+        "new balance rebel v4",
+        "new balance rebel v6",
+        "new balance rebel v5 review",
+        "new balance rebel v5 mens",
+        "new balance rebel fuel cell",
+        "new balance rebel v3",
+        "new balance rebel trail",
+        "new balance rebel 5",
+        "new balance rebel v5 women",
+        "new balance rebel v5 reddit",
+        "new balance rebel v6 release date",
+        "new balance rebel v4 vs v5",
+        "new balance rebel 4",
+        "new balance rebel v5 amazon"
+      ]
+    },
+    {
       "term": "merino wool running",
       "category": "feature_material",
       "suggestions": [
-        "merino wool running socks",
         "merino wool running shirt",
         "merino wool running shorts",
+        "merino wool running socks",
         "merino wool running clothes",
         "merino wool running tights",
         "merino wool running gear",
@@ -242,6 +452,7 @@
       "category": "feature_material",
       "suggestions": [
         "carbon plate shoes for running",
+        "carbon plate shoes banned",
         "carbon plate shoes near me",
         "carbon plate shoes for hyrox",
         "carbon plate shoes women",
@@ -254,8 +465,7 @@
         "carbon plate shoes reddit",
         "carbon plate shoes hoka",
         "carbon plate shoes meaning",
-        "carbon plate shoes for training",
-        "carbon plate shoes for 5k"
+        "carbon plate shoes for training"
       ]
     },
     {
@@ -497,9 +707,9 @@
       "term": "women's running shorts",
       "category": "use_case_persona",
       "suggestions": [
+        "women's running shorts with phone pocket",
         "women's running shorts with liner",
         "women's running shorts with pockets",
-        "women's running shorts with phone pocket",
         "women's running shorts with compression liner",
         "women's running shorts 5 inch inseam",
         "women's running shorts 4 inch inseam",

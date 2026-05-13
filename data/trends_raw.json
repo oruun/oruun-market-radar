@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-12T10:54:18.246937+00:00",
+  "fetched_at": "2026-05-13T00:46:33.376108+00:00",
   "timeframe": "today 12-m",
   "primary_geo": "US",
   "series": [
@@ -270,116 +270,6 @@
     {
       "term": "seamless running top",
       "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "recycled polyester activewear",
-      "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "bamboo activewear",
-      "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "anti chafe shorts",
-      "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "thermal base layer",
-      "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "ventilated running cap",
-      "category": "feature_material",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "city run outfit",
-      "category": "use_case_persona",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "marathon training kit",
-      "category": "use_case_persona",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "half marathon prep",
-      "category": "use_case_persona",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "gym outfit men",
-      "category": "use_case_persona",
-      "geo_series": {
-        "US": []
-      },
-      "related": {
-        "top": [],
-        "rising": []
-      }
-    },
-    {
-      "term": "women's running shorts",
-      "category": "use_case_persona",
       "geo_series": {
         "US": []
       },
