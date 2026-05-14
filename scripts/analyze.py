@@ -397,6 +397,62 @@ def main() -> None:
     long_tail.sort(key=lambda s: (-len(s["text"].split()),))
     long_tail = long_tail[:25]
 
+    # ----- Aggregation D: weekly-change detection (NEW THIS WEEK) -----
+    # Compare current autocomplete against the most recent prior snapshot.
+    # Reveals which buyer-intent queries are JUST emerging.
+    weekly_changes = {
+        "compared_against": None,
+        "weeks_of_history": 0,
+        "new_queries_count": 0,
+        "new_buying_intent": [],
+        "dropped_count": 0,
+    }
+    snap_dir = DATA_DIR / "snapshots"
+    if snap_dir.exists():
+        # All snapshots sorted by date in filename
+        snaps = sorted(snap_dir.glob("autocomplete_*.json"))
+        weekly_changes["weeks_of_history"] = len(snaps)
+        # Find the most recent snapshot that's NOT today (avoid self-compare)
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        prior = [s for s in snaps if today not in s.name]
+        if prior:
+            prev_snap_path = prior[-1]
+            try:
+                prev_data = json.loads(prev_snap_path.read_text(encoding="utf-8"))
+                # Build lookup of previous suggestions, keyed by lowercased text
+                prev_keys: set[str] = set()
+                for r in prev_data.get("rows", []):
+                    for text in r.get("suggestions", []) or []:
+                        prev_keys.add(text.lower().strip())
+                # Find suggestions in current that are NOT in prior
+                new_suggs: list[dict] = []
+                seen_new: set[str] = set()
+                for s in all_suggestions:
+                    key = s["text"].lower().strip()
+                    if key in prev_keys or key in seen_new:
+                        continue
+                    seen_new.add(key)
+                    new_suggs.append(s)
+                # Also count drops
+                cur_keys = {s["text"].lower().strip() for s in all_suggestions}
+                dropped = [k for k in prev_keys if k not in cur_keys]
+                # Filter to BUYING-INTENT new queries — most actionable
+                new_buying = [
+                    s for s in new_suggs
+                    if s["intent"] in ("transactional", "commercial")
+                ]
+                # Sort by length (longer = more specific niche) then by intent priority
+                intent_priority = {"transactional": 0, "commercial": 1}
+                new_buying.sort(key=lambda s: (intent_priority.get(s["intent"], 9), -len(s["text"])))
+                weekly_changes.update({
+                    "compared_against": prev_snap_path.stem.replace("autocomplete_", ""),
+                    "new_queries_count": len(new_suggs),
+                    "new_buying_intent": new_buying[:20],
+                    "dropped_count": len(dropped),
+                })
+            except Exception as e:
+                print(f"  weekly diff failed: {e}", flush=True)
+
     # ------- Pain points (Reddit, optional) -------
     pain_points = []
     pain_triggers = []
@@ -452,6 +508,7 @@ def main() -> None:
         "top_buying_intent": top_buying_intent,
         "brand_sov_autocomplete": brand_sov_autocomplete,
         "long_tail": long_tail,
+        "weekly_changes": weekly_changes,
         "intent_global": [{"intent": k, "count": v} for k, v in intent_global.most_common()],
         "brand_share_of_voice": sov,
         "brand_sentiment": sentiment,

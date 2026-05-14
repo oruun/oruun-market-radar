@@ -125,6 +125,16 @@ def main() -> None:
     total = sum(len(r["suggestions"]) for r in rows)
     print(f"\nWrote {target}  ({len(rows)} terms, {total} total suggestions)")
 
+    # Persist a dated snapshot so analyze.py can diff WoW change.
+    # Snapshots accumulate in data/snapshots/ and are committed to the repo
+    # so the next workflow run can read them.
+    snap_dir = DATA_DIR / "snapshots"
+    snap_dir.mkdir(exist_ok=True)
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    snap_path = snap_dir / f"autocomplete_{today}.json"
+    snap_path.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Wrote snapshot {snap_path}")
+
 
 if __name__ == "__main__":
     main()

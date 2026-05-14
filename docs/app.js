@@ -69,6 +69,7 @@ function render() {
   document.getElementById("data-sources").textContent =
     (state.data.data_sources_active || []).join(" + ") || "no data";
   renderKPIs();
+  renderWeeklyChanges();
   renderBuyingIntent();
   renderBrandSov();
   renderLongTail();
@@ -76,6 +77,48 @@ function render() {
   renderJourney();
   renderTable();
   renderOpportunities();
+}
+
+// ---------- Weekly changes ----------
+function renderWeeklyChanges() {
+  const wc = state.data.weekly_changes;
+  const section = document.getElementById("weekly-changes-section");
+  const meta = document.getElementById("weekly-changes-meta");
+  const content = document.getElementById("weekly-changes-content");
+
+  // No history yet — first run. Hide the whole section so we don't
+  // confuse users with an empty box. The section will appear next
+  // run once we have a baseline to compare against.
+  if (!wc || !wc.compared_against) {
+    if (section) section.style.display = "none";
+    return;
+  }
+  if (section) section.style.display = "";
+
+  meta.innerHTML = `Comparing <b>today</b> against snapshot from
+    <b>${escapeHtml(wc.compared_against)}</b>
+    (${wc.weeks_of_history} weeks of history accumulated).
+    <b>${wc.new_queries_count}</b> new autocomplete queries appeared since then.`;
+
+  const buying = wc.new_buying_intent || [];
+  if (buying.length === 0) {
+    content.innerHTML = `<div class="empty-state">
+      No new buying-intent queries this week. Either consumer search behavior
+      is steady, or the prior snapshot is too recent to show meaningful change.
+    </div>`;
+    return;
+  }
+  content.innerHTML = `<div class="bi-grid">` +
+    buying.map((s) => {
+      const meta = INTENT_META[s.intent] || INTENT_META.generic;
+      return `<div class="bi-card new-this-week" style="border-left-color:${meta.color}">
+        <div class="bi-text">${escapeHtml(s.text)}</div>
+        <div class="bi-meta">
+          <span style="color:${meta.color}">${meta.short}</span>
+          <span class="bi-seed">${escapeHtml(s.seed)}</span>
+        </div>
+      </div>`;
+    }).join("") + `</div>`;
 }
 
 // ---------- Highest buying intent (transactional + commercial) ----------
