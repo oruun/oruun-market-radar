@@ -23,6 +23,7 @@ Output: data/autocomplete_raw.json
 """
 from __future__ import annotations
 import json
+import os
 import random
 import time
 from datetime import datetime, timezone
@@ -38,21 +39,25 @@ DATA_DIR.mkdir(exist_ok=True)
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "Mozilla/5.0 (compatible; oruun-market-radar/0.4)"})
 
-# Variations to query per seed term. Order matters — earlier ones get priority
-# in deduplication so the most "natural" completions stay at the top.
-VARIATIONS = [
-    ("",                "raw"),         # bare seed
-    (" ",               "raw"),         # long-tail
-    (" for",            "persona"),
-    (" vs",             "comparison"),
-    (" best",           "commercial"),
-    (" review",         "decision"),
-    (" 2026",           "fresh"),
-    (" cheap",          "price"),
-    (" alternative",    "switching"),
-    (" reddit",         "community"),
-    ("best ",           "prefix"),      # prepended, not appended
+# Variations queried per seed term. Local execution can handle the full 11;
+# GHA IPs get throttled. The DEPTH env var controls which set is used:
+#   AUTOCOMPLETE_DEPTH=rich (default for local runs)  -> all 11
+#   AUTOCOMPLETE_DEPTH=lean (set in GHA workflow)     -> first 6 only
+ALL_VARIATIONS = [
+    ("",                "raw"),         # 1. bare seed
+    (" for",            "persona"),     # 2. persona / use-case
+    (" vs",             "comparison"),  # 3. comparison intent
+    (" best",           "commercial"),  # 4. commercial decision
+    (" review",         "decision"),    # 5. decision research
+    ("best ",           "prefix"),      # 6. prefix "best X"
+    (" 2026",           "fresh"),       # 7. temporal / new
+    (" cheap",          "price"),       # 8. price-sensitive
+    (" alternative",    "switching"),   # 9. brand-switching signal
+    (" reddit",         "community"),   # 10. community-driven research
+    (" ",               "longtail"),    # 11. extra long-tail (trailing space)
 ]
+DEPTH = os.environ.get("AUTOCOMPLETE_DEPTH", "rich").lower()
+VARIATIONS = ALL_VARIATIONS if DEPTH == "rich" else ALL_VARIATIONS[:6]
 
 
 def load_config() -> dict:
@@ -106,8 +111,9 @@ def main() -> None:
                     continue
                 seen.add(key)
                 merged.append({"text": s, "from": vlabel})
-            # polite delay between variations
-            time.sleep(0.4 + random.uniform(0, 0.2))
+            # Polite delay — Google throttles aggressively from GHA IPs.
+            # 0.8s + jitter keeps us under throttle threshold.
+            time.sleep(0.8 + random.uniform(0, 0.4))
 
         # Cap at 60 per seed to keep payload reasonable
         merged = merged[:60]
@@ -123,7 +129,10 @@ def main() -> None:
     target = DATA_DIR / "autocomplete_raw.json"
     target.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
     total = sum(len(r["suggestions"]) for r in rows)
-    print(f"\nWrote {target}  ({len(rows)} terms, {total} total suggestions)")
+    avg_per_seed = total / len(rows) if rows else 0
+    print(f"\nWrote {target}  ({len(rows)} terms, {total} total suggestions, {avg_per_seed:.1f} avg/seed)")
+    if avg_per_seed < 10:
+        print(f"  ⚠ THROTTLE WARNING: only {avg_per_seed:.1f} avg suggestions/seed (expected 30+). Google likely rate-limited this run.")
 
     # Persist a dated snapshot so analyze.py can diff WoW change.
     # Snapshots accumulate in data/snapshots/ and are committed to the repo

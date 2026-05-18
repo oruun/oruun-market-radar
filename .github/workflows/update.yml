@@ -33,29 +33,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Google Autocomplete — most reliable signal. Run FIRST so even if
-      # Trends times out, we still have the centerpiece data.
-      # 11 variations × ~25 seeds × ~0.5s = ~140s of polite delay alone.
+      # Google Autocomplete — our ONLY data source now.
+      # Reduced to 6 variations × ~63 seeds × ~0.8s = ~5 min total.
+      # Trends was removed: GitHub Actions IPs are heavily rate-limited and
+      # Trends has timed out every single run for 4 consecutive weeks.
       - name: Fetch Google autocomplete suggestions
-        timeout-minutes: 10
+        timeout-minutes: 12
+        env:
+          AUTOCOMPLETE_DEPTH: lean   # GHA IPs throttle; local runs use 'rich'
         run: python scripts/fetch_autocomplete.py
         continue-on-error: true
 
-      # Google Trends — rate-limited but high-value. Best-effort.
-      - name: Fetch Google Trends + related queries
-        timeout-minutes: 20
-        run: python scripts/fetch_trends.py
-        continue-on-error: true
-
-      # Belt-and-suspenders: ensure trends file exists for analyze.py
-      - name: Ensure trends file exists
+      # Always-write an empty trends scaffold so analyze.py doesn't error.
+      - name: Stub empty Trends data
         if: always()
         run: |
           mkdir -p data
-          if [ ! -s data/trends_raw.json ]; then
-            echo '{"fetched_at": null, "timeframe": "today 12-m", "primary_geo": "US", "series": []}' > data/trends_raw.json
-            echo "Wrote empty trends_raw.json scaffold."
-          fi
+          echo '{"fetched_at": null, "timeframe": "today 12-m", "primary_geo": "US", "series": []}' > data/trends_raw.json
 
       - name: Analyze
         timeout-minutes: 5
