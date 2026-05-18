@@ -69,6 +69,7 @@ function render() {
   document.getElementById("data-sources").textContent =
     (state.data.data_sources_active || []).join(" + ") || "no data";
   renderKPIs();
+  renderBlogDrafts();
   renderWeeklyChanges();
   renderBuyingIntent();
   renderBrandSov();
@@ -77,6 +78,34 @@ function render() {
   renderJourney();
   renderTable();
   renderOpportunities();
+}
+
+// ---------- Blog drafts ----------
+function renderBlogDrafts() {
+  const bd = state.data.blog_drafts;
+  const section = document.getElementById("blog-drafts-section");
+  const content = document.getElementById("blog-drafts-content");
+  if (!bd || !bd.drafts || bd.drafts.length === 0) {
+    // Hide the whole section so it doesn't display empty before first generation.
+    if (section) section.style.display = "none";
+    return;
+  }
+  if (section) section.style.display = "";
+  content.innerHTML =
+    `<div class="bd-meta">Generated <b>${escapeHtml(bd.generated_at)}</b> · ${bd.drafts.length} drafts ready for review</div>` +
+    `<div class="bd-grid">` +
+    bd.drafts.map((d, i) => {
+      const meta = INTENT_META[d.intent] || INTENT_META.generic;
+      return `<a class="bd-card" style="border-left-color:${meta.color}" href="${escapeAttr(d.github_url)}" target="_blank" rel="noopener">
+        <div class="bd-num">Draft ${i + 1}</div>
+        <div class="bd-title">${escapeHtml(d.title)}</div>
+        <div class="bd-tags">
+          <span style="color:${meta.color}">${meta.label}</span>
+          <span class="bd-cat">${escapeHtml(d.category || "")}</span>
+        </div>
+        <div class="bd-cta">Open draft on GitHub →</div>
+      </a>`;
+    }).join("") + `</div>`;
 }
 
 // ---------- Weekly changes ----------

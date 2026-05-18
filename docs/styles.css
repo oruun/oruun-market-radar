@@ -477,6 +477,57 @@ td.empty-state { display: table-cell; }     /* used inside <tr><td colspan=...> 
 }
 .bi-seed { letter-spacing: 0.06em; }
 
+/* Blog drafts grid */
+.bd-meta {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+.bd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+.bd-card {
+  display: block;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s, transform 0.15s;
+}
+.bd-card:hover {
+  background: rgba(214,255,92,0.05);
+  transform: translateY(-1px);
+}
+.bd-num {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+.bd-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 4px 0 8px;
+  line-height: 1.35;
+}
+.bd-tags {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+.bd-cat { color: var(--text-dim); }
+.bd-cta {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
 /* New-this-week emphasis */
 .bi-card.new-this-week {
   position: relative;

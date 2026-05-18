@@ -68,12 +68,22 @@ jobs:
         if: always()
         run: python scripts/build_dashboard_data.py
 
+      # Generate 3 GEO-optimized blog drafts from this week's data.
+      # Skips silently if ANTHROPIC_API_KEY secret is not set.
+      - name: Generate blog drafts
+        if: always()
+        timeout-minutes: 4
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_blogs.py
+        continue-on-error: true
+
       - name: Commit refreshed data
         if: always()
         run: |
           git config user.name "oruun-radar-bot"
           git config user.email "actions@github.com"
-          git add docs/data.json data/*.json data/snapshots/*.json 2>/dev/null || true
+          git add docs/data.json data/*.json data/snapshots/*.json blogs/ 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No data changes."
           else
