@@ -493,11 +493,27 @@ def main() -> None:
         "timeframe": trends.get("timeframe"),
         "data_sources_active": [
             x for x, v in [
-                ("Google Trends", bool(trends and trends.get("series"))),
-                ("Wikipedia", bool(wiki and wiki.get("brands"))),
-                ("GDELT News", bool(gdelt and gdelt.get("rows"))),
-                ("Hacker News", bool(hn and hn.get("rows"))),
-                ("Autocomplete", bool(auto and auto.get("rows"))),
+                # Count Trends "active" only if at least one series has real data
+                ("Google Trends", any(
+                    any(g for g in s.get("geo_series", {}).values())
+                    for s in ((trends or {}).get("series") or [])
+                )),
+                # Wikipedia active only if at least one brand has daily pageviews
+                ("Wikipedia", any(
+                    b.get("daily") for b in ((wiki or {}).get("brands") or [])
+                )),
+                # GDELT active only if at least one timeline is non-empty
+                ("GDELT News", any(
+                    r.get("timeline") for r in ((gdelt or {}).get("rows") or [])
+                )),
+                # HN active only if at least one brand has hits
+                ("Hacker News", any(
+                    (r.get("recent_12m_count", 0) + r.get("prior_12m_count", 0)) > 0
+                    for r in ((hn or {}).get("rows") or [])
+                )),
+                ("Autocomplete", any(
+                    r.get("suggestions") for r in ((auto or {}).get("rows") or [])
+                )),
                 ("Reddit", not reddit.get("skipped") and bool(reddit.get("posts"))),
             ] if v
         ],

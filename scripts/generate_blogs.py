@@ -290,8 +290,9 @@ def main() -> int:
                             "title": briefs[i]["text"],
                             "intent": briefs[i].get("intent", "commercial"),
                             "category": briefs[i].get("category", ""),
-                            "path": written[i],
-                            "github_url": f"../../blob/main/{written[i]}",
+                            # store path with forward slashes; the frontend
+                            # builds the absolute GitHub URL using location.host.
+                            "path": written[i].replace("\\", "/"),
                         }
                         for i in range(len(written))
                     ],

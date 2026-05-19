@@ -81,22 +81,36 @@ function render() {
 }
 
 // ---------- Blog drafts ----------
+function inferRepoUrl() {
+  // GitHub Pages convention: <user>.github.io/<repo>/ → github.com/<user>/<repo>
+  const host = location.host;
+  if (!host.endsWith(".github.io")) return null;
+  const user = host.split(".")[0];
+  const repo = location.pathname.split("/").filter(Boolean)[0] || "oruun-market-radar";
+  return `https://github.com/${user}/${repo}`;
+}
+
 function renderBlogDrafts() {
   const bd = state.data.blog_drafts;
   const section = document.getElementById("blog-drafts-section");
   const content = document.getElementById("blog-drafts-content");
   if (!bd || !bd.drafts || bd.drafts.length === 0) {
-    // Hide the whole section so it doesn't display empty before first generation.
     if (section) section.style.display = "none";
     return;
   }
   if (section) section.style.display = "";
+  const repoUrl = inferRepoUrl();
   content.innerHTML =
     `<div class="bd-meta">Generated <b>${escapeHtml(bd.generated_at)}</b> · ${bd.drafts.length} drafts ready for review</div>` +
     `<div class="bd-grid">` +
     bd.drafts.map((d, i) => {
       const meta = INTENT_META[d.intent] || INTENT_META.generic;
-      return `<a class="bd-card" style="border-left-color:${meta.color}" href="${escapeAttr(d.github_url)}" target="_blank" rel="noopener">
+      // Build absolute GitHub URL. Fall back to old github_url if path missing.
+      const cleanPath = (d.path || "").replace(/\\/g, "/");
+      const ghUrl = repoUrl && cleanPath
+        ? `${repoUrl}/blob/main/${cleanPath}`
+        : (d.github_url || "#");
+      return `<a class="bd-card" style="border-left-color:${meta.color}" href="${escapeAttr(ghUrl)}" target="_blank" rel="noopener">
         <div class="bd-num">Draft ${i + 1}</div>
         <div class="bd-title">${escapeHtml(d.title)}</div>
         <div class="bd-tags">
