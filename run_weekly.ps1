@@ -59,7 +59,28 @@ $venvPy = Join-Path $venv "Scripts\python.exe"
 Say-Step "Installing/updating dependencies"
 & $venvPy -m pip install --upgrade pip --quiet
 & $venvPy -m pip install -r requirements.txt --quiet
-Say-OK "Dependencies ready"
+if ($LASTEXITCODE -ne 0) {
+    Say-Err "pip install failed. Dependencies are NOT ready."
+    Say-Err "Common cause: Python version mismatch. We need Python 3.11-3.13 ideally."
+    Write-Host ""
+    Write-Host "To fix:"
+    Write-Host "  Option A: Install Python 3.12 from https://www.python.org/downloads/"
+    Write-Host "            Then delete C:\dev\oruun-market-radar\.venv and re-run this script."
+    Write-Host "  Option B: Re-run this script — relaxed version pins may fix it automatically."
+    Read-Host "Press Enter to exit"
+    exit 1
+}
+
+# Verify the critical packages actually imported
+$check = & $venvPy -c "import yaml, requests, pandas, numpy, pytrends, anthropic; print('OK')" 2>&1
+if ($check -notmatch "OK") {
+    Say-Err "Dependencies installed but failed to import:"
+    Write-Host $check
+    Say-Err "Most likely a Python 3.14 wheel issue. Try installing Python 3.12 (see above)."
+    Read-Host "Press Enter to exit"
+    exit 1
+}
+Say-OK "Dependencies ready and importable"
 
 # --- 3. Git pull so we don't drift from remote ---
 Say-Step "Pulling latest from GitHub"
