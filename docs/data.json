@@ -8689,5 +8689,28 @@
   "brand_sentiment": {},
   "pain_points": [],
   "pain_triggers": [],
-  "pain_summary": null
+  "pain_summary": null,
+  "blog_drafts": {
+    "generated_at": "2026-05-19",
+    "drafts": [
+      {
+        "title": "best moisture wicking shirts for hiking",
+        "intent": "commercial",
+        "category": "feature_material",
+        "path": "blogs/2026-05-19/01-best-moisture-wicking-shirts-for-hiking.md"
+      },
+      {
+        "title": "best moisture wicking shirts for women",
+        "intent": "commercial",
+        "category": "feature_material",
+        "path": "blogs/2026-05-19/02-best-moisture-wicking-shirts-for-women.md"
+      },
+      {
+        "title": "what to wear when running in the cold reddit",
+        "intent": "informational",
+        "category": "feature_material",
+        "path": "blogs/2026-05-19/03-what-to-wear-when-running-in-the-cold-reddit.md"
+      }
+    ]
+  }
 }
