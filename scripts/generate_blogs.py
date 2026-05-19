@@ -244,7 +244,9 @@ def main() -> int:
     out_dir = BLOGS_DIR / today
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    written = []
+    # We store (brief, path) tuples — guarantees title and path stay in sync
+    # even when some Claude calls fail and others succeed.
+    successful: list[tuple[dict, str]] = []
     for i, q in enumerate(briefs[:3], start=1):
         query = q["text"]
         intent = q.get("intent", "commercial")
@@ -260,8 +262,11 @@ def main() -> int:
         fname = f"{i:02d}-{slug}.md"
         path = out_dir / fname
         path.write_text(markdown, encoding="utf-8")
-        written.append(str(path.relative_to(ROOT)))
+        successful.append((q, str(path.relative_to(ROOT))))
         print(f"  -> wrote {path}", flush=True)
+
+    # Back-compat: keep `written` as a list of paths for the README index below.
+    written = [p for _, p in successful]
 
     if written:
         index = out_dir / "README.md"
@@ -287,14 +292,15 @@ def main() -> int:
                     "generated_at": today,
                     "drafts": [
                         {
-                            "title": briefs[i]["text"],
-                            "intent": briefs[i].get("intent", "commercial"),
-                            "category": briefs[i].get("category", ""),
-                            # store path with forward slashes; the frontend
+                            "title": brief["text"],
+                            "intent": brief.get("intent", "commercial"),
+                            "category": brief.get("category", ""),
+                            # forward slashes for URL safety; the frontend
                             # builds the absolute GitHub URL using location.host.
-                            "path": written[i].replace("\\", "/"),
+                            "path": path_str.replace("\\", "/"),
                         }
-                        for i in range(len(written))
+                        # Iterate the (brief, path) pairs — guaranteed sync.
+                        for brief, path_str in successful
                     ],
                 }
                 docs_data_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")

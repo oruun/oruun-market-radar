@@ -6,6 +6,6 @@ This folder contains 3 blog drafts auto-generated from this week's hottest consu
 
 ## This week's drafts
 
-- [01-best-moisture-wicking-shirts-for-working-out.md](01-best-moisture-wicking-shirts-for-working-out.md)
-- [02-best-running-compression-socks-uk-women-s.md](02-best-running-compression-socks-uk-women-s.md)
-- [03-how-to-wear-a-trucker-hat-with-short-hair.md](03-how-to-wear-a-trucker-hat-with-short-hair.md)
+- [01-best-open-toe-compression-socks-for-women.md](01-best-open-toe-compression-socks-for-women.md)
+- [02-best-open-toe-compression-socks-20-30mmhg.md](02-best-open-toe-compression-socks-20-30mmhg.md)
+- [03-how-to-wear-a-trucker-hat-with-long-hair.md](03-how-to-wear-a-trucker-hat-with-long-hair.md)

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T07:54:09.883103+00:00",
+  "generated_at": "2026-05-19T11:08:21.298109+00:00",
   "trends_fetched_at": "2026-05-19T07:54:09.505796+00:00",
   "wiki_fetched_at": "2026-05-12T10:48:45.885638+00:00",
   "gdelt_fetched_at": "2026-05-12T10:56:08.653652+00:00",
@@ -9,7 +9,6 @@
   "reddit_posts_analyzed": 0,
   "timeframe": "today 12-m",
   "data_sources_active": [
-    "Google Trends",
     "Wikipedia",
     "GDELT News",
     "Hacker News",
