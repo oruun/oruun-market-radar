@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-19T11:28:46.851877+00:00",
+  "fetched_at": "2026-05-19T12:11:08.419728+00:00",
   "timeframe": "today 12-m",
   "primary_geo": "US",
   "series": [
@@ -50,6 +50,226 @@
     {
       "term": "running tank top",
       "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "running singlet",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "running shorts",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "5 inch running shorts",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "split running shorts",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "compression running shorts",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "2 in 1 running shorts",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "running socks",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "no show running socks",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "merino running socks",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "running cap",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "running hat",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "trucker hat running",
+      "category": "product_category",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "tracksmith van cortlandt singlet",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "tracksmith twilight tank",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "satisfy short distance shorts",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "satisfy running tee",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "bandit running shirt",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "nike dri fit running shirt",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "nike challenger shorts",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "lululemon fast and free shorts",
+      "category": "competitor_keyword",
       "geo_series": {
         "US": []
       },
