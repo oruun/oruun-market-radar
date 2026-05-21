@@ -8689,5 +8689,28 @@
   "brand_sentiment": {},
   "pain_points": [],
   "pain_triggers": [],
-  "pain_summary": null
+  "pain_summary": null,
+  "blog_drafts": {
+    "generated_at": "2026-05-21",
+    "drafts": [
+      {
+        "title": "best compression lined running shorts",
+        "intent": "commercial",
+        "category": "product_category",
+        "path": "blogs/2026-05-21/01-best-compression-lined-running-shorts.md"
+      },
+      {
+        "title": "best cold weather running pants women",
+        "intent": "commercial",
+        "category": "use_case_persona",
+        "path": "blogs/2026-05-21/02-best-cold-weather-running-pants-women.md"
+      },
+      {
+        "title": "what gear do you need to run a marathon",
+        "intent": "informational",
+        "category": "use_case_persona",
+        "path": "blogs/2026-05-21/03-what-gear-do-you-need-to-run-a-marathon.md"
+      }
+    ]
+  }
 }
