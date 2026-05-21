@@ -1,14 +1,17 @@
 name: Weekly Market Radar Update
 
 on:
-  schedule:
-    - cron: "0 6 * * 1"   # every Monday 06:00 UTC
+  # MANUAL TRIGGER ONLY. The cloud pipeline never runs by itself.
+  #
+  # Why: GitHub's runner IPs are rate-limited, so autocomplete/Trends fetches
+  # fail in the cloud. When a cloud run failed, build_dashboard_data.py used to
+  # fall back to the seed sample and the Commit step pushed it -- silently
+  # overwriting your real data with the May 2026 seed (the "back to 5月6日" bug).
+  #
+  # All real weekly refreshes now happen locally via run_weekly.ps1 and are
+  # pushed by hand. This workflow stays only as a manual fallback you can start
+  # yourself from the Actions tab if you ever want to.
   workflow_dispatch: {}
-  push:
-    paths:
-      - "keywords.yaml"
-      - "scripts/**"
-      - ".github/workflows/update.yml"
 
 permissions:
   contents: write
