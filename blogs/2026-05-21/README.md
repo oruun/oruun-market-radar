@@ -6,6 +6,6 @@ This folder contains 3 blog drafts auto-generated from this week's hottest consu
 
 ## This week's drafts
 
-- [01-best-compression-lined-running-shorts.md](01-best-compression-lined-running-shorts.md)
-- [02-best-cold-weather-running-pants-women.md](02-best-cold-weather-running-pants-women.md)
-- [03-what-gear-do-you-need-to-run-a-marathon.md](03-what-gear-do-you-need-to-run-a-marathon.md)
+- [01-best-running-tank-tops-amazon.md](01-best-running-tank-tops-amazon.md)
+- [02-best-hot-weather-long-sleeve-running-shirt.md](02-best-hot-weather-long-sleeve-running-shirt.md)
+- [03-running-t-shirt-for-sale.md](03-running-t-shirt-for-sale.md)

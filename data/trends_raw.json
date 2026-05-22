@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-19T12:11:08.419728+00:00",
+  "fetched_at": "2026-05-22T03:27:43.424450+00:00",
   "timeframe": "today 12-m",
   "primary_geo": "US",
   "series": [
@@ -270,6 +270,424 @@
     {
       "term": "lululemon fast and free shorts",
       "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "patagonia airshed pullover",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "on running tee",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "janji aft tights",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "ciele alpcap",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "goodr running cap",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "darn tough running socks",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "balega running socks",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "feetures elite socks",
+      "category": "competitor_keyword",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "merino wool running shirt",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "seamless running top",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "anti chafe running shorts",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "moisture wicking shirt",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "breathable running shorts",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "quick dry running tee",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "lightweight running singlet",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "recycled polyester running",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "bamboo running shirt",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "mesh running shorts",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "compression running socks",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "toe running socks",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "sun protection running shirt",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "cooling running shirt",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "sweat wicking cap",
+      "category": "feature_material",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "city run outfit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "marathon kit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "hot weather running gear",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "cold weather running gear",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "summer running outfit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "winter running outfit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "rainy day running gear",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "women running tank top",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "men running shorts",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "track workout outfit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "half marathon kit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "ultra running kit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "trail running shorts",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "treadmill running outfit",
+      "category": "use_case_persona",
+      "geo_series": {
+        "US": []
+      },
+      "related": {
+        "top": [],
+        "rising": []
+      }
+    },
+    {
+      "term": "race day kit",
+      "category": "use_case_persona",
       "geo_series": {
         "US": []
       },
