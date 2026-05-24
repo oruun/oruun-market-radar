@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-22T03:27:43.845089+00:00",
-  "trends_fetched_at": "2026-05-22T03:27:43.424450+00:00",
+  "generated_at": "2026-05-24T11:13:41.535980+00:00",
+  "trends_fetched_at": "2026-05-24T11:13:41.129656+00:00",
   "wiki_fetched_at": "2026-05-12T10:48:45.885638+00:00",
   "gdelt_fetched_at": "2026-05-12T10:56:08.653652+00:00",
   "hn_fetched_at": "2026-05-12T10:56:08.859627+00:00",
-  "autocomplete_fetched_at": "2026-05-22T02:43:19.856427+00:00",
+  "autocomplete_fetched_at": "2026-05-24T10:29:55.676740+00:00",
   "reddit_fetched_at": "2026-05-12T10:56:47.452986+00:00",
   "reddit_posts_analyzed": 0,
   "timeframe": "today 12-m",
@@ -38,11 +38,6 @@
           "from": "raw"
         },
         {
-          "text": "running shirtless",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "running shirts long sleeve",
           "intent": "generic",
           "from": "raw"
@@ -54,11 +49,6 @@
         },
         {
           "text": "running shirt with pockets",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running shirtless reddit",
           "intent": "generic",
           "from": "raw"
         },
@@ -330,7 +320,7 @@
         },
         {
           "intent": "generic",
-          "count": 28
+          "count": 26
         },
         {
           "intent": "branded",
@@ -692,27 +682,12 @@
           "from": "raw"
         },
         {
-          "text": "running teenager",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running teen",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "running tee reddit",
           "intent": "generic",
           "from": "raw"
         },
         {
           "text": "running t shirts",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running teeth",
           "intent": "generic",
           "from": "raw"
         },
@@ -728,11 +703,6 @@
         },
         {
           "text": "running tee mockup",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running teer dream number",
           "intent": "generic",
           "from": "raw"
         },
@@ -837,11 +807,6 @@
           "from": "comparison"
         },
         {
-          "text": "do running trainers make a difference",
-          "intent": "generic",
-          "from": "comparison"
-        },
-        {
           "text": "running tee womens",
           "intent": "generic",
           "from": "comparison"
@@ -882,21 +847,6 @@
           "from": "commercial"
         },
         {
-          "text": "what brand is best for running",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "running recommendations",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
-          "text": "what are good alternatives to running",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
           "text": "best running tee shirts",
           "intent": "commercial",
           "from": "commercial"
@@ -932,21 +882,6 @@
           "from": "decision"
         },
         {
-          "text": "tea runners review",
-          "intent": "commercial",
-          "from": "decision"
-        },
-        {
-          "text": "runners need review",
-          "intent": "commercial",
-          "from": "decision"
-        },
-        {
-          "text": "running testimonials",
-          "intent": "generic",
-          "from": "decision"
-        },
-        {
           "text": "best running tees",
           "intent": "commercial",
           "from": "decision"
@@ -970,11 +905,11 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 30
+          "count": 23
         },
         {
           "intent": "commercial",
-          "count": 25
+          "count": 21
         },
         {
           "intent": "branded",
@@ -1485,16 +1420,6 @@
           "from": "comparison"
         },
         {
-          "text": "walk vs jog vs run",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "runs vs run",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
           "text": "running tank.tops",
           "intent": "commercial",
           "from": "comparison"
@@ -1575,11 +1500,6 @@
           "from": "decision"
         },
         {
-          "text": "what brand is best for running",
-          "intent": "commercial",
-          "from": "decision"
-        },
-        {
           "text": "best running tank tops",
           "intent": "commercial",
           "from": "prefix"
@@ -1608,17 +1528,12 @@
           "text": "best running tank tops amazon",
           "intent": "transactional",
           "from": "prefix"
-        },
-        {
-          "text": "what are the best running runners",
-          "intent": "commercial",
-          "from": "prefix"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "commercial",
-          "count": 50
+          "count": 46
         },
         {
           "intent": "branded",
@@ -1963,17 +1878,17 @@
       "category": "product_category",
       "suggestions": [
         {
-          "text": "running shorts women",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "running shorts men",
           "intent": "generic",
           "from": "raw"
         },
         {
           "text": "running shorts with phone pocket",
+          "intent": "generic",
+          "from": "raw"
+        },
+        {
+          "text": "running shorts for women",
           "intent": "generic",
           "from": "raw"
         },
@@ -1988,12 +1903,12 @@
           "from": "raw"
         },
         {
-          "text": "running shorts that don't ride up",
+          "text": "running shorts for thick thighs",
           "intent": "generic",
           "from": "raw"
         },
         {
-          "text": "running shorts for thick thighs",
+          "text": "running shorts that don't ride up",
           "intent": "generic",
           "from": "raw"
         },
@@ -2023,11 +1938,6 @@
           "from": "raw"
         },
         {
-          "text": "running shorts woman",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "running shorts sale",
           "intent": "transactional",
           "from": "raw"
@@ -2038,17 +1948,12 @@
           "from": "raw"
         },
         {
-          "text": "running shorts for women",
+          "text": "running shorts for thick thighs women",
           "intent": "generic",
-          "from": "persona"
+          "from": "raw"
         },
         {
           "text": "running shorts for men",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "running shorts for thick thighs women",
           "intent": "generic",
           "from": "persona"
         },
@@ -2223,11 +2128,6 @@
           "from": "commercial"
         },
         {
-          "text": "best sports running shoes",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
           "text": "best men's athletic shorts",
           "intent": "commercial",
           "from": "commercial"
@@ -2261,16 +2161,26 @@
           "text": "running shorts review uk",
           "intent": "commercial",
           "from": "decision"
+        },
+        {
+          "text": "running shorts review women",
+          "intent": "commercial",
+          "from": "decision"
+        },
+        {
+          "text": "running shorts review men",
+          "intent": "commercial",
+          "from": "decision"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "commercial",
-          "count": 29
+          "count": 30
         },
         {
           "intent": "generic",
-          "count": 27
+          "count": 25
         },
         {
           "intent": "branded",
@@ -3158,11 +3068,6 @@
           "from": "prefix"
         },
         {
-          "text": "compression running short",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
           "text": "compression running shorts sale",
           "intent": "transactional",
           "from": "price"
@@ -3175,12 +3080,12 @@
       ],
       "intent_breakdown": [
         {
-          "intent": "generic",
+          "intent": "commercial",
           "count": 25
         },
         {
-          "intent": "commercial",
-          "count": 25
+          "intent": "generic",
+          "count": 24
         },
         {
           "intent": "branded",
@@ -3534,6 +3439,11 @@
           "from": "raw"
         },
         {
+          "text": "running socks women",
+          "intent": "generic",
+          "from": "raw"
+        },
+        {
           "text": "running socks reddit",
           "intent": "generic",
           "from": "raw"
@@ -3551,11 +3461,6 @@
         {
           "text": "running socks balega",
           "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "running socks for women",
-          "intent": "generic",
           "from": "raw"
         },
         {
@@ -3602,6 +3507,11 @@
           "text": "running socks with toes",
           "intent": "generic",
           "from": "raw"
+        },
+        {
+          "text": "running socks for women",
+          "intent": "generic",
+          "from": "persona"
         },
         {
           "text": "running socks for men",
@@ -3674,11 +3584,6 @@
           "from": "persona"
         },
         {
-          "text": "Outline key differences between running and regular socks",
-          "intent": "generic",
-          "from": "comparison"
-        },
-        {
           "text": "running socks vs hiking socks",
           "intent": "commercial",
           "from": "comparison"
@@ -3740,6 +3645,11 @@
         },
         {
           "text": "compression socks vs tights for flying",
+          "intent": "commercial",
+          "from": "comparison"
+        },
+        {
+          "text": "compression socks vs sleeves for varicose veins",
           "intent": "commercial",
           "from": "comparison"
         },
@@ -3820,11 +3730,6 @@
         },
         {
           "text": "running socks reviews",
-          "intent": "commercial",
-          "from": "decision"
-        },
-        {
-          "text": "running socks review uk",
           "intent": "commercial",
           "from": "decision"
         }
@@ -3968,11 +3873,6 @@
           "from": "persona"
         },
         {
-          "text": "no show socks for running shoes",
-          "intent": "informational",
-          "from": "persona"
-        },
-        {
           "text": "no show socks for running reddit",
           "intent": "informational",
           "from": "persona"
@@ -4063,11 +3963,6 @@
           "from": "commercial"
         },
         {
-          "text": "best no show socks for running shoes",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
           "text": "best no show socks for runners",
           "intent": "commercial",
           "from": "commercial"
@@ -4116,11 +4011,11 @@
       "intent_breakdown": [
         {
           "intent": "informational",
-          "count": 25
+          "count": 24
         },
         {
           "intent": "commercial",
-          "count": 21
+          "count": 20
         },
         {
           "intent": "branded",
@@ -4252,11 +4147,6 @@
           "from": "persona"
         },
         {
-          "text": "merino wool socks for work boots",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "merino wool socks for skiing",
           "intent": "generic",
           "from": "persona"
@@ -4279,11 +4169,6 @@
         {
           "text": "merino wool socks for sale",
           "intent": "transactional",
-          "from": "persona"
-        },
-        {
-          "text": "merino wool socks for boots",
-          "intent": "generic",
           "from": "persona"
         },
         {
@@ -4322,11 +4207,6 @@
           "from": "comparison"
         },
         {
-          "text": "kirkland merino wool socks vs darn tough",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
           "text": "costco merino wool socks vs darn tough",
           "intent": "branded",
           "from": "comparison"
@@ -4338,11 +4218,6 @@
         },
         {
           "text": "are merino wool socks good for running",
-          "intent": "generic",
-          "from": "comparison"
-        },
-        {
-          "text": "is merino good for running",
           "intent": "generic",
           "from": "comparison"
         },
@@ -4440,18 +4315,18 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 39
+          "count": 36
         },
         {
           "intent": "commercial",
           "count": 16
         },
         {
-          "intent": "branded",
-          "count": 3
+          "intent": "transactional",
+          "count": 2
         },
         {
-          "intent": "transactional",
+          "intent": "branded",
           "count": 2
         }
       ]
@@ -4466,32 +4341,7 @@
           "from": "raw"
         },
         {
-          "text": "running capris",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "running cap womens",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running capacitor",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running capris with pockets",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running caption",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running capris for women",
           "intent": "generic",
           "from": "raw"
         },
@@ -4511,27 +4361,7 @@
           "from": "raw"
         },
         {
-          "text": "running capital of the world",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running capital of the us",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "running cap for big head",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running captions funny",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "running capybara",
           "intent": "generic",
           "from": "raw"
         },
@@ -4764,7 +4594,7 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 34
+          "count": 25
         },
         {
           "intent": "commercial",
@@ -5429,19 +5259,9 @@
           "from": "persona"
         },
         {
-          "text": "tracksmith van cortlandt short",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
           "text": "tracksmith van cortlandt tee",
           "intent": "branded",
           "from": "persona"
-        },
-        {
-          "text": "tracksmith van cortlandt review",
-          "intent": "branded",
-          "from": "comparison"
         },
         {
           "text": "tracksmith van cortlandt shorts review",
@@ -5464,19 +5284,9 @@
           "from": "decision"
         },
         {
-          "text": "is tracksmith a good brand",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
           "text": "what is a track singlet",
           "intent": "informational",
           "from": "decision"
-        },
-        {
-          "text": "tracksmith van cortlandt",
-          "intent": "branded",
-          "from": "fresh"
         },
         {
           "text": "tracksmith free van cortlandt singlet",
@@ -5487,7 +5297,7 @@
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 21
+          "count": 17
         },
         {
           "intent": "informational",
@@ -5545,11 +5355,6 @@
           "from": "raw"
         },
         {
-          "text": "tracksmith twilight 5000 twin cities",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
           "text": "tracksmith twilight tee review",
           "intent": "branded",
           "from": "comparison"
@@ -5563,27 +5368,12 @@
           "text": "tracksmith twilight shorts reddit",
           "intent": "branded",
           "from": "comparison"
-        },
-        {
-          "text": "tracksmith twilight",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "tracksmith twilight series",
-          "intent": "branded",
-          "from": "fresh"
-        },
-        {
-          "text": "tracksmith twilight meet",
-          "intent": "branded",
-          "from": "fresh"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 16
+          "count": 12
         }
       ]
     },
@@ -5615,22 +5405,12 @@
           "text": "not satisfying shorts",
           "intent": "generic",
           "from": "switching"
-        },
-        {
-          "text": "satisfy running reviews",
-          "intent": "branded",
-          "from": "switching"
-        },
-        {
-          "text": "satisfy running reddit",
-          "intent": "branded",
-          "from": "community"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 6
+          "count": 4
         },
         {
           "intent": "generic",
@@ -5644,11 +5424,6 @@
       "suggestions": [
         {
           "text": "satisfy running tee sale",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "satisfy running t",
           "intent": "branded",
           "from": "raw"
         },
@@ -5728,19 +5503,9 @@
           "from": "persona"
         },
         {
-          "text": "satisfy running pants",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
           "text": "satisfy trail running cap",
           "intent": "branded",
           "from": "persona"
-        },
-        {
-          "text": "satisfy running reviews",
-          "intent": "branded",
-          "from": "comparison"
         },
         {
           "text": "satisfy running vest",
@@ -5763,24 +5528,9 @@
           "from": "decision"
         },
         {
-          "text": "satisfy running review",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "satisfy running reddit",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
           "text": "best running tees",
           "intent": "commercial",
           "from": "prefix"
-        },
-        {
-          "text": "satisfy running mothtech",
-          "intent": "branded",
-          "from": "fresh"
         },
         {
           "text": "satisfy running clothes",
@@ -5793,21 +5543,6 @@
           "from": "switching"
         },
         {
-          "text": "what are good alternatives to running",
-          "intent": "commercial",
-          "from": "switching"
-        },
-        {
-          "text": "alternatives for running at home",
-          "intent": "commercial",
-          "from": "switching"
-        },
-        {
-          "text": "any.run alternatives",
-          "intent": "commercial",
-          "from": "switching"
-        },
-        {
           "text": "satisfy running shirt reddit",
           "intent": "branded",
           "from": "community"
@@ -5816,11 +5551,11 @@
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 30
+          "count": 24
         },
         {
           "intent": "commercial",
-          "count": 4
+          "count": 1
         }
       ]
     },
@@ -5944,17 +5679,7 @@
           "from": "persona"
         },
         {
-          "text": "bandit running reddit",
-          "intent": "branded",
-          "from": "commercial"
-        },
-        {
           "text": "bandit clothing running",
-          "intent": "branded",
-          "from": "commercial"
-        },
-        {
-          "text": "bandit running brand",
           "intent": "branded",
           "from": "commercial"
         },
@@ -5970,11 +5695,6 @@
         },
         {
           "text": "bandit running top review",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "bandit running reviews",
           "intent": "branded",
           "from": "decision"
         },
@@ -5999,16 +5719,6 @@
           "from": "prefix"
         },
         {
-          "text": "bandit runner",
-          "intent": "branded",
-          "from": "fresh"
-        },
-        {
-          "text": "bandit running race",
-          "intent": "branded",
-          "from": "fresh"
-        },
-        {
           "text": "bandit running gear reddit",
           "intent": "branded",
           "from": "community"
@@ -6027,7 +5737,7 @@
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 33
+          "count": 28
         },
         {
           "intent": "commercial",
@@ -6138,16 +5848,6 @@
           "from": "persona"
         },
         {
-          "text": "is nike dri fit good for running",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "how does nike dri fit fit",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
           "text": "do nike dri fit shirts run small",
           "intent": "branded",
           "from": "persona"
@@ -6171,7 +5871,7 @@
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 24
+          "count": 22
         }
       ]
     },
@@ -6395,11 +6095,6 @@
           "from": "comparison"
         },
         {
-          "text": "nike challenger vs flex stride",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
           "text": "are nike challenger shorts good",
           "intent": "branded",
           "from": "commercial"
@@ -6450,11 +6145,6 @@
           "from": "decision"
         },
         {
-          "text": "nike challenger short",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
           "text": "nike challenger 2 shorts",
           "intent": "branded",
           "from": "fresh"
@@ -6483,7 +6173,7 @@
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 60
+          "count": 58
         }
       ]
     },
@@ -6612,16 +6302,6 @@
           "from": "comparison"
         },
         {
-          "text": "lululemon fast and free vs swift speed",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
-          "text": "lululemon fast and free vs base pace",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
           "text": "lululemon fast and free shorts review men",
           "intent": "branded",
           "from": "decision"
@@ -6647,17 +6327,7 @@
           "from": "decision"
         },
         {
-          "text": "best lululemon fast and free dupes",
-          "intent": "branded",
-          "from": "prefix"
-        },
-        {
           "text": "lululemon fast and free shorts 6",
-          "intent": "branded",
-          "from": "fresh"
-        },
-        {
-          "text": "lululemon fast and free short 10",
           "intent": "branded",
           "from": "fresh"
         },
@@ -6685,22 +6355,12 @@
           "text": "lululemon fast and free running shorts reddit",
           "intent": "branded",
           "from": "community"
-        },
-        {
-          "text": "lululemon fast and free reddit",
-          "intent": "branded",
-          "from": "community"
-        },
-        {
-          "text": "lululemon fast and free sizing reddit",
-          "intent": "branded",
-          "from": "community"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 41
+          "count": 35
         }
       ]
     },
@@ -6709,120 +6369,15 @@
       "category": "competitor_keyword",
       "suggestions": [
         {
-          "text": "patagonia airshed pullover review",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
           "text": "patagonia airshed pullover wind shirt",
           "intent": "branded",
           "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pullover women",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pullover pro",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed hoodie",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover women's",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover review",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover men's",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover vs houdini",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia men's airshed pullover",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover sizing",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover reddit",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover sale",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover pine needle green",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover bundle green",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "patagonia airshed pro pullover - women's",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "patagonia airshed pro pullover - men's",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "patagonia airshed pro vs houdini",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
-          "text": "patagonia airshed vs houdini air",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
-          "text": "patagonia men's airshed pro pullover review",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "patagonia airshed review",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "patagonia airshed pro pullover",
-          "intent": "branded",
-          "from": "fresh"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 22
+          "count": 1
         }
       ]
     },
@@ -6837,11 +6392,6 @@
         },
         {
           "text": "on running tee men",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "on running teen",
           "intent": "branded",
           "from": "raw"
         },
@@ -6861,32 +6411,7 @@
           "from": "raw"
         },
         {
-          "text": "on running t",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
           "text": "on running t shirts men",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "on running t performance",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "on running t court",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "on running t core",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "on running t club",
           "intent": "branded",
           "from": "raw"
         },
@@ -6916,26 +6441,6 @@
           "from": "persona"
         },
         {
-          "text": "on running for tennis",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "on running terry",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "on running shoes for tennis",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "on running team",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
           "text": "on running t shirt review",
           "intent": "branded",
           "from": "decision"
@@ -6947,31 +6452,6 @@
         },
         {
           "text": "on running performance t shirt review",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "on running tennis review",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "on running tennis shoes review",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "on running reviews reddit",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "on running reviews",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "on running cloud terry review",
           "intent": "branded",
           "from": "decision"
         },
@@ -7006,16 +6486,6 @@
           "from": "prefix"
         },
         {
-          "text": "best teen running shoes",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best teen running watch",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
           "text": "best trail running tee",
           "intent": "commercial",
           "from": "prefix"
@@ -7028,11 +6498,6 @@
         {
           "text": "best oversized running tees",
           "intent": "transactional",
-          "from": "prefix"
-        },
-        {
-          "text": "best teen running trainers",
-          "intent": "commercial",
           "from": "prefix"
         },
         {
@@ -7051,37 +6516,12 @@
           "from": "prefix"
         },
         {
-          "text": "on running 2023",
-          "intent": "branded",
-          "from": "fresh"
-        },
-        {
           "text": "on running shirt reddit",
           "intent": "branded",
           "from": "community"
         },
         {
-          "text": "on running performance t reddit",
-          "intent": "branded",
-          "from": "community"
-        },
-        {
           "text": "on running shirt sizing reddit",
-          "intent": "branded",
-          "from": "community"
-        },
-        {
-          "text": "on running reddit",
-          "intent": "branded",
-          "from": "community"
-        },
-        {
-          "text": "on running shoes reddit",
-          "intent": "branded",
-          "from": "community"
-        },
-        {
-          "text": "on cloud running reddit",
           "intent": "branded",
           "from": "community"
         },
@@ -7094,11 +6534,11 @@
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 37
+          "count": 17
         },
         {
           "intent": "commercial",
-          "count": 11
+          "count": 8
         },
         {
           "intent": "transactional",
@@ -7231,27 +6671,7 @@
           "from": "raw"
         },
         {
-          "text": "ciele alzcap",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "ciele alzcap sc",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "ciele alz vs gocap",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
           "text": "cap ciele athletics",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "ciele alzcap vs gocap",
           "intent": "branded",
           "from": "persona"
         },
@@ -7259,21 +6679,6 @@
           "text": "best ciele cap",
           "intent": "branded",
           "from": "commercial"
-        },
-        {
-          "text": "ciele review",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "ciele athletics alzcap",
-          "intent": "branded",
-          "from": "decision"
-        },
-        {
-          "text": "ciele alzcap review",
-          "intent": "branded",
-          "from": "decision"
         },
         {
           "text": "ciele reflective hat",
@@ -7359,7 +6764,7 @@
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 40
+          "count": 33
         }
       ]
     },
@@ -7373,38 +6778,8 @@
           "from": "raw"
         },
         {
-          "text": "good running captions",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "good running captions for instagram",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "good running cap reddit",
           "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "goodr running sunglasses",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "goodr running glasses",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "goodr running",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "goodr running warehouse",
-          "intent": "branded",
           "from": "raw"
         },
         {
@@ -7418,22 +6793,12 @@
           "from": "persona"
         },
         {
-          "text": "goodr for running",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
           "text": "good running hats",
           "intent": "generic",
           "from": "persona"
         },
         {
           "text": "good running hat",
-          "intent": "generic",
-          "from": "switching"
-        },
-        {
-          "text": "good.running cadence",
           "intent": "generic",
           "from": "switching"
         },
@@ -7448,16 +6813,6 @@
           "from": "community"
         },
         {
-          "text": "good running cadence reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "goodr running sunglasses review",
-          "intent": "branded",
-          "from": "community"
-        },
-        {
           "text": "good running cap",
           "intent": "generic",
           "from": "longtail"
@@ -7466,11 +6821,7 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 12
-        },
-        {
-          "intent": "branded",
-          "count": 6
+          "count": 8
         },
         {
           "intent": "commercial",
@@ -7688,11 +7039,6 @@
           "from": "comparison"
         },
         {
-          "text": "darn tough vs balega",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
           "text": "are darn tough running socks good",
           "intent": "branded",
           "from": "commercial"
@@ -7786,7 +7132,7 @@
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 60
+          "count": 59
         }
       ]
     },
@@ -7965,17 +7311,7 @@
           "from": "comparison"
         },
         {
-          "text": "balega vs",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
           "text": "balega socks vs bombas",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
-          "text": "balega vs bombas",
           "intent": "branded",
           "from": "comparison"
         },
@@ -8058,17 +7394,12 @@
           "text": "balega socks reddit",
           "intent": "branded",
           "from": "community"
-        },
-        {
-          "text": "balega reddit",
-          "intent": "branded",
-          "from": "community"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 54
+          "count": 51
         }
       ]
     },
@@ -8192,16 +7523,6 @@
           "from": "comparison"
         },
         {
-          "text": "feetures elite vs merino",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
-          "text": "feetures elite vs high performance",
-          "intent": "branded",
-          "from": "comparison"
-        },
-        {
           "text": "feetures elite running socks review",
           "intent": "branded",
           "from": "decision"
@@ -8260,7 +7581,7 @@
       "intent_breakdown": [
         {
           "intent": "branded",
-          "count": 35
+          "count": 33
         },
         {
           "intent": "generic",
@@ -8368,16 +7689,6 @@
           "from": "persona"
         },
         {
-          "text": "is merino wool good for running",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "is merino good for running",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "merino wool shirt benefits",
           "intent": "generic",
           "from": "persona"
@@ -8450,12 +7761,12 @@
       ],
       "intent_breakdown": [
         {
-          "intent": "generic",
-          "count": 18
-        },
-        {
           "intent": "commercial",
           "count": 17
+        },
+        {
+          "intent": "generic",
+          "count": 16
         }
       ]
     },
@@ -8544,22 +7855,12 @@
           "from": "persona"
         },
         {
-          "text": "seamless running pants",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "seamless running bra",
           "intent": "generic",
           "from": "persona"
         },
         {
           "text": "seamless running socks",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "seamless running shoes",
           "intent": "generic",
           "from": "persona"
         },
@@ -8571,12 +7872,12 @@
       ],
       "intent_breakdown": [
         {
-          "intent": "generic",
-          "count": 10
-        },
-        {
           "intent": "commercial",
           "count": 9
+        },
+        {
+          "intent": "generic",
+          "count": 8
         },
         {
           "intent": "branded",
@@ -8694,11 +7995,6 @@
           "from": "commercial"
         },
         {
-          "text": "what to use to prevent chafing while running",
-          "intent": "informational",
-          "from": "commercial"
-        },
-        {
           "text": "anti chafe running shorts women's",
           "intent": "generic",
           "from": "commercial"
@@ -8722,30 +8018,16 @@
           "text": "best anti chafing compression shorts",
           "intent": "commercial",
           "from": "prefix"
-        },
-        {
-          "text": "best anti chafing running",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "anti chafing reddit",
-          "intent": "generic",
-          "from": "community"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 17
+          "count": 16
         },
         {
           "intent": "commercial",
-          "count": 11
-        },
-        {
-          "intent": "informational",
-          "count": 1
+          "count": 10
         }
       ]
     },
@@ -8919,33 +8201,13 @@
           "from": "comparison"
         },
         {
-          "text": "is dri fit the same as moisture wicking",
-          "intent": "generic",
-          "from": "comparison"
-        },
-        {
           "text": "how do moisture wicking shirts work",
           "intent": "informational",
           "from": "comparison"
         },
         {
-          "text": "moisture wicking vs cotton",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
           "text": "moisture-wicking shirts material",
           "intent": "generic",
-          "from": "comparison"
-        },
-        {
-          "text": "moisture wicking vs moisture absorbing",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "moisture wicking vs dri-fit",
-          "intent": "commercial",
           "from": "comparison"
         },
         {
@@ -8986,11 +8248,6 @@
         {
           "text": "do moisture wicking shirts keep you cool",
           "intent": "generic",
-          "from": "commercial"
-        },
-        {
-          "text": "moisture wicking explained",
-          "intent": "informational",
           "from": "commercial"
         },
         {
@@ -9057,15 +8314,15 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 33
+          "count": 32
         },
         {
           "intent": "commercial",
-          "count": 19
+          "count": 16
         },
         {
           "intent": "informational",
-          "count": 5
+          "count": 4
         },
         {
           "intent": "transactional",
@@ -9223,11 +8480,6 @@
           "from": "comparison"
         },
         {
-          "text": "most breathable running shoes",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
           "text": "most popular running shorts",
           "intent": "generic",
           "from": "commercial"
@@ -9240,11 +8492,6 @@
         {
           "text": "running shorts review",
           "intent": "commercial",
-          "from": "decision"
-        },
-        {
-          "text": "breathable running shoe",
-          "intent": "generic",
           "from": "decision"
         },
         {
@@ -9279,11 +8526,6 @@
         },
         {
           "text": "best breathable shorts",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best breathable running shoe",
           "intent": "commercial",
           "from": "prefix"
         },
@@ -9331,11 +8573,11 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 25
+          "count": 23
         },
         {
           "intent": "commercial",
-          "count": 22
+          "count": 21
         },
         {
           "intent": "informational",
@@ -9382,28 +8624,8 @@
           "from": "raw"
         },
         {
-          "text": "how to run quick",
-          "intent": "informational",
-          "from": "raw"
-        },
-        {
-          "text": "how to dry cotton fast",
-          "intent": "informational",
-          "from": "raw"
-        },
-        {
           "text": "what is a quick dry shirt",
           "intent": "informational",
-          "from": "raw"
-        },
-        {
-          "text": "quick dry running shoes",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "quick dry running pants",
-          "intent": "generic",
           "from": "raw"
         },
         {
@@ -9417,22 +8639,12 @@
           "from": "raw"
         },
         {
-          "text": "quick dry trail running shoes",
-          "intent": "generic",
-          "from": "decision"
-        },
-        {
           "text": "best quick dry running shorts",
           "intent": "commercial",
           "from": "prefix"
         },
         {
           "text": "best quick dry running socks",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best quick drying trail running shoe",
           "intent": "commercial",
           "from": "prefix"
         },
@@ -9460,25 +8672,20 @@
           "text": "quick dry tank",
           "intent": "generic",
           "from": "fresh"
-        },
-        {
-          "text": "quick dry trail runners",
-          "intent": "generic",
-          "from": "switching"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 14
+          "count": 10
         },
         {
           "intent": "commercial",
-          "count": 6
+          "count": 5
         },
         {
           "intent": "informational",
-          "count": 3
+          "count": 1
         }
       ]
     },
@@ -9642,11 +8849,6 @@
           "from": "fresh"
         },
         {
-          "text": "lightest running shoes 2023",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
           "text": "running singlets women's",
           "intent": "generic",
           "from": "switching"
@@ -9663,11 +8865,6 @@
         },
         {
           "text": "running singlet reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "lightweight running shoes reddit",
           "intent": "generic",
           "from": "community"
         },
@@ -9695,7 +8892,7 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 28
+          "count": 26
         },
         {
           "intent": "commercial",
@@ -9722,113 +8919,15 @@
           "from": "raw"
         },
         {
-          "text": "is recycled polyester bad",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "is recycled polyester environmentally friendly",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "what is recycled polyester",
-          "intent": "informational",
-          "from": "raw"
-        },
-        {
-          "text": "is recycled polyester safe",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "is recycled polyester better",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "recycled polyester rug",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "recycled polyester joggers",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "recycled polyester pants",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "recycled polyester ripstop",
-          "intent": "commercial",
-          "from": "raw"
-        },
-        {
-          "text": "is recycled polyester good for running",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "pros and cons of recycled polyester",
-          "intent": "commercial",
-          "from": "persona"
-        },
-        {
-          "text": "is 100 polyester good for running",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "is recycled polyester good",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "recycled running shoes",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "recycled polyester challenge",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "recycled polyester price",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
           "text": "recycled polyester jacket",
           "intent": "generic",
           "from": "fresh"
-        },
-        {
-          "text": "recycled polyester breathable",
-          "intent": "generic",
-          "from": "switching"
-        },
-        {
-          "text": "recycled polyester vs polyester",
-          "intent": "commercial",
-          "from": "switching"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 17
-        },
-        {
-          "intent": "commercial",
           "count": 3
-        },
-        {
-          "intent": "informational",
-          "count": 1
         }
       ]
     },
@@ -9902,11 +9001,6 @@
           "from": "persona"
         },
         {
-          "text": "how to stop bamboo running",
-          "intent": "commercial",
-          "from": "persona"
-        },
-        {
           "text": "bamboo t shirt review",
           "intent": "commercial",
           "from": "persona"
@@ -9917,34 +9011,9 @@
           "from": "persona"
         },
         {
-          "text": "running bamboo problems",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "bamboo running",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "bamboo runner rug",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "bamboo runner",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "bamboo upf shirt",
           "intent": "generic",
           "from": "fresh"
-        },
-        {
-          "text": "non-running bamboo",
-          "intent": "generic",
-          "from": "switching"
         },
         {
           "text": "bamboo athletic shirts",
@@ -9955,11 +9024,11 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 17
+          "count": 12
         },
         {
           "intent": "commercial",
-          "count": 6
+          "count": 5
         }
       ]
     },
@@ -10121,11 +9190,6 @@
           "text": "running mesh shorts",
           "intent": "generic",
           "from": "prefix"
-        },
-        {
-          "text": "best mesh running shoes",
-          "intent": "commercial",
-          "from": "prefix"
         }
       ],
       "intent_breakdown": [
@@ -10135,7 +9199,7 @@
         },
         {
           "intent": "commercial",
-          "count": 5
+          "count": 4
         },
         {
           "intent": "branded",
@@ -10909,17 +9973,7 @@
           "from": "persona"
         },
         {
-          "text": "sun protection for runners",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "sun protection clothing for runners",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "sun protection running",
           "intent": "generic",
           "from": "persona"
         },
@@ -10962,7 +10016,7 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 20
+          "count": 18
         },
         {
           "intent": "commercial",
@@ -11110,11 +10164,6 @@
           "from": "persona"
         },
         {
-          "text": "how to stay cool while running",
-          "intent": "informational",
-          "from": "commercial"
-        },
-        {
           "text": "best cool running gear",
           "intent": "commercial",
           "from": "prefix"
@@ -11221,7 +10270,7 @@
         },
         {
           "intent": "informational",
-          "count": 5
+          "count": 4
         },
         {
           "intent": "branded",
@@ -11233,11 +10282,6 @@
       "term": "sweat wicking cap",
       "category": "feature_material",
       "suggestions": [
-        {
-          "text": "sweat wicking capris",
-          "intent": "generic",
-          "from": "raw"
-        },
         {
           "text": "sweat wicking cap men",
           "intent": "generic",
@@ -11264,32 +10308,12 @@
           "from": "raw"
         },
         {
-          "text": "moisture wicking capris",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "moisture wicking capri pants",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "sweat absorbing cap for men",
           "intent": "generic",
           "from": "raw"
         },
         {
           "text": "moisture wicking cap men",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "moisture wicking capris for women",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "moisture wicking capabilities",
           "intent": "generic",
           "from": "raw"
         },
@@ -11301,11 +10325,6 @@
         {
           "text": "sweat absorbing cap for gym",
           "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "moisture wicking capris plus size",
-          "intent": "transactional",
           "from": "raw"
         },
         {
@@ -11331,31 +10350,6 @@
         {
           "text": "moisture wicking hat for running",
           "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "how does sweat wicking work",
-          "intent": "informational",
-          "from": "persona"
-        },
-        {
-          "text": "what does sweat wicking fabric means",
-          "intent": "informational",
-          "from": "persona"
-        },
-        {
-          "text": "what is sweat wicking fabric",
-          "intent": "informational",
-          "from": "persona"
-        },
-        {
-          "text": "is cotton sweat wicking",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "what is sweat wicking material",
-          "intent": "informational",
           "from": "persona"
         },
         {
@@ -11409,17 +10403,7 @@
           "from": "decision"
         },
         {
-          "text": "sweat wicking camisole",
-          "intent": "generic",
-          "from": "decision"
-        },
-        {
           "text": "best sweat absorbing cap",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best moisture wicking capris",
           "intent": "commercial",
           "from": "prefix"
         },
@@ -11469,11 +10453,6 @@
           "from": "community"
         },
         {
-          "text": "sweat wicking meaning",
-          "intent": "informational",
-          "from": "community"
-        },
-        {
           "text": "sweat wicking skull cap",
           "intent": "generic",
           "from": "community"
@@ -11502,19 +10481,11 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 34
+          "count": 27
         },
         {
           "intent": "commercial",
-          "count": 13
-        },
-        {
-          "intent": "informational",
-          "count": 5
-        },
-        {
-          "intent": "transactional",
-          "count": 1
+          "count": 12
         }
       ]
     },
@@ -11543,11 +10514,6 @@
           "from": "raw"
         },
         {
-          "text": "city outfits 2022",
-          "intent": "generic",
-          "from": "decision"
-        },
-        {
           "text": "city walking outfit",
           "intent": "generic",
           "from": "decision"
@@ -11556,7 +10522,7 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 6
+          "count": 5
         }
       ]
     },
@@ -11564,26 +10530,6 @@
       "term": "marathon kit",
       "category": "use_case_persona",
       "suggestions": [
-        {
-          "text": "marathon kitchen",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "marathon kitty",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "marathon kitchen timer",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "marathon kitchen hardware",
-          "intent": "generic",
-          "from": "raw"
-        },
         {
           "text": "marathon kit bag",
           "intent": "generic",
@@ -11605,17 +10551,7 @@
           "from": "raw"
         },
         {
-          "text": "marathon kitne kilometre hoti hai",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "marathon kit layout",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "marathon kitchener waterloo",
           "intent": "generic",
           "from": "raw"
         },
@@ -11626,16 +10562,6 @@
         },
         {
           "text": "marathon kit lay",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "marathon kitchen accessories",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "marathon kitne kilometre hota hai",
           "intent": "generic",
           "from": "raw"
         },
@@ -11675,21 +10601,6 @@
           "from": "persona"
         },
         {
-          "text": "marathon rules",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "what to take when running a marathon",
-          "intent": "informational",
-          "from": "persona"
-        },
-        {
-          "text": "marathon race kits",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "marathon sponsored kit vs rook",
           "intent": "commercial",
           "from": "comparison"
@@ -11700,69 +10611,9 @@
           "from": "comparison"
         },
         {
-          "text": "marathon 1 vs marathon 2 grass",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "marathon 1 vs 2",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "marathon kits",
-          "intent": "generic",
-          "from": "comparison"
-        },
-        {
-          "text": "marathon vs kirkland toilet paper",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
           "text": "best marathon kit",
           "intent": "commercial",
           "from": "comparison"
-        },
-        {
-          "text": "marathon vs 10k",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "marathon vs boulevard britax",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "marathon shoe review",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "marathon best timing",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "marathon plus review",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "marathon best",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "marathon best runner",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "best marathon pack",
-          "intent": "commercial",
-          "from": "prefix"
         },
         {
           "text": "best marathon running kit",
@@ -11805,36 +10656,6 @@
           "from": "prefix"
         },
         {
-          "text": "easiest bq marathons",
-          "intent": "generic",
-          "from": "prefix"
-        },
-        {
-          "text": "what is the easiest marathon to run",
-          "intent": "informational",
-          "from": "prefix"
-        },
-        {
-          "text": "which marathon has the most runners",
-          "intent": "generic",
-          "from": "prefix"
-        },
-        {
-          "text": "best marathon key restaurants",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best marathon products",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best marathon runner",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
           "text": "london marathon kit 2026",
           "intent": "generic",
           "from": "fresh"
@@ -11868,15 +10689,15 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 32
+          "count": 19
         },
         {
           "intent": "commercial",
-          "count": 25
+          "count": 11
         },
         {
           "intent": "informational",
-          "count": 3
+          "count": 1
         }
       ]
     },
@@ -11896,11 +10717,6 @@
         },
         {
           "text": "hot weather running shirt",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "hot weather running pants",
           "intent": "generic",
           "from": "raw"
         },
@@ -11927,11 +10743,6 @@
         {
           "text": "hot weather running t shirt",
           "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "best hot weather running pants",
-          "intent": "commercial",
           "from": "raw"
         },
         {
@@ -11970,22 +10781,12 @@
           "from": "persona"
         },
         {
-          "text": "how to run better in hot weather",
-          "intent": "informational",
-          "from": "commercial"
-        },
-        {
           "text": "best hot weather running t shirt",
           "intent": "commercial",
           "from": "prefix"
         },
         {
           "text": "best hot weather long sleeve running shirt",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best hot weather running shoes",
           "intent": "commercial",
           "from": "prefix"
         },
@@ -12000,17 +10801,7 @@
           "from": "community"
         },
         {
-          "text": "running hot weather reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
           "text": "cold weather running gear reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "hot weather running",
           "intent": "generic",
           "from": "community"
         }
@@ -12018,18 +10809,14 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 15
+          "count": 12
         },
         {
           "intent": "commercial",
-          "count": 9
+          "count": 7
         },
         {
           "intent": "branded",
-          "count": 1
-        },
-        {
-          "intent": "informational",
           "count": 1
         }
       ]
@@ -12134,11 +10921,6 @@
           "from": "persona"
         },
         {
-          "text": "cold weather running pants for men",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "cold weather running clothes for men",
           "intent": "generic",
           "from": "persona"
@@ -12149,27 +10931,12 @@
           "from": "persona"
         },
         {
-          "text": "cold weather running pants for women",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "best cold weather running gear for men",
           "intent": "commercial",
           "from": "persona"
         },
         {
           "text": "best cold weather running gear for women",
-          "intent": "commercial",
-          "from": "persona"
-        },
-        {
-          "text": "best cold weather running pants for men",
-          "intent": "commercial",
-          "from": "persona"
-        },
-        {
-          "text": "best cold weather running pants for women",
           "intent": "commercial",
           "from": "persona"
         },
@@ -12259,27 +11026,12 @@
           "from": "prefix"
         },
         {
-          "text": "best cold weather running pants",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
           "text": "best cold weather running clothes",
           "intent": "commercial",
           "from": "prefix"
         },
         {
-          "text": "best cold weather running pants men",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
           "text": "best cold weather running shirt",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best cold weather running pants women",
           "intent": "commercial",
           "from": "prefix"
         },
@@ -12319,11 +11071,6 @@
           "from": "price"
         },
         {
-          "text": "cold weather running pants reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
           "text": "cold weather running clothes reddit",
           "intent": "generic",
           "from": "community"
@@ -12342,11 +11089,11 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 27
+          "count": 24
         },
         {
           "intent": "commercial",
-          "count": 23
+          "count": 18
         },
         {
           "intent": "transactional",
@@ -12387,11 +11134,6 @@
           "from": "raw"
         },
         {
-          "text": "summer jogging outfits for men",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "summer jogging outfit for women",
           "intent": "generic",
           "from": "raw"
@@ -12427,21 +11169,6 @@
           "from": "raw"
         },
         {
-          "text": "summer running attire",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "summer running suit for men",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "summer running suit",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "summer running outfit for women",
           "intent": "generic",
           "from": "persona"
@@ -12467,11 +11194,6 @@
           "from": "persona"
         },
         {
-          "text": "summer running suit for women",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "best summer running clothes for women",
           "intent": "commercial",
           "from": "persona"
@@ -12480,11 +11202,6 @@
           "text": "running outfit for summer",
           "intent": "generic",
           "from": "persona"
-        },
-        {
-          "text": "summer running outfits",
-          "intent": "generic",
-          "from": "comparison"
         },
         {
           "text": "summer running vest",
@@ -12510,26 +11227,6 @@
           "text": "best summer running outfit",
           "intent": "commercial",
           "from": "commercial"
-        },
-        {
-          "text": "how to have the best summer ever",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "best running outfits",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "good running outfits",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
-          "text": "best summer running outfits",
-          "intent": "commercial",
-          "from": "prefix"
         },
         {
           "text": "best summer running shirts",
@@ -12597,22 +11294,12 @@
           "from": "price"
         },
         {
-          "text": "cute running outfits summer",
-          "intent": "generic",
-          "from": "price"
-        },
-        {
           "text": "summer running shirt reddit",
           "intent": "generic",
           "from": "community"
         },
         {
           "text": "running outfit ideas",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "summer running reddit",
           "intent": "generic",
           "from": "community"
         },
@@ -12625,11 +11312,11 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 34
+          "count": 25
         },
         {
           "intent": "commercial",
-          "count": 17
+          "count": 14
         }
       ]
     },
@@ -12743,26 +11430,6 @@
           "from": "persona"
         },
         {
-          "text": "winter running accessories for women",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "winter running dress for men",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "winter running suit for men",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "winter running accessories for men",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "winter running tops for men",
           "intent": "commercial",
           "from": "persona"
@@ -12781,16 +11448,6 @@
           "text": "winter running gear for beginners",
           "intent": "generic",
           "from": "persona"
-        },
-        {
-          "text": "winter running suit for women",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "winter running outfits",
-          "intent": "generic",
-          "from": "comparison"
         },
         {
           "text": "winter running outfit mens",
@@ -12941,7 +11598,7 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 34
+          "count": 28
         },
         {
           "intent": "commercial",
@@ -12976,11 +11633,6 @@
           "from": "raw"
         },
         {
-          "text": "what to run in when it's raining",
-          "intent": "informational",
-          "from": "raw"
-        },
-        {
           "text": "what to wear to run in the rain",
           "intent": "informational",
           "from": "raw"
@@ -12996,11 +11648,6 @@
           "from": "raw"
         },
         {
-          "text": "rainy day running",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "running gear for rainy weather",
           "intent": "generic",
           "from": "comparison"
@@ -13008,11 +11655,6 @@
         {
           "text": "running gear review",
           "intent": "commercial",
-          "from": "decision"
-        },
-        {
-          "text": "rainy day running shoes",
-          "intent": "generic",
           "from": "decision"
         },
         {
@@ -13044,7 +11686,7 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 7
+          "count": 5
         },
         {
           "intent": "commercial",
@@ -13052,7 +11694,7 @@
         },
         {
           "intent": "informational",
-          "count": 3
+          "count": 2
         }
       ]
     },
@@ -13181,11 +11823,6 @@
           "from": "commercial"
         },
         {
-          "text": "what are the best women's running trainers",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
           "text": "best running tanks women's",
           "intent": "commercial",
           "from": "commercial"
@@ -13249,7 +11886,7 @@
       "intent_breakdown": [
         {
           "intent": "commercial",
-          "count": 33
+          "count": 32
         },
         {
           "intent": "branded",
@@ -13594,21 +12231,6 @@
       "category": "use_case_persona",
       "suggestions": [
         {
-          "text": "track workout outfits",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "track training outfits",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "track workout pants",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "track workout clothes",
           "intent": "generic",
           "from": "raw"
@@ -13629,51 +12251,6 @@
           "from": "raw"
         },
         {
-          "text": "workout track pants women",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "workout track pants for men",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "workout track suit",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "workout tracksuit for women",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "workout track suit men",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "workout track pants nike",
-          "intent": "branded",
-          "from": "raw"
-        },
-        {
-          "text": "workout track bottoms",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "workout track pants for women",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "workout track suit for men",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "what to wear for track",
           "intent": "informational",
           "from": "persona"
@@ -13689,87 +12266,12 @@
           "from": "persona"
         },
         {
-          "text": "track workout for fat loss",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "track practice outfits",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "track workout for weight loss",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "track workout on iphone",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "best workout track pants",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best workout track pants for men",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "how to get in shape for track",
-          "intent": "informational",
-          "from": "prefix"
-        },
-        {
-          "text": "best track outfits",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best workout outfits 2022",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best track and field outfits",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
           "text": "best workout outfit sets",
           "intent": "commercial",
           "from": "prefix"
         },
         {
-          "text": "best workout outfits on amazon",
-          "intent": "branded",
-          "from": "prefix"
-        },
-        {
-          "text": "gym track pants cheap",
-          "intent": "transactional",
-          "from": "price"
-        },
-        {
           "text": "where to buy cheap workout clothes",
-          "intent": "transactional",
-          "from": "price"
-        },
-        {
-          "text": "workout outfits near me",
-          "intent": "transactional",
-          "from": "price"
-        },
-        {
-          "text": "cheap workout outfits sets",
-          "intent": "transactional",
-          "from": "price"
-        },
-        {
-          "text": "cheap workout outfits",
           "intent": "transactional",
           "from": "price"
         },
@@ -13779,22 +12281,7 @@
           "from": "price"
         },
         {
-          "text": "gym track pants reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "track workout reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
           "text": "reddit workout clothes",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "reddit workout tracking app",
           "intent": "generic",
           "from": "community"
         }
@@ -13802,23 +12289,19 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 22
-        },
-        {
-          "intent": "commercial",
-          "count": 7
-        },
-        {
-          "intent": "transactional",
-          "count": 6
-        },
-        {
-          "intent": "branded",
-          "count": 3
+          "count": 5
         },
         {
           "intent": "informational",
-          "count": 3
+          "count": 2
+        },
+        {
+          "intent": "commercial",
+          "count": 2
+        },
+        {
+          "intent": "transactional",
+          "count": 2
         }
       ]
     },
@@ -13827,22 +12310,7 @@
       "category": "use_case_persona",
       "suggestions": [
         {
-          "text": "half marathon kitne kilometre ka hota hai",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon kitchener",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "half marathon kit list",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon kitne kilometre hota hai",
           "intent": "generic",
           "from": "raw"
         },
@@ -13852,99 +12320,9 @@
           "from": "raw"
         },
         {
-          "text": "half marathon kitchener waterloo",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon kitna hota hai",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon kitsap county",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon kitsap",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon cost",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon finish time",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "day of half marathon",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon rules",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon kirkland",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "half marathon ky",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "kit for half marathon",
           "intent": "generic",
           "from": "persona"
-        },
-        {
-          "text": "half marathon do i need gel",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "what to bring on a half marathon",
-          "intent": "branded",
-          "from": "persona"
-        },
-        {
-          "text": "half marathon for dummies",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "half marathon for rookies",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "half marathon for first timers",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "half marathon for beginners",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "half marathon prep for beginners",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "best half marathon in kentucky",
-          "intent": "commercial",
-          "from": "prefix"
         },
         {
           "text": "best half marathon gear",
@@ -13952,54 +12330,9 @@
           "from": "prefix"
         },
         {
-          "text": "best half marathon 2022",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best half marathon tips",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
           "text": "bucharest half marathon 2026 kit",
           "intent": "generic",
           "from": "fresh"
-        },
-        {
-          "text": "half marathon expected finish time",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "half marathon 2023 colorado",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "half marathons 2024 usa",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "half marathon 2023 washington state",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "half marathon 2023 seattle",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "half marathon pack",
-          "intent": "generic",
-          "from": "longtail"
-        },
-        {
-          "text": "half marathon pack g",
-          "intent": "generic",
-          "from": "longtail"
         },
         {
           "text": "half marathon survival kit",
@@ -14055,14 +12388,10 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 40
+          "count": 14
         },
         {
           "intent": "commercial",
-          "count": 4
-        },
-        {
-          "intent": "branded",
           "count": 1
         }
       ]
@@ -14152,31 +12481,6 @@
           "from": "persona"
         },
         {
-          "text": "is ultra running bad for you",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "ultra running for beginners",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "ultra running training for beginners",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "ultra running form",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
-          "text": "ultra running supplies",
-          "intent": "generic",
-          "from": "persona"
-        },
-        {
           "text": "trail running best gear",
           "intent": "commercial",
           "from": "commercial"
@@ -14187,74 +12491,9 @@
           "from": "commercial"
         },
         {
-          "text": "ultra running brands",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
-          "text": "is ultra running healthy",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
-          "text": "ultra running beginner guide",
-          "intent": "informational",
-          "from": "commercial"
-        },
-        {
-          "text": "best ultra running book",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "best ultra running lights",
-          "intent": "commercial",
-          "from": "commercial"
-        },
-        {
           "text": "best ultra running gear",
           "intent": "commercial",
           "from": "commercial"
-        },
-        {
-          "text": "ultra running pack reviews",
-          "intent": "commercial",
-          "from": "decision"
-        },
-        {
-          "text": "trail running pack reviews",
-          "intent": "commercial",
-          "from": "decision"
-        },
-        {
-          "text": "ultra running results",
-          "intent": "generic",
-          "from": "decision"
-        },
-        {
-          "text": "ultra running shoes review",
-          "intent": "commercial",
-          "from": "decision"
-        },
-        {
-          "text": "ultra running essentials",
-          "intent": "generic",
-          "from": "decision"
-        },
-        {
-          "text": "ultra running checklist",
-          "intent": "generic",
-          "from": "decision"
-        },
-        {
-          "text": "ultra-running",
-          "intent": "generic",
-          "from": "decision"
-        },
-        {
-          "text": "ultraboost running review",
-          "intent": "commercial",
-          "from": "decision"
         },
         {
           "text": "best trail running kit",
@@ -14263,11 +12502,6 @@
         },
         {
           "text": "best ultra marathon kit",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best ultra running pack",
           "intent": "commercial",
           "from": "prefix"
         },
@@ -14287,17 +12521,7 @@
           "from": "prefix"
         },
         {
-          "text": "best ultra running equipment",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
           "text": "best trail running gear",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best trail running pack",
           "intent": "commercial",
           "from": "prefix"
         },
@@ -14345,45 +12569,16 @@
           "text": "ultra marathon gear reddit",
           "intent": "generic",
           "from": "community"
-        },
-        {
-          "text": "trail running pack reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "trail running equipment reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "ultra running reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "ultraboost running reddit",
-          "intent": "generic",
-          "from": "community"
-        },
-        {
-          "text": "ultra marathon reddit",
-          "intent": "generic",
-          "from": "community"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 36
+          "count": 20
         },
         {
           "intent": "commercial",
-          "count": 23
-        },
-        {
-          "intent": "informational",
-          "count": 1
+          "count": 14
         }
       ]
     },
@@ -14517,32 +12712,7 @@
           "from": "comparison"
         },
         {
-          "text": "difference between trail running and road running",
-          "intent": "generic",
-          "from": "comparison"
-        },
-        {
-          "text": "do trail running shoes make a difference",
-          "intent": "generic",
-          "from": "comparison"
-        },
-        {
-          "text": "trail running vs hiking shoes reddit",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
           "text": "running shorts vs training shorts",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "trail running shoes vs regular",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "trail running shoes vs running",
           "intent": "commercial",
           "from": "comparison"
         },
@@ -14662,11 +12832,6 @@
           "from": "decision"
         },
         {
-          "text": "can you wear trail running shoes everyday",
-          "intent": "generic",
-          "from": "decision"
-        },
-        {
           "text": "trail running shorts women's",
           "intent": "generic",
           "from": "decision"
@@ -14695,11 +12860,11 @@
       "intent_breakdown": [
         {
           "intent": "commercial",
-          "count": 29
+          "count": 26
         },
         {
           "intent": "generic",
-          "count": 26
+          "count": 23
         },
         {
           "intent": "branded",
@@ -14730,21 +12895,6 @@
           "from": "raw"
         },
         {
-          "text": "what is treadmill running good for",
-          "intent": "informational",
-          "from": "raw"
-        },
-        {
-          "text": "how to get better at treadmill running",
-          "intent": "informational",
-          "from": "raw"
-        },
-        {
-          "text": "treadmill running outside",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "treadmill outfit",
           "intent": "generic",
           "from": "raw"
@@ -14753,41 +12903,12 @@
           "text": "what to wear on a treadmill",
           "intent": "branded",
           "from": "raw"
-        },
-        {
-          "text": "treadmill running accessories",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "treadmill wearing out shoes",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "treadmill running race",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "treadmill running goals",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "treadmill 2023",
-          "intent": "generic",
-          "from": "fresh"
         }
       ],
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 9
-        },
-        {
-          "intent": "informational",
-          "count": 2
+          "count": 3
         },
         {
           "intent": "branded",
@@ -14835,16 +12956,6 @@
           "from": "raw"
         },
         {
-          "text": "race day pack",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
-          "text": "race day pack list",
-          "intent": "generic",
-          "from": "raw"
-        },
-        {
           "text": "marathon race day kit",
           "intent": "generic",
           "from": "raw"
@@ -14875,43 +12986,8 @@
           "from": "raw"
         },
         {
-          "text": "race day vs stakes day",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "race day shoes vs training shoes",
-          "intent": "commercial",
-          "from": "comparison"
-        },
-        {
-          "text": "race day safety",
-          "intent": "generic",
-          "from": "comparison"
-        },
-        {
-          "text": "race day running shoes",
-          "intent": "generic",
-          "from": "comparison"
-        },
-        {
           "text": "best marathon race day kit",
           "intent": "commercial",
-          "from": "commercial"
-        },
-        {
-          "text": "race day drinks",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
-          "text": "race day tips",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
-          "text": "day of 5k race prep",
-          "intent": "generic",
           "from": "commercial"
         },
         {
@@ -14920,27 +12996,7 @@
           "from": "commercial"
         },
         {
-          "text": "race day bag",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
-          "text": "race day bag running",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
-          "text": "race day essentials",
-          "intent": "generic",
-          "from": "commercial"
-        },
-        {
           "text": "powerstop track day kit review",
-          "intent": "commercial",
-          "from": "decision"
-        },
-        {
-          "text": "a day at the races review",
           "intent": "commercial",
           "from": "decision"
         },
@@ -14950,74 +13006,9 @@
           "from": "decision"
         },
         {
-          "text": "race day quads reviews",
-          "intent": "commercial",
-          "from": "decision"
-        },
-        {
           "text": "best track day kit car",
           "intent": "commercial",
           "from": "prefix"
-        },
-        {
-          "text": "day before running race tips",
-          "intent": "generic",
-          "from": "prefix"
-        },
-        {
-          "text": "5k race day tips",
-          "intent": "generic",
-          "from": "prefix"
-        },
-        {
-          "text": "best race day shoes",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "best race day running shoes",
-          "intent": "commercial",
-          "from": "prefix"
-        },
-        {
-          "text": "race day january 28 2023",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "race daytona 2023",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "race day 2022",
-          "intent": "generic",
-          "from": "fresh"
-        },
-        {
-          "text": "cheap race day shoes",
-          "intent": "transactional",
-          "from": "price"
-        },
-        {
-          "text": "race day checklist",
-          "intent": "generic",
-          "from": "price"
-        },
-        {
-          "text": "race day cups",
-          "intent": "generic",
-          "from": "price"
-        },
-        {
-          "text": "race day lube and wash",
-          "intent": "generic",
-          "from": "switching"
-        },
-        {
-          "text": "race day quads promo code",
-          "intent": "transactional",
-          "from": "community"
         },
         {
           "text": "race kit rk1",
@@ -15028,19 +13019,15 @@
       "intent_breakdown": [
         {
           "intent": "generic",
-          "count": 29
-        },
-        {
-          "intent": "commercial",
-          "count": 10
+          "count": 11
         },
         {
           "intent": "branded",
           "count": 4
         },
         {
-          "intent": "transactional",
-          "count": 2
+          "intent": "commercial",
+          "count": 4
         }
       ]
     }
@@ -15093,6 +13080,13 @@
       "intent": "commercial",
       "from": "commercial",
       "seed": "long sleeve running shirt",
+      "category": "product_category"
+    },
+    {
+      "text": "compression socks vs sleeves for varicose veins",
+      "intent": "commercial",
+      "from": "comparison",
+      "seed": "running socks",
       "category": "product_category"
     },
     {
@@ -15248,110 +13242,98 @@
       "from": "prefix",
       "seed": "hot weather running gear",
       "category": "use_case_persona"
-    },
-    {
-      "text": "women's running tank top with phone pocket",
-      "intent": "commercial",
-      "from": "raw",
-      "seed": "women running tank top",
-      "category": "use_case_persona"
     }
   ],
   "brand_sov_autocomplete": [
     {
       "brand": "nike",
-      "mentions": 128,
-      "share_pct": 21.05
+      "mentions": 123,
+      "share_pct": 24.07
     },
     {
       "brand": "darn tough",
-      "mentions": 63,
-      "share_pct": 10.36
-    },
-    {
-      "brand": "on",
-      "mentions": 57,
-      "share_pct": 9.38
+      "mentions": 61,
+      "share_pct": 11.94
     },
     {
       "brand": "balega",
-      "mentions": 57,
-      "share_pct": 9.38
+      "mentions": 53,
+      "share_pct": 10.37
     },
     {
       "brand": "lululemon",
-      "mentions": 50,
-      "share_pct": 8.22
-    },
-    {
-      "brand": "ciele",
-      "mentions": 41,
-      "share_pct": 6.74
+      "mentions": 44,
+      "share_pct": 8.61
     },
     {
       "brand": "feetures",
-      "mentions": 39,
-      "share_pct": 6.41
+      "mentions": 37,
+      "share_pct": 7.24
     },
     {
-      "brand": "satisfy",
-      "mentions": 37,
-      "share_pct": 6.09
+      "brand": "on",
+      "mentions": 34,
+      "share_pct": 6.65
     },
     {
-      "brand": "tracksmith",
-      "mentions": 37,
-      "share_pct": 6.09
+      "brand": "ciele",
+      "mentions": 34,
+      "share_pct": 6.65
     },
     {
       "brand": "bandit",
-      "mentions": 36,
-      "share_pct": 5.92
+      "mentions": 31,
+      "share_pct": 6.07
     },
     {
-      "brand": "patagonia",
-      "mentions": 24,
-      "share_pct": 3.95
+      "brand": "satisfy",
+      "mentions": 29,
+      "share_pct": 5.68
+    },
+    {
+      "brand": "tracksmith",
+      "mentions": 29,
+      "share_pct": 5.68
     },
     {
       "brand": "adidas",
       "mentions": 14,
-      "share_pct": 2.3
+      "share_pct": 2.74
     },
     {
       "brand": "asics",
       "mentions": 6,
-      "share_pct": 0.99
-    },
-    {
-      "brand": "goodr",
-      "mentions": 6,
-      "share_pct": 0.99
+      "share_pct": 1.17
     },
     {
       "brand": "janji",
       "mentions": 5,
-      "share_pct": 0.82
+      "share_pct": 0.98
     },
     {
       "brand": "smartwool",
       "mentions": 3,
-      "share_pct": 0.49
+      "share_pct": 0.59
+    },
+    {
+      "brand": "patagonia",
+      "mentions": 3,
+      "share_pct": 0.59
     },
     {
       "brand": "new balance",
       "mentions": 2,
-      "share_pct": 0.33
+      "share_pct": 0.39
     },
     {
       "brand": "injinji",
       "mentions": 2,
-      "share_pct": 0.33
+      "share_pct": 0.39
     },
     {
       "brand": "soar",
       "mentions": 1,
-      "share_pct": 0.16
+      "share_pct": 0.2
     }
   ],
   "long_tail": [
@@ -15532,68 +13514,33 @@
     }
   ],
   "weekly_changes": {
-    "compared_against": "2026-05-21",
-    "weeks_of_history": 4,
-    "new_queries_count": 9,
+    "compared_against": "2026-05-22",
+    "weeks_of_history": 5,
+    "new_queries_count": 4,
     "new_buying_intent": [
       {
-        "text": "marathon vs kirkland toilet paper",
+        "text": "compression socks vs sleeves for varicose veins",
         "intent": "commercial",
         "from": "comparison",
-        "seed": "marathon kit",
-        "category": "use_case_persona"
-      },
-      {
-        "text": "marathon sponsored kit vs rook",
-        "intent": "commercial",
-        "from": "comparison",
-        "seed": "marathon kit",
-        "category": "use_case_persona"
-      },
-      {
-        "text": "marathon 1 vs marathon 2 grass",
-        "intent": "commercial",
-        "from": "comparison",
-        "seed": "marathon kit",
-        "category": "use_case_persona"
-      },
-      {
-        "text": "marathon vs boulevard britax",
-        "intent": "commercial",
-        "from": "comparison",
-        "seed": "marathon kit",
-        "category": "use_case_persona"
-      },
-      {
-        "text": "marathon free kit vs rook",
-        "intent": "commercial",
-        "from": "comparison",
-        "seed": "marathon kit",
-        "category": "use_case_persona"
-      },
-      {
-        "text": "running socks review uk",
-        "intent": "commercial",
-        "from": "decision",
         "seed": "running socks",
         "category": "product_category"
       },
       {
-        "text": "marathon 1 vs 2",
+        "text": "running shorts review women",
         "intent": "commercial",
-        "from": "comparison",
-        "seed": "marathon kit",
-        "category": "use_case_persona"
+        "from": "decision",
+        "seed": "running shorts",
+        "category": "product_category"
       },
       {
-        "text": "marathon vs 10k",
+        "text": "running shorts review men",
         "intent": "commercial",
-        "from": "comparison",
-        "seed": "marathon kit",
-        "category": "use_case_persona"
+        "from": "decision",
+        "seed": "running shorts",
+        "category": "product_category"
       }
     ],
-    "dropped_count": 9
+    "dropped_count": 392
   },
   "intent_global": [],
   "brand_share_of_voice": [],
@@ -15602,25 +13549,25 @@
   "pain_triggers": [],
   "pain_summary": null,
   "blog_drafts": {
-    "generated_at": "2026-05-22",
+    "generated_at": "2026-05-24",
     "drafts": [
       {
-        "title": "marathon vs kirkland toilet paper",
+        "title": "compression socks vs sleeves for varicose veins",
         "intent": "commercial",
-        "category": "use_case_persona",
-        "path": "blogs/2026-05-22/01-marathon-vs-kirkland-toilet-paper.md"
+        "category": "product_category",
+        "path": "blogs/2026-05-24/01-compression-socks-vs-sleeves-for-varicose-veins.md"
       },
       {
-        "title": "marathon sponsored kit vs rook",
+        "title": "running shorts review women",
         "intent": "commercial",
-        "category": "use_case_persona",
-        "path": "blogs/2026-05-22/02-marathon-sponsored-kit-vs-rook.md"
+        "category": "product_category",
+        "path": "blogs/2026-05-24/02-running-shorts-review-women.md"
       },
       {
-        "title": "marathon 1 vs marathon 2 grass",
+        "title": "running shorts review men",
         "intent": "commercial",
-        "category": "use_case_persona",
-        "path": "blogs/2026-05-22/03-marathon-1-vs-marathon-2-grass.md"
+        "category": "product_category",
+        "path": "blogs/2026-05-24/03-running-shorts-review-men.md"
       }
     ]
   }
